@@ -32,27 +32,26 @@
     right: 0
     bottom: -5px
 
-.language
-  color: $white
-  text-transform: uppercase
-  padding-top: 13px
+.geolocation
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  padding: 1px
+  min-width: 160px
   font-family: Roboto
-  font-style: normal
-  font-weight: 500
   font-size: 12px
   line-height: 14px
+  cursor: pointer
 
-  &-wrapper
-    display: flex
-    cursor: pointer
+  &__title
+    margin-right: 5px
+    font-weight: 300
+    color: $white
 
-  &__item
-    min-width: 25px
-
-  &__select
-    display: none
-    position: relative
-    z-index: 999
+  &__city
+    font-weight: 500
+    color: $orange
+    text-decoration: underline
 
 .arrow
   width: 8px
@@ -189,6 +188,18 @@
 
 //адаптив под средний размер
 
+@media screen and ( max-width: 1080px )
+.navigation
+
+  &__sub
+    padding-left: 0
+
+.navbar
+
+  &__item
+    margin-right: 20px
+
+
 @media screen and ( max-width: 1200px )
   .search
 
@@ -303,3 +314,6 @@
           border: none
           outline: none
           box-shadow: none
+
+  .geolocation
+    min-width: 100px
