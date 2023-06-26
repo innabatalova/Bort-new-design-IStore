@@ -1,4 +1,4 @@
-@charset "UTF-8";
+/* @charset "UTF-8"; */
 /**
  * Foundation for Sites
  * Version 6.6.3
@@ -801,7 +801,6 @@ ul.no-bullet, ol.no-bullet {
     background: transparent !important;
     color: black !important;
     -webkit-print-color-adjust: economy;
-            color-adjust: economy;
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
     text-shadow: none !important; }

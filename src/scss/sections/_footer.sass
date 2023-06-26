@@ -1,0 +1,166 @@
+.footer
+  padding-top: 70px
+
+  &-wrapper
+    display: flex
+    justify-content: space-between
+
+  &-contacts
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 350px
+
+  &-listing
+    display: flex
+    flex-direction: column
+    width: 100%
+
+  &__logo
+    max-width: 195px
+    max-height: 60px
+    margin-bottom: 60px
+
+  &-address
+    font-family: Roboto
+    font-style: normal
+    font-weight: normal
+    font-size: 13px
+    line-height: 13px
+    color: $black
+
+  &-map
+    font-family: Roboto
+    font-style: normal
+    font-weight: normal
+    font-size: 13px
+    line-height: 13px
+    color: $blue
+    text-decoration-line: underline
+
+.listing
+
+  &-wrapper
+    margin-bottom: 30px
+    padding-left: 20px
+
+.copyright
+  font-family: Roboto
+  font-style: normal
+  font-weight: 300
+  font-size: 13px
+  line-height: 28px
+  color: $grey
+  padding-left: 38px
+
+.mobile
+
+  &-arrow
+    display: none
+
+//появление мобильной кнопки "вверх
+
+.scroll
+
+  &-arrow
+    position: fixed
+    bottom: 0
+    right: 15px
+    text-align: center
+    display: none
+    padding-top: 5px
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    background-color: $orange
+    border: 6px solid $white
+    z-index: 12
+
+  &-img
+    width: 12px
+    height: 6px
+
+//адаптив под средний размер
+
+@media screen and ( max-width: 986px )
+
+  .top-line
+    margin-top: 70px
+
+  .footer
+
+    &-wrapper
+      flex-direction: column
+
+    &-contacts
+      align-items: start
+      width: 100%
+      margin-bottom: 30px
+
+    &-phone, &-address, &-map
+      margin-bottom: 15px
+
+  .listing
+
+    &-wrapper
+      padding-left: 0
+
+  .copyright
+    text-align: center
+
+//адаптив под мобильные устройства
+
+@media screen and ( max-width: 740px )
+
+  .top-line
+    height: 10px
+    margin-top: 20px
+    margin-bottom: 20px
+
+  .footer
+
+    &-contacts
+      align-items: start
+
+    &__logo
+      max-width: 140px
+      max-height: 40px
+      margin-bottom: 20px
+
+    &-phone
+      font-size: 16px
+      line-height: 19px
+      margin-bottom: 10px
+
+    &-address
+      font-size: 11px
+      line-height: 13px
+      margin-bottom: 5px
+
+    &-map
+      font-size: 11px
+      line-height: 13px
+      margin-bottom: 20px
+
+    &__catalog
+      margin-bottom: 30px
+
+  .listing
+
+    &-wrapper
+      flex-wrap: wrap
+      justify-content: start
+
+    &-title
+      font-size: 14px
+      line-height: 17px
+
+    &-item
+      font-size: 12px
+      line-height: 22px
+
+  .copyright
+    padding-left: 0
+    text-align: start
+    font-size: 11px
+    line-height: 10px

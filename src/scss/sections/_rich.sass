@@ -1,0 +1,334 @@
+.rich
+  display: flex
+  justify-content: space-between
+
+  &-wrapper
+    display: flex
+    flex-direction: column
+    width: 70%
+
+  &-video
+    position: relative
+    width: 100%
+    height: 500px
+
+  &-video iframe
+    position: absolute
+    width: 100%
+    height: 100%
+    border: none
+
+  &-text
+    font-family: Roboto
+    font-style: normal
+    font-weight: 300
+    font-size: 15px
+    line-height: 26px
+
+  &-section
+    position: relative
+    min-height: 380px
+    display: flex
+    justify-content: space-between
+    margin-bottom: 45px
+
+    &-one
+      flex-direction: column
+
+      &__info
+        margin-bottom: 45px
+
+    &-three
+      flex-direction: row-reverse
+
+    &__image
+      position: relative
+      width: 47%
+      overflow: hidden
+
+    &__img
+      position: absolute
+      top: -10%
+      bottom: -10%
+      height: 120%
+      transition-duration: 0.7s
+      perspective: 400px
+
+    &__info
+      position: relative
+      width: 47%
+      padding: 1px
+
+    &__title
+      font-family: Russo One
+      font-style: normal
+      font-weight: normal
+      font-size: 20px
+      line-height: 24px
+      text-transform: uppercase
+      margin-bottom: 50px
+
+      &:before
+        position: absolute
+        content: ""
+        top: 75px
+        left: 0
+        height: 5px
+        width: 100px
+        background-color: $orange
+
+    &__subtitle
+      position: absolute
+      bottom: 0
+      right: 0
+      left: 0
+      font-family: Open Sans
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 26px
+      margin-bottom: 0
+      background-color: $light_grey
+
+    &__list
+      margin-top: 30px
+
+      &__item
+        padding-left: 15px
+        font-family: Roboto
+        font-style: normal
+        font-weight: 300
+        font-size: 15px
+        line-height: 16px
+
+        &:after
+          position: relative
+          display: block
+          content: ""
+          width: 7px
+          height: 7px
+          background-color: $orange
+          border-radius: 50%
+          top: -10px
+          left: -15px
+
+    &-last
+      margin-bottom: 0
+      overflow: hidden
+
+    &__five
+
+      &__img
+        position: absolute
+        top: -10%
+        bottom: -10%
+        height: 140%
+        width: 100%
+        transition-duration: 0.7s
+        perspective: 400px
+
+.fales
+
+  &-wrapper
+    position: relative
+    width: 25%
+
+  &-sticky
+    position: sticky
+    top: 150px
+
+  &-board
+    padding: 45px
+    padding-right: 110px
+    background-color: $light_grey
+
+    &__title
+      font-family: Russo One
+      font-style: normal
+      font-weight: normal
+      font-size: 13px
+      line-height: 20px
+      text-transform: uppercase
+
+    &__pdf
+      display: flex
+
+    &__download
+      display: flex
+      flex-direction: column
+      margin-left: 20px
+
+    &__link
+      font-family: Roboto
+      font-style: normal
+      font-weight: 500
+      font-size: 14px
+      line-height: 26px
+      color: $blue
+      text-decoration: underline
+
+    &-kb
+      font-family: Roboto
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 12px
+
+.support
+
+  &-info
+    font-family: Roboto
+    font-style: normal
+    font-weight: 300
+    font-size: 13px
+    line-height: 18px
+    margin-top: 30px
+    margin-bottom: 20px
+
+  &-phone
+    display: block
+    margin-bottom: 20px
+
+  &-watch
+    display: flex
+    flex-direction: column
+    font-family: Roboto
+    font-style: normal
+    font-weight: 300
+    font-size: 13px
+    line-height: 18px
+
+//адаптив под средний размер
+@media screen and ( max-width: 1350px )
+  .rich
+
+    &-text
+      font-size: 13px
+      line-height: 22px
+
+    &-section
+      min-height: 340px
+
+      &__image
+        width: 49%
+
+      &__title
+        font-size: 16px
+        line-height: 20px
+
+        &::before
+          top: 50px
+
+      &__list
+
+        &__item
+          font-size: 13px
+          line-height: 16px
+
+  .fales
+
+    &-wrapper
+      width: 27%
+
+    &-board
+      padding: 40px
+      padding-right: 95px
+
+@media screen and ( max-width: 1100px )
+  .rich
+
+    &-section
+      flex-direction: column
+      min-height: auto
+      margin-bottom: 0
+
+      &-one
+        margin-bottom: 25px
+
+      &__image
+        width: 100%
+        height: 400px
+        margin-bottom: 20px
+
+      &__info
+        width: 100%
+
+      &__title
+        font-size: 14px
+        line-height: 17px
+        margin-bottom: 35px
+
+        &::before
+          top: 35px
+          width: 40px
+          height: 3px
+
+      &__subtitle
+        font-size: 10px
+        line-height: 18px
+        padding-top: 3px
+        padding-bottom: 3px
+
+      &__list__item
+        font-size: 11px
+        line-height: 14px
+
+    &-img
+      height: 95%
+
+    &-video
+      height: 350px
+
+    &-text
+      font-size: 11px
+      line-height: 14px
+
+  .fales
+
+    &-board
+      padding: 35px
+
+//адаптив под мобильные устройства
+@media screen and ( max-width: 866px )
+  .fales
+
+    &-wrapper
+      display: none
+
+  .rich
+
+    &-wrapper
+      width: 100%
+
+    &-section
+
+      &-four, &-five
+        display: none
+
+      &-one
+
+        &__info
+          margin-top: 40px
+          margin-bottom: 20px
+
+      &__image
+        height: 250px
+
+      &__list
+        margin-top: 5px
+
+    &-video
+      height: 230px
+
+@media screen and ( max-width: 398px )
+  .rich
+
+    &-section
+
+      &__title
+
+        &::before
+          top: 55px
+
+    &-video
+      height: 170px

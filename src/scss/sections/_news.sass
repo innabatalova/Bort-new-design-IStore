@@ -1,0 +1,71 @@
+.news
+
+  &__title
+    position: relative
+    margin-top: 80px
+    margin-bottom: 75px
+    font-family: Russo One
+    font-style: normal
+    font-weight: normal
+    font-size: 25px
+    line-height: 30px
+
+    &:before
+      content: ""
+      background-color: $orange
+      height: 5px
+      width: 90px
+      position: absolute
+      left: 0
+      top: 55px
+
+//адаптив под средний размер
+@media screen and ( max-width: 1120px )
+  .news
+
+    &__card
+      height: 320px
+
+      &__title
+        font-size: 14px
+        line-height: 20px
+
+    &__date
+      margin-bottom: 10px
+
+//адаптив под мобильные устройства
+
+@media screen and ( max-width: 740px )
+
+  .news
+
+    &__title
+      font-size: 16px
+      line-height: 22px
+      margin-top: 40px
+      margin-bottom: 25px
+
+      &:before
+        top: 30px
+
+    &__card
+      height: 220px
+      min-height: 160px
+      padding-right: 20px
+
+      &__title
+        font-size: 12px
+        line-height: 16px
+        margin-top: 0
+
+    &__date
+      font-size: 10px
+      line-height: 12px
+
+    &__info
+      font-size: 11px
+      line-height: 15px
+
+    &__link
+      font-size: 12px
+      line-height: 12px

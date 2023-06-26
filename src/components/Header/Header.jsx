@@ -1,56 +1,44 @@
-<!DOCTYPE html>
-<html lang="ru">
+import React from 'react'
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Листинг товаров</title>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Russo+One&display=swap" />
-  <link rel="stylesheet" href="css/foundation.css" />
-  <link rel="stylesheet" href="css/owl.carousel.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="image/favicon.ico" type="image/x-icon" />
-</head>
+import NavbarItem from '../NavbarItem/NavbarItem'
 
-<body>
-  <header class="header">
-    <div class="navigation">
-      <div class="grid-container">
-        <div class="navigation-wrapper">
+import BortLogo1 from '../../static/image/Bort_logo_1.svg'
+import SearchImg from '../../static/image/search.svg'
+import LogoSearchArrow from '../../static/image/logo-search-arrow.svg'
+import CloseMobileIcon from '../../static/image/close-mobile-icon.svg'
+import YoutubeIcon from '../../static/image/Youtube.svg'
+import VKIcon from '../../static/image/VK.svg'
+import OKIcon from '../../static/image/OK.svg'
+import TwitterIcon from '../../static/image/Twitter.svg'
 
+
+const Header = () => {
+  return (
+    <header class="header">
+      <div class="navigation">
+        <div class="grid-container">
+          <div class="navigation-wrapper">
             <div class="geolocation">
               <span class="geolocation__title">Ваш город: </span>
               <span class="geolocation__city">Москва</span>
-
             </div>
-
-
             <div class="navigation__sub">
               <ul class="navbar">
-                <li class="navbar__item">
-                  <a href="about-company.html" target="_blank">О компании</a>
-                </li>
-                <li class="navbar__item">
-                  <a href="guarantee.html" target="_blank">Гарантия и сервис</a>
-                </li>
-                <li class="navbar__item">
-                  <a href="be-dealer.html" target="_blank">Стать дилером</a>
-                </li>
-                <li class="navbar__item"><a href="#">Интернет-магазин</a></li>
-                <li class="navbar__item"><a href="#">Оптовый портал</a></li>
-                <li class="navbar__item">
-                  <a href="contacts.html" target="_blank">Контакты</a>
-                </li>
+                <NavbarItem hrefProps='about-company.html' itemProps='О компании'/>
+                <NavbarItem hrefProps='guarantee.html"' itemProps='Оплата и доставка'/>
+                <NavbarItem hrefProps='be-dealer.html' itemProps='Контакты'/>
+                <NavbarItem hrefProps='#' itemProps='Гарантия и сервис'/>
+                <NavbarItem hrefProps='#' itemProps='Оптовый портал'/>
+                <NavbarItem hrefProps='#' itemProps='Расширенная гарантия' classProps='navbar__item_garanty'/>
               </ul>
-              <a href="cabinet.html" class="account">Личный кабинет</a>
+              <div>
+                <a href="cabinet.html" class="account">Личный кабинет</a>
+                <a href="cabinet.html" class="account busket">Корзина (0)</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- /.navigation -->
 
       <div class="grid-container">
         <div class="logo-wrapper">
@@ -59,19 +47,23 @@
             <span class="logo-line"></span>
             <span class="logo-line logo-end"></span>
           </button>
-          <img src="image/close-mobile-icon.svg" alt="close mobile icon" class="logo-close" />
-          <a href="index.html"><img src="image/Bort_logo_1.svg" alt="Bort logo" class="logo-image" /></a>
+          <img src={CloseMobileIcon} alt="close mobile icon" class="logo-close" />
+          <a href="index.html"><img src={BortLogo1} alt="Bort logo" class="logo-image" /></a>
 
           <form action="#" class="logo-search">
-            <img src="image/search.svg" alt="icon search" class="logo-search-image" />
+            <img src={SearchImg} alt="icon search" class="logo-search-image" />
             <input type="text" class="logo-search-input" placeholder="Поиск по каталогу" />
             <button type="reset" class="logo-search-reset">
-              <img src="image/logo-search-arrow.svg" alt="logo search arrow" class="logo-search-arrow" />
+              <img src={LogoSearchArrow} alt="logo search arrow" class="logo-search-arrow" />
             </button>
           </form>
 
           <div class="searchmobile">
             <span class="searchmobile-shadow"></span>
+            <div class="geolocation geolocation_searchmobile">
+              <span class="geolocation__title geolocation__title_searchmobile">Ваш город: </span>
+              <span class="geolocation__city">Москва</span>
+            </div>
             <ul class="searchmobile-wrapper">
               <li class="searchmobile-item">
                 <div class="searchmobile-item-wrapper searchmobile-tool">
@@ -376,9 +368,6 @@
                     <a href="guarantee.html">Гарантия и сервис</a>
                   </li>
                   <li class="bort-listing-item footer-mobile-listing-item">
-                    Расширенная гарантия
-                  </li>
-                  <li class="bort-listing-item footer-mobile-listing-item">
                     <a href="be-dealer.html">Стать дилером</a>
                   </li>
                   <li class="bort-listing-item footer-mobile-listing-item">
@@ -408,7 +397,7 @@
               </div>
               <div class="footer-contacts">
                 <a href="tel:74997001034" target="_blank" class="footer-phone">+7 <span
-                    class="footer-phone-code">(499)</span> 700-10-34</a>
+                  class="footer-phone-code">(499)</span> 700-10-34</a>
 
                 <div class="footer-address">
                   Россия, Москва, Авиационная улица, 79В
@@ -420,18 +409,18 @@
 
                 <div class="icons">
                   <a href="#" target="_blank" class="footer-link">
-                    <img src="image/Youtube.svg" alt="Youtube icon" class="icons-image" />
+                    <img src={YoutubeIcon} alt="Youtube icon" class="icons-image" />
                   </a>
 
                   <a href="#" target="_blank" class="footer-link">
-                    <img src="image/VK.svg" alt="VK icon" class="icons-image" />
+                    <img src={VKIcon} alt="VK icon" class="icons-image" />
                   </a>
 
                   <a href="#" target="_blank" class="footer-link">
-                    <img src="image/OK.svg" alt="OK icon" class="icons-image" />
+                    <img src={OKIcon} alt="OK icon" class="icons-image" />
                   </a>
-                  <a href="#" target="_blank" class="footer-link"><img src="image/Twitter.svg" alt="Twitter icon"
-                      class="icons-image" /></a>
+                  <a href="#" target="_blank" class="footer-link"><img src={TwitterIcon} alt="Twitter icon"
+                    class="icons-image" /></a>
                 </div>
               </div>
             </div>
@@ -451,13 +440,12 @@
           </div>
         </div>
       </div>
-      <!-- /.logo-wrapper -->
 
       <div class="grid-container">
         <div class="searchbar">
           <div class="searchbar-scrolling-wrapper">
-            <a href="index.html" class="searchbar-scrolling-link"><img src="image/Bort_logo_1.svg" alt="Bort logo"
-                class="searchbar-scrolling-logo" /></a>
+            <a href="index.html" class="searchbar-scrolling-link"><img src={BortLogo1} alt="Bort logo"
+              class="searchbar-scrolling-logo" /></a>
             <ul class="searchbar__list">
               <li class="searchbar__item searchbar__item__tool">
                 инструменты
@@ -719,433 +707,14 @@
             <form action="#" class="search">
               <input type="text" class="search-input" />
               <button class="search-button">
-                <img src="image/search.svg" alt="icon search" class="searchbar__image" />
+                <img src={SearchImg} alt="icon search" class="searchbar__image" />
               </button>
             </form>
           </div>
         </div>
       </div>
-  </header>
-  <!-- /.header -->
+    </header>
+  )
+}
 
-  <main class="listing-product">
-    <div class="grid-container">
-      <nav class="breadcrumb listing-product-breadcrumb">
-        <ul class="breadcrumb-list">
-          <li class="breadcrumb-list__item breadcrumb-list__nav">
-            <a href="index.html" class="breadcrumb-list__link">Главная</a>
-          </li>
-
-          <li class="breadcrumb-list__item breadcrumb-list__nav">
-            <a href="#" class="breadcrumb-list__link">Инструменты</a>
-          </li>
-
-          <li class="breadcrumb-list__item">
-            <a href="category.html" class="breadcrumb-list__link">Аккумуляторный инструмент</a>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.breadcrumb -->
-      <h1 class="listing-product-title">АККУМУЛЯТОРНЫЙ ИНСТРУМЕНT</h1>
-    </div>
-    <!-- /.grid-container -->
-  </main>
-  <!-- /.listing-product -->
-
-  <section class="listing-product-cards">
-    <div class="grid-container">
-      <div class="listing-product-cards-wrapper">
-        <div class="card listing-product-card">
-          <img src="listing_image/listing-card-one.jpg" alt="BLK-250D-LI" class="listing-product-card-image" />
-          <h2 class="listing-product-card-title">
-            КОМПРЕССОР АВТОМОБИЛЬНЫЙ <span>BLK-250D-LI</span>
-          </h2>
-          <button class="listing-product-card-button">Где купить?</button>
-        </div>
-
-        <div class="card listing-product-card">
-          <img src="listing_image/listing-card-two.jpg" alt="BTK-82" class="listing-product-card-image" />
-          <h2 class="listing-product-card-title">
-            НАБОР РУЧНОГО ИНСТРУМЕНТА BTK-82
-          </h2>
-          <button class="listing-product-card-button">Где купить?</button>
-        </div>
-
-        <div class="card listing-product-card">
-          <img src="listing_image/listing-card-three.jpg" alt="BWS-18LI-125" class="listing-product-card-image" />
-          <h2 class="listing-product-card-title">
-            МАШИНА ШЛИФОВАЛЬНАЯ УГЛОВАЯ АККУМУЛЯТОРНАЯ BWS-18LI-125
-          </h2>
-          <button class="listing-product-card-button">Где купить?</button>
-        </div>
-
-        <div class="card listing-product-card">
-          <img src="listing_image/listing-card-four.jpg" alt="BOF-1080N" class="listing-product-card-image" />
-          <h2 class="listing-product-card-title">
-            ФРЕЗЕР ЭЛЕКТРИЧЕСКИЙ BOF-1080N
-          </h2>
-          <button class="listing-product-card-button">Где купить?</button>
-        </div>
-
-        <div class="card listing-product-card">
-          <img src="listing_image/listing-card-two.jpg" alt="BLK-250D-LI" class="listing-product-card-image" />
-          <h2 class="listing-product-card-title">
-            КОМПРЕССОР АВТОМОБИЛЬНЫЙ <span>BLK-250D-LI</span>
-          </h2>
-          <button class="listing-product-card-button">Где купить?</button>
-        </div>
-
-        <div class="card listing-product-card">
-          <img src="listing_image/listing-card-four.jpg" alt="BTK-82" class="listing-product-card-image" />
-          <h2 class="listing-product-card-title">
-            НАБОР РУЧНОГО ИНСТРУМЕНТА BTK-82
-          </h2>
-          <button class="listing-product-card-button">Где купить?</button>
-        </div>
-
-        <div class="card listing-product-card">
-          <img src="listing_image/listing-card-one.jpg" alt="BWS-18LI-125" class="listing-product-card-image" />
-          <h2 class="listing-product-card-title">
-            МАШИНА ШЛИФОВАЛЬНАЯ УГЛОВАЯ АККУМУЛЯТОРНАЯ BWS-18LI-125
-          </h2>
-          <button class="listing-product-card-button">Где купить?</button>
-        </div>
-
-        <div class="card listing-product-card">
-          <img src="listing_image/listing-card-three.jpg" alt="BOF-1080N" class="listing-product-card-image" />
-          <h2 class="listing-product-card-title">
-            ФРЕЗЕР ЭЛЕКТРИЧЕСКИЙ BOF-1080N
-          </h2>
-          <button class="listing-product-card-button">Где купить?</button>
-        </div>
-      </div>
-
-      <p class="listing-product-info">
-        Аккумуляторная дрель-шуруповерт поможет быстро открутить и закрутить
-        гайки, винты, саморезы и прочий крепеж. Безударные модели работают с
-        деревом, пластиком, гипсокартном, а для работы с твердыми материалами,
-        такими как камень, бетон или кирпичная кладка, подойдут ударные
-        дрель-шуруповерты. Использование аккумулятора в качестве источника
-        питания обеспечивает мобильность и автономность. С таким инструментом
-        можно работать в поле, на улице, при выключенном электричестве.
-        Компания Bort выпускает широкий ассортимент аккумуляторных
-        дрелей-шуруповертов с различными техническими характеристиками, что
-        позволит подобрать оптимальную модель, исходя из решаемых задач. Так,
-        шуропуверт с максимальным крутящим моментом 50 Нм позволит вкручивать
-        даже очень большие болты, в то время как модели с крутящим моментом
-        30–35 Нм подойдут для большинства типовых задач. Аккумуляторные
-        дрели-шуруповерты Bort обладают современными функциями, такими как
-        реверс, быстрозажимной патрон, подсветка рабочей зоны, 2 скорости
-        работы.
-      </p>
-    </div>
-  </section>
-  <!-- /.listing-cards -->
-  <section class="news">
-    <div class="grid-container">
-      <h2 class="news__title">Новости компании / блог</h2>
-      <div class="owl-carousel slide-category">
-        <div class="carousel-item card bort-news-card news__card">
-          <span class="bort-news-card__date news__date">05/11/2020</span>
-          <h3 class="bort-news-card__title news__card__title">
-            Сам себе клиннер! Проводим профессиональную очистку помещения при
-            помощи строительного пылесоса bort.
-          </h3>
-          <p class="bort-news-card__info news__info">
-            Вы знаете, что для того, чтобы полностью устранить из помещения
-            все следы ремонта, не навредив при этом своему здоровью, нужно
-            проводить профессиональную очистку?
-          </p>
-          <a href="#" class="bort-news-card__link news__link">Подробнее</a>
-        </div>
-        <div class="carousel-item card bort-news-card news__card">
-          <span class="bort-news-card__date news__date">05/11/2020</span>
-          <h3 class="bort-news-card__title news__card__title">
-            Строительные пылесосы, пароочистители и многое другое. Что нужно
-            для открытия клинингового бизнеса?
-          </h3>
-          <p class="bort-news-card__info news__info">
-            Вы знаете, что для того, чтобы полностью устранить из помещения
-            все следы ремонта, не навредив при этом своему здоровью, нужно
-            проводить профессиональную очистку?
-          </p>
-          <a href="#" class="bort-news-card__link news__link">Подробнее</a>
-        </div>
-        <div class="carousel-item card bort-news-card news__card">
-          <span class="bort-news-card__date news__date">05/11/2020</span>
-          <h3 class="bort-news-card__title news__card__title">
-            Почему важна чистота на заводе, как ее навести и как в этом
-            поможет мойка высокого давления bort?
-          </h3>
-          <p class="bort-news-card__info news__info">
-            Вы знаете, что для того, чтобы полностью устранить из помещения
-            все следы ремонта, не навредив при этом своему здоровью, нужно
-            проводить профессиональную очистку?
-          </p>
-          <a href="#" class="bort-news-card__link news__link">Подробнее</a>
-        </div>
-        <div class="carousel-item card bort-news-card news__card">
-          <span class="bort-news-card__date news__date">05/11/2020</span>
-          <h3 class="bort-news-card__title news__card__title">
-            Как выбрать мойку высокого давления для автомобиля и помещения? В
-            чем отличие?
-          </h3>
-          <p class="bort-news-card__info news__info">
-            Вы знаете, что для того, чтобы полностью устранить из помещения
-            все следы ремонта, не навредив при этом своему здоровью, нужно
-            проводить профессиональную очистку?
-          </p>
-          <a href="#" class="bort-news-card__link news__link">Подробнее</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- /.news -->
-
-  <section class="banner">
-    <div class="grid-container">
-      <div class="banner-wrapper">
-        <div class="card banner-card banner-card_one">
-          <h2 class="banner__title">Лобзики электрические</h2>
-
-          <p class="banner__info">
-            Также при выборе следует обратить внимание на такие
-            характеристики, как максимальная глубина пропила, скорость
-            резания.
-          </p>
-          <div class="banner__arrow">
-            <img src="image/banner-arrow.svg" alt="banner arrow" />
-          </div>
-        </div>
-
-        <div class="card banner-card banner-card_two">
-          <h2 class="banner__title">Мойки высокого давления</h2>
-
-          <p class="banner__info">
-            Мойки высокого давления подходят и для уборки животноводческих
-            помещений, складов.
-          </p>
-          <div class="banner__arrow">
-            <img src="image/banner-arrow.svg" alt="banner arrow" />
-          </div>
-        </div>
-      </div>
-      <!-- /.banner-wrapper -->
-    </div>
-    <!-- /.grid-container -->
-  </section>
-  <!-- /.banner -->
-  <span class="top-line"></span>
-
-  <footer class="footer">
-    <div class="grid-container">
-      <div class="footer-wrapper">
-        <div class="footer-contacts index-link">
-          <img src="image/Bort_logo_footer.svg" alt="bort logo" class="footer__logo" />
-          <a href="tel:74997001034" target="_blank" class="footer-phone bort-support-phone">+7<span
-              class="footer-phone-code bort-support-phone-code">(499)</span>700-10-34</a>
-
-          <div class="footer-address">
-            Россия, Москва, Авиационная улица, 79В
-          </div>
-
-          <div class="footer-map">
-            <a href="#" target="_blank">Показать на карте</a>
-          </div>
-
-          <div class="icons">
-            <a href="#" target="_blank" class="footer-link">
-              <img src="image/Youtube.svg" alt="Youtube icon" class="icons-image" />
-            </a>
-
-            <a href="#" target="_blank" class="footer-link">
-              <img src="image/VK.svg" alt="VK icon" class="icons-image" />
-            </a>
-
-            <a href="#" target="_blank" class="footer-link">
-              <img src="image/OK.svg" alt="OK icon" class="icons-image" />
-            </a>
-            <a href="#" target="_blank" class="footer-link"><img src="image/Twitter.svg" alt="Twitter icon"
-                class="icons-image" /></a>
-          </div>
-        </div>
-        <!-- /.footer-contacts -->
-        <div class="footer-listing">
-          <div class="listing-wrapper grid-x">
-            <div class="footer__catalog small-6 large-3 cell">
-              <ul>
-                <li class="bort-listing-title listing-title">
-                  каталог товаров
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">Инструменты</a>
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">Измельчители</a>
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">Клининг</a>
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">Автотовары</a>
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">Бытовая техника</a>
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">Товары для сада</a>
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">Ручные инструменты</a>
-                </li>
-              </ul>
-            </div>
-            <div class="small-6 large-3 cell">
-              <ul>
-                <li class="bort-listing-title listing-title">
-                  присоединяйтесь!
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">Youtube</a>
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">Facebook</a>
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">Instagram</a>
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">Pinterest</a>
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">Яндекс Дзен</a>
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">Drive2</a>
-                </li>
-              </ul>
-            </div>
-            <div class="small-6 large-3 cell">
-              <ul>
-                <li class="bort-listing-title listing-title">О КОМПАНИИ</li>
-                <li class="bort-listing-item listing-item">
-                  <a href="about-company.html">О компании</a>
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="contacts.html">Контакты</a>
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="guarantee.html" target="_blank">Гарантия</a>
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">Сервисные центры</a>
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">Расширенная гарантия</a>
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">Конфидециальность</a>
-                </li>
-              </ul>
-            </div>
-            <div class="small-6 large-3 cell">
-              <ul>
-                <li class="bort-listing-title listing-title">
-                  ДОПОЛНИТЕЛЬНО
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">Блог</a>
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">Каталог товаров</a>
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">Каталог клининг</a>
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">Акции и новости</a>
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">eXtreme серия</a>
-                </li>
-                <li class="bort-listing-item listing-item">
-                  <a href="#">Карта сайта</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <span class="copyright">Все права защищены © 2016-2020 Bort-global.ru</span>
-        </div>
-        <!-- /.listing -->
-      </div>
-      <!-- /.footer-wrapper -->
-    </div>
-    <!-- /.grid-container -->
-  </footer>
-
-  <!-- /.footer -->
-  <span class="bottom-line"></span>
-
-  <div class="scroll-arrow">
-    <img src="image/footer-arrow.svg" alt="arrow top" class="scroll-img" />
-  </div>
-  <div class="modal-overlay">
-    <div class="bort-modal modal-overlay-form-modal">
-      <h3 class="bort-modal-title modal-overlay-title">написать нам</h3>
-      <form action="#" class="bort-modal-form modal-overlay-modal-form">
-        <div>
-          <span class="bort-modal-text">Ваше ФИО</span>
-          <input type="text" name="name" class="bort-modal-contacts modal-overlay-form-modal-contacts" required
-            minlength="2" />
-        </div>
-        <div>
-          <span class="bort-modal-text">Контактный телефон</span>
-          <input name="phone" type="tel" class="
-                bort-phone bort-modal-contacts
-                invalid
-                modal-overlay-form-modal-contacts
-              " required minlength="18" />
-        </div>
-        <div>
-          <span class="bort-modal-text">E-mail</span>
-          <input name="Email" type="email" class="
-                bort-modal-contacts
-                invalid
-                modal-overlay-form-modal-contacts
-              " required minlength="2" />
-        </div>
-        <div>
-          <span class="bort-modal-text">Ваше сообщение</span>
-          <textarea name="message" cols="30" rows="10" class="
-                bort-modal-message
-                modal-overlay-form-modal-contacts modal-overlay-modal-message
-              "></textarea>
-        </div>
-        <button class="
-              bort-modal-button bort-button-orange50
-              modal-overlay-modal-button
-            ">
-          Отправить
-        </button>
-      </form>
-    </div>
-  </div>
-
-  <div class="modal-open">
-    <div class="modal-open__form">
-      <span class="modal-open__post">Форма отправлена успешно!</span>
-      <button class="modal-open__button bort-button-orange35">OK</button>
-    </div>
-  </div>
-
-  <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="js/jquery.validate.min.js"></script>
-  <script src="js/vendor.js"></script>
-  <script src="js/foundation.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.mask.min.js"></script>
-  <script src="js/main.js"></script>
-</body>
-
-</html>
+export default Header;

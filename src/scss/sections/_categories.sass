@@ -1,0 +1,53 @@
+.categories
+  margin-top: 60px
+
+  &-card
+    padding: 20px
+    max-width: 23%
+    margin-right: 15px
+    margin-bottom: 20px
+    cursor: pointer
+
+.card
+
+  &-wrapper
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+  &__image
+    max-width: 250px
+    max-height: 250px
+
+  &__title
+    font-family: Russo One
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 23px
+
+  &_end
+    margin-right: 0
+
+//адаптив под мобильные устройства
+
+@media screen and ( max-width: 740px )
+
+  .categories
+    margin-top: 40px
+
+    &-card
+      min-width: 47%
+      margin-right: 10px
+
+  .card
+
+    &__title
+      font-size: 9px
+      line-height: 12px
+
+    &_end
+      margin-right: 0
+
+    &_mobile
+      margin-right: 0

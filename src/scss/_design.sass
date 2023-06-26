@@ -1,0 +1,642 @@
+.buttons
+
+  &-wrapper
+    display: flex
+    justify-content: space-between
+    margin-top: 50px
+    background-color: #72c9dd
+
+  &__block
+    display: flex
+    flex-direction: column
+    padding: 26px 14px
+    width: 100%
+    border: 1px solid grey
+
+//стили кнопок
+.bort
+
+  &__button
+    margin-top: 40px
+
+  &-button
+
+    &-black35, &-white35, &-orange35, &-disabled35
+      width: 210px
+      padding: 8px
+      font-family: Roboto
+      font-style: normal
+      font-weight: normal
+      font-size: 15px
+      line-height: 15px
+
+    &-black35, &-black45, &-black50
+      color: $black
+      background-color: inherit
+      border: 3px solid
+
+      &:hover
+        color: $white
+        background-color: $black
+        border: 3px solid $black
+
+      &:active
+        color: $white
+        background-color: $dark_grey
+        border: 3px solid $dark_grey
+
+    &-white35, &-white45, &-white50
+      color: $white
+      background-color: inherit
+      border: 3px solid $white
+
+      &:hover
+        color: $black
+        background-color: $white
+        border: 3px solid $white
+
+      &:active
+        color: $white
+        background-color: $dark_grey
+        border: 3px solid $dark_grey
+
+    &-orange35, &-orange45, &-orange50
+      color: $white
+      background-color: $orange
+      border: 3px solid $orange
+
+      &:hover
+        color: $white
+        background-color: #E78826
+        border: 3px solid #E78826
+
+      &:active
+        color: $white
+        background-color: #CC6D0A
+        border: 3px solid #CC6D0A
+
+    &-disabled35, &-disabled45, &-disabled50
+      color: $white
+      background-color: $grey
+      border: 3px solid $grey
+
+    &-black45, &-white45, &-orange45, &-disabled45
+      width: 210px
+      padding: 13px
+      font-family: Roboto
+      font-style: normal
+      font-weight: normal
+      font-size: 15px
+      line-height: 15px
+
+    &-black50, &-white50, &-orange50, &-disabled50
+      width: 210px
+      padding: 15px
+      font-family: Roboto
+      font-style: normal
+      font-weight: normal
+      font-size: 15px
+      line-height: 15px
+
+//стили формы обратной связи 
+.form
+
+  &-wrapper
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    margin-top: 40px
+    border: 1px solid lightgrey
+    padding: 20px
+
+.bort
+
+  &-modal
+    max-width: 370px
+    padding: 45px
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15)
+    background-color: $white
+
+    &-contacts
+      width: 280px
+      height: 45px
+      margin-bottom: 20px
+      resize: none
+      border: 1px solid #B9B9B9
+
+    &-message
+      width: 280px
+      max-height: 75px
+      resize: none
+      border: 1px solid #B9B9B9
+      margin-bottom: 40px
+
+    &-title
+      font-family: Russo One
+      font-style: normal
+      font-weight: normal
+      font-size: 13px
+      line-height: 20px
+      text-transform: uppercase
+      margin-bottom: 40px
+
+    &-text
+      font-family: Roboto
+      font-style: normal
+      font-weight: 500
+      font-size: 12px
+      line-height: 15px
+      margin-bottom: 6px
+
+    &-button
+      width: 100%
+
+//стили колонки footer
+.bort
+
+  &__list
+
+    &__wrapper
+      margin-left: 60px
+
+  &-listing
+
+    &-title
+      margin-bottom: 20px
+      text-transform: uppercase
+      font-family: Russo One
+      font-style: normal
+      font-weight: normal
+      font-size: 15px
+      line-height: 18px
+      color: $black
+
+    &-item
+      font-family: Roboto
+      font-style: normal
+      font-weight: 300
+      font-size: 13px
+      line-height: 28px
+      color: $dark_grey
+      text-transform: none
+      cursor: pointer
+
+      &:hover, &:focus
+        color: $grey
+
+      &:active
+        color: $orange
+
+//стили для карточки новостей
+
+.item
+
+  &__news
+
+    &__wrapper
+      margin-left: 160px
+
+.bort
+
+  &__news
+    width: 360px
+
+  &-news
+
+    &-card
+      justify-content: space-between
+      max-width: 90%
+      border: none
+      min-height: 275px
+
+      &__title
+        font-family: Roboto
+        font-style: normal
+        font-weight: 500
+        font-size: 15px
+        line-height: 19px
+        margin-bottom: 20px
+
+      &__date
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 24px
+        margin-bottom: 20px
+
+      &__info
+        color: $dark_grey
+        font-family: Roboto
+        font-style: normal
+        font-weight: 300
+        font-size: 13px
+        line-height: 19px
+        margin-bottom: 20px
+
+      &__link
+        text-decoration-line: underline
+        color: $blue
+        font-family: Roboto
+        font-style: normal
+        font-weight: 500
+        font-size: 13px
+        line-height: 19px
+
+        &:active, &:focus, &:hover
+          color: $blue
+
+.checkbox
+
+  &-wrapper
+    position: relative
+    margin-top: -150px
+    margin-left: 550px
+
+.select
+
+  &-wrapper
+    position: relative
+    margin-top: -150px
+    margin-left: 80px
+
+//стили для checkbox
+
+.bort
+
+  &-checkbox
+    position: absolute
+    appearance: none
+
+    &-label
+      font-family: Roboto
+      font-style: normal
+      font-weight: normal
+      font-size: 13px
+      line-height: 13px
+      color: $dark_grey
+
+      &:before
+        content: ''
+        position: absolute
+        top: 3px
+        left: -18px
+        width: 16px
+        height: 16px
+        border: 1px solid $dark_grey
+        border-radius: 3px
+        z-index: 1
+
+      &:after
+        position: absolute
+        content: ''
+        width: 16px
+        height: 16px
+        background: url(../static/image/check.svg) no-repeat
+        background-position-x: center
+        background-position-y: center
+        border-radius: 3px
+        background-color: $orange
+        top: 3px
+        left: -18px
+        z-index: 2
+        opacity: 0
+
+.bort
+
+  &-checkbox
+
+    &:hover
+      left: -18px
+      top: 3px
+      width: 16px
+      height: 16px
+      border: 1px solid $orange
+      z-index: 3
+      border-radius: 3px
+
+    &:checked  + label
+      color: $black
+
+      &:after
+        opacity: 1
+
+//стили для select
+
+.bort
+
+  &-select
+    position: absolute
+    appearance: none
+
+    &-label
+      font-family: Roboto
+      font-style: normal
+      font-weight: normal
+      font-size: 13px
+      line-height: 13px
+      color: $dark_grey
+
+      &:before
+        content: ''
+        position: absolute
+        top: 3px
+        left: -18px
+        width: 16px
+        height: 16px
+        border: 1px solid $dark_grey
+        border-radius: 14px
+        z-index: 1
+
+      &:after
+        position: absolute
+        content: ''
+        width: 16px
+        height: 16px
+        background: url(../static/image/select.svg) no-repeat
+        background-position-x: center
+        background-position-y: center
+        border-radius: 14px
+        background-color: $white
+        border: 1px solid $orange
+        top: 3px
+        left: -18px
+        z-index: 2
+        opacity: 0
+
+.bort
+
+  &-select
+
+    &:hover
+      left: -18px
+      top: 3px
+      width: 16px
+      height: 16px
+      border: 1px solid $orange
+      z-index: 3
+      border-radius: 14px
+
+    &:checked  + label
+      color: $black
+
+      &:after
+        opacity: 1
+
+//стили для checkbox-disabled, select-disabled
+
+.bort
+
+  &-checkbox
+
+    &-disabled
+      position: absolute
+      appearance: none
+
+      &-label
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        font-size: 13px
+        line-height: 13px
+        color: $grey
+
+        &:before
+          content: ''
+          position: absolute
+          top: 3px
+          left: 57px
+          width: 16px
+          height: 16px
+          border: 1px solid $light_grey
+          border-radius: 3px
+          z-index: 1
+
+  &-select
+
+    &-disabled
+      position: absolute
+      appearance: none
+
+      &-label
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        font-size: 13px
+        line-height: 13px
+        color: $grey
+
+        &:before
+          content: ''
+          position: absolute
+          top: 3px
+          left: 57px
+          width: 16px
+          height: 16px
+          border: 1px solid $light_grey
+          border-radius: 14px
+          z-index: 1
+
+//стили для input
+
+.input
+
+  &__form
+    margin-top: 60px
+    display: flex
+    border: 1px solid lightgrey
+    padding: 20px
+    background-color: #72c9dd
+
+  &-wrapper
+    margin-left: 25px
+    display: flex
+    flex-direction: column
+
+.bort
+
+  &-input45, &-input45-disabled
+    height: 45px
+    padding: 15px
+    width: 206px
+    font-family: Roboto
+    font-style: normal
+    font-weight: normal
+    font-size: 15px
+    line-height: 15px
+    border: 1px solid $grey
+    background-color: $white
+
+    &-disabled
+      background-color: $light_grey
+
+    &:hover
+      border: 1px solid $dark_grey
+      box-shadow: none
+      color: $black
+
+    &:focus
+      border: 1px solid $black
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15)
+
+  &-input50, &-input50-disabled
+    height: 50px
+    padding: 15px
+    width: 206px
+    font-family: Roboto
+    font-style: normal
+    font-weight: normal
+    font-size: 15px
+    line-height: 15px
+    border: 1px solid $grey
+    background-color: $white
+
+    &-disabled
+      background-color: $light_grey
+
+    &:hover
+      border: 1px solid $dark_grey
+      box-shadow: none
+      color: $black
+
+    &:focus
+      border: 1px solid $black
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15)
+
+  &-input
+
+    &-title, &-title-disabled
+      font-family: Roboto
+      font-style: normal
+      font-weight: 500
+      font-size: 12px
+      line-height: 15px
+      color: $black
+
+      &-disabled
+        color: $dark_grey
+
+//стили для меню
+
+.bort
+
+  &__menu
+    margin-left: 110px
+
+  &__submenu
+    margin-left: 110px
+
+  &-menu
+
+    &-item
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 340px
+      background-color: $lighest_grey
+      height: 60px
+      font-family: Roboto
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 22px
+      color: $dark_grey
+      padding: 18px 25px
+      margin-bottom: 1px
+      background-image: url(../static/image/menu-arrow.svg)
+      background-repeat: no-repeat
+      background-position-x: 300px
+      padding-right: 25px
+      background-position-y: center
+      cursor: pointer
+
+      &:hover, &:focus
+        color: $black
+        background-image: url(../static/image/menu-arrow-black.svg)
+        background-color: $light_grey
+
+      &:active
+        color: $white
+        background-image: url(../static/image/menu-arrow-white.svg)
+        background-color: $orange
+
+  &-submenu
+
+    &-top
+
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 330px
+      height: 40px
+      padding: 14px 18px
+      font-family: Roboto
+      font-style: normal
+      font-weight: 500
+      font-size: 12px
+      line-height: 12px
+      color: $white
+      background-color: $orange
+      margin-bottom: 5px
+
+    &-arrows
+      width: 12px
+      height: 8px
+
+      &-transform
+        transform: rotate(180deg)
+
+    &-icon
+      width: 8px
+      height: 12px
+
+    &-list
+      display: none
+
+    &-item
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 330px
+      height: 40px
+      padding: 14px 18px
+      font-family: Roboto
+      font-style: normal
+      font-weight: 500
+      font-size: 12px
+      line-height: 12px
+      color: $black
+      background-color: $lighest_grey
+      margin-bottom: 5px
+
+      &:hover, &:focus
+        color: $dark_grey
+
+      &:active
+        background-color: $light_grey
+
+.bort
+
+  &-support
+
+    &-phone
+      font-family: Russo One
+      font-style: normal
+      font-weight: normal
+      font-size: 22px
+      line-height: 27px
+      color: $black
+
+      &-code
+        color: $orange
+
+@media screen and ( max-width: 740px )
+  .bort
+
+    &-modal
+
+      &-contacts
+        margin-bottom: 10px
+
+      &-title, &-message
+        margin-bottom: 20px
