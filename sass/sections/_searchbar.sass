@@ -1,0 +1,213 @@
+.searchbar
+  position: relative
+  margin-top: 50px
+
+  &__list
+    display: flex
+
+  &__item
+    position: relative
+    text-transform: uppercase
+    margin-right: 50px
+    font-family: Russo One
+    font-style: normal
+    font-weight: normal
+    font-size: 13px
+    line-height: 16px
+    cursor: pointer
+
+    &:hover, &:focus
+      color: $orange
+
+  &::before
+    content: ""
+    background-color: $grey
+    height: 1px
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 45px
+
+  &-menu
+
+    &-item
+      width: 100%
+      font-weight: 500
+      font-size: 12px
+      line-height: 14px
+      color: $black
+      background-color: $white
+      background-position-x: 270px
+      margin-bottom: 0
+      border-bottom: 1px solid $lighest_grey
+
+    &-wrapper
+      width: 300px
+      position: absolute
+      display: none
+      z-index: 5
+      top: 47px
+      left: 0
+      margin-left: 0
+
+  &__menu
+
+    &__topline
+
+      position: relative
+      width: 100%
+      height: 10px
+      background-color: $orange
+      margin-bottom: 0
+
+      &:after
+        content: ''
+        position: absolute
+        left: 1px
+        bottom: 10px
+        border: 8px solid transparent
+        border-bottom: 8px solid $orange
+
+    &__item
+
+      &__tool
+        width: 100%
+        height: 50px
+
+//стили подменю
+.searchbar
+
+  &__submenu
+
+    &__wrapper
+
+      &__grinders
+        visibility: hidden
+        opacity: 0
+        position: absolute
+        width: 300px
+        z-index: 4
+        left: 280px
+        top: 0
+        bottom: 0
+        background-color: $white
+        box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.35)
+
+        &__visability
+          visibility: visible
+          opacity: 1
+          z-index: 5
+
+        &:hover, &:focus
+          visibility: visible
+          opacity: 1
+
+      &__cordless
+        visibility: hidden
+        opacity: 0
+        position: absolute
+        width: 300px
+        z-index: 4
+        left: 280px
+        top: 0
+        bottom: 0
+        background-color: $white
+        box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.35)
+
+        &__visability
+          visibility: visible
+          opacity: 1
+          z-index: 5
+
+        &:hover, &:focus
+          visibility: visible
+          opacity: 1
+
+    &__item
+      position: relative
+      width: 100%
+      height: 50px
+      font-weight: 500
+      font-size: 12px
+      line-height: 14px
+      color: $black
+      background-color: $white
+      background-position-x: 270px
+      margin-bottom: 0
+      border-bottom: 1px solid $lighest_grey
+      background-image: none
+
+      &:hover, &:focus
+        background-image: none
+
+      &:active
+        background-image: none
+
+    &__topline
+
+      position: relative
+      width: 100%
+      height: 10px
+      background-color: $orange
+      margin-bottom: 0
+
+  &-scrolling
+    position: fixed
+    top: -5px
+    left: 0
+    right: 0
+    z-index: 9
+    background-color: white
+    padding-top: 15px
+    padding-right: 6rem
+    padding-left: 6rem
+    padding-bottom: 5px
+    justify-content: center
+
+    &-wrapper
+      width: 100%
+      display: flex
+      justify-content: space-between
+
+      &-visible
+        max-width: 85rem
+        margin: auto
+
+    &-logo
+      width: 70px
+      height: 20px
+      margin-bottom: 5px
+
+    &-link
+      display: none
+
+//адаптив под средний размер
+@media screen and ( max-width: 1400px )
+  .searchbar
+
+    &__item
+      margin-right: 30px
+
+    &-scrolling
+      padding-left: 1rem
+      padding-right: 1rem
+
+@media screen and ( max-width: 986px )
+
+  .searchbar
+
+    &__item
+      margin-right: 10px
+
+@media screen and ( max-width: 837px )
+
+  .searchbar
+
+    &__item
+      margin-right: 5px
+
+  .search
+
+    &-input
+      padding: 0
+      width: 100px

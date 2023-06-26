@@ -1,0 +1,178 @@
+.listing
+
+  &-product
+    background: url(../listing_image/BG-listing.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    padding-top: 30px
+    padding-bottom: 40px
+    margin-top: 30px
+    color: $white
+
+    &-title
+      text-transform: uppercase
+      margin-top: 70px
+      margin-bottom: 20px
+      font-family: Russo One
+      font-style: normal
+      font-weight: normal
+      font-size: 40px
+      line-height: 30px
+
+    &-cards
+
+      &-wrapper
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        width: 100%
+        margin: 40px 0
+
+    &-card
+      padding: 40px
+      max-width: 320px
+      justify-content: space-between
+      position: relative
+
+            // variant 1
+      // &::after 
+      //   position: absolute
+      //   left: 0
+      //   top: 0
+      //   content: 'Новинкa'
+      //   padding: 5px 25px
+      //   font-family: Russo One
+      //   font-style: normal
+      //   font-weight: normal
+      //   color: white
+      //   text-transform: uppercase
+      //   background-color: orange
+      //   background: linear-gradient(-45deg, transparent 15px, orange 0)
+
+      // variant 2
+      &::after
+        position: absolute
+        left: -37px
+        bottom: 40%
+        content: "Новинкa"
+        padding: 5px 45px
+        font-family: Russo One
+        font-style: normal
+        font-weight: normal
+        color: white
+        text-transform: uppercase
+        background: linear-gradient(-45deg, transparent 25px, #D9760F 0)
+        transform: rotate(45deg)
+
+      &-title
+        display: flex
+        flex-direction: column
+        font-family: Russo One
+        font-style: normal
+        font-weight: normal
+        font-size: 15px
+        line-height: 18px
+        margin-top: 50px
+        margin-bottom: 15px
+
+      &-button
+        font-family: Roboto
+        font-style: normal
+        font-weight: 500
+        font-size: 13px
+        line-height: 19px
+        text-align: left
+        color: $orange
+        text-decoration: underline
+        background-image: url(../image/listing-arrow.svg)
+        background-repeat: no-repeat
+        background-position-y: center
+        background-position-x: 85px
+        cursor: pointer
+
+    &-info
+      font-family: Roboto
+      font-style: normal
+      font-weight: 300
+      font-size: 15px
+      line-height: 26px
+      color: $dark_grey
+
+//адаптив под мобильные устройств
+
+@media screen and ( max-width: 740px )
+
+  .listing
+    padding-top: 20px
+
+    &-product
+      background: url(../image/BG-listing-mobile.jpg)
+      background-repeat: no-repeat
+      background-size: cover
+      padding-top: 20px
+      padding-bottom: 20px
+
+      &-breadcrumb
+        width: 150%
+
+      &-title
+        margin-top: 20px
+        margin-bottom: 20px
+        font-size: 20px
+        line-height: 24px
+
+      &-card
+        padding: 20px 15px
+        max-width: 30%
+
+        // variant 1
+        &::after
+          font-size: 9px
+          line-height: 12px
+
+        // variant 2
+        // &::after
+          // bottom: 50%
+          // font-size: 9px
+          // line-height: 12px
+
+        &-image
+          max-width: 115px
+          max-height: 115px
+
+        &-title
+          font-size: 9px
+          line-height: 12px
+          margin-top: 13px
+          margin-bottom: 13px
+
+        &-button
+          font-size: 11px
+          line-height: 19px
+          background-position-x: 70px
+
+      &-info
+        display: none
+
+@media screen and ( max-width: 560px )
+
+  .listing
+
+    &-product
+
+      &-card
+        // variant 2
+        // &::after
+        //   bottom: 60%
+
+@media screen and ( max-width: 420px )
+
+  .listing
+
+    &-product
+
+      &-card
+        max-width: 48%
+        // variant 2
+        // &::after
+        //   bottom: 50%

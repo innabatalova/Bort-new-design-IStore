@@ -1,0 +1,214 @@
+.dropshipping
+
+  &-title
+    font-family: Russo One
+    font-style: normal
+    font-weight: normal
+    font-size: 35px
+    line-height: 40px
+    margin-bottom: 50px
+
+  &-wrapper
+    display: flex
+    flex-direction: column
+    position: relative
+    height: 600px
+
+  &-menu
+
+    &-item
+
+      &-active
+        color: $white
+        background-image: url(../image/menu-arrow-white.svg)
+        background-color: $blue
+
+      &:hover, &:focus, &:active
+        color: $white
+        background-image: url(../image/menu-arrow-white.svg)
+        background-color: $blue
+
+  &-info
+
+    &-block
+      display: none
+      position: absolute
+      width: 65%
+      right: 0
+      padding: 1px
+
+      &-visible
+        display: block
+
+    &-text
+      font-family: Roboto
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      line-height: 22px
+      color: $dark_grey
+
+    &-black
+      color: $black
+      margin-top: 25px
+      margin-bottom: 25px
+
+    &-list
+      list-style-type: disc
+      margin-left: 15px
+      margin-bottom: 25px
+
+    &-button
+      width: 310px
+      margin-top: 45px
+
+    &-link
+      color: $orange
+      text-decoration: underline
+      cursor: pointer
+
+    &-site
+
+      &-list
+        margin-bottom: 20px
+
+    &-price
+      color: $orange
+
+    &-modal
+
+      &-item
+        width: 48%
+
+      &-form
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+
+      &-text
+
+        &:after
+          content: '*'
+          color: $orange
+
+      &-contacts
+        width: 100%
+
+      &-area
+        width: 100%
+
+      &-message
+        width: 100%
+        max-height: 170px
+
+      &-button
+        width: 200px
+
+//адаптив под средний размер
+@media screen and ( max-width: 1250px )
+  .dropshipping
+
+    &-wrapper
+      height: 850px
+
+@media screen and ( max-width: 1150px )
+  .dropshipping
+
+    &-menu
+
+      &-item
+        width: 300px
+        background-position-x: 250px
+
+@media screen and ( max-width: 920px )
+  .dropshipping
+
+    &-info
+
+      &-block
+        width: 57%
+
+      &-text
+        font-size: 13px
+        line-height: 18px
+
+//адаптив под мобильные устройства
+@media screen and ( max-width: 740px )
+  .dropshipping
+
+    &-wrapper
+      height: auto
+
+    &-title
+      font-size: 15px
+      line-height: 22px
+      margin-bottom: 35px
+
+    &-wrapper
+      flex-direction: column
+
+    &-menu
+
+      &-item
+        position: relative
+        justify-content: center
+        width: 100%
+        font-size: 12px
+        line-height: 12px
+        background-image: none
+        background-color: $blue
+        color: $white
+
+        &:hover
+          background-image: none
+
+        &::before
+          content: ''
+          position: absolute
+          top: 45%
+          left: 15px
+          background-image: url(../image/submenu-arrows.svg)
+          width: 12px
+          height: 8px
+
+        &:after
+          content: ''
+          position: absolute
+          top: 45%
+          right: 15px
+          background-image: url(../image/submenu-arrows.svg)
+          width: 12px
+          height: 8px
+
+        &-transform
+
+          &::before, &:after
+            transform: rotate(180deg)
+
+    &-info
+
+      &-block
+        display: none
+        position: relative
+        width: 100%
+        margin-top: 20px
+        margin-bottom: 20px
+
+      &-text
+        font-size: 11px
+        line-height: 14px
+
+      &-button
+        width: 100%
+        margin-top: 40px
+
+      &-modal
+
+        &-form
+          flex-direction: column
+
+        &-item
+          width: 100%
+
+        &-button
+          width: 100%

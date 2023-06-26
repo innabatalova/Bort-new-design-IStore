@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Дизайн система Bort</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Russo+One&display=swap"
+    />
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="buttons-wrapper">
+        <div class="buttons__block">
+          <button class="bort__button bort-button-black35">Button name</button>
+          <button class="bort__button bort-button-white35">Button name</button>
+          <button class="bort__button bort-button-orange35">Button name</button>
+          <button class="bort__button bort-button-disabled35">
+            Button name
+          </button>
+        </div>
+        <div class="buttons__block">
+          <button class="bort__button bort-button-black45">Button name</button>
+          <button class="bort__button bort-button-white45">Button name</button>
+          <button class="bort__button bort-button-orange45">Button name</button>
+          <button class="bort__button bort-button-disabled45">
+            Button name
+          </button>
+        </div>
+        <div class="buttons__block">
+          <button class="bort__button bort-button-black50">Button name</button>
+          <button class="bort__button bort-button-white50">Button name</button>
+          <button class="bort__button bort-button-orange50">Button name</button>
+          <button class="bort__button bort-button-disabled50">
+            Button name
+          </button>
+        </div>
+      </div>
+      <div class="form-wrapper">
+        <div class="bort-modal">
+          <h3 class="bort-modal-title">обратная связь</h3>
+          <form action="#" class="bort-modal-form">
+            <span class="bort-modal-text">Ваше ФИО</span>
+            <input
+              type="text"
+              name="name"
+              class="bort-modal-contacts"
+              required
+              minlength="2"
+            />
+            <span class="bort-modal-text">Контактный телефон</span>
+            <input
+              name="phone"
+              type="tel"
+              class="bort-phone bort-modal-contacts invalid"
+              required
+              minlength="18"
+            />
+            <span class="bort-modal-text">E-mail</span>
+            <input
+              name="Email"
+              type="email"
+              class="bort-modal-contacts invalid"
+              required
+              minlength="2"
+            />
+            <span class="bort-modal-text">Ваше сообщение</span>
+            <textarea
+              name="message"
+              cols="30"
+              rows="10"
+              class="bort-modal-message"
+            ></textarea>
+            <button class="bort-modal-button bort-button-orange50">
+              Отправить
+            </button>
+          </form>
+        </div>
+
+        <div class="bort__list__wrapper">
+          <ul>
+            <li class="bort-listing-title">каталог товаров</li>
+            <li class="bort-listing-item"><a href="#">Инструменты</a></li>
+            <li class="bort-listing-item"><a href="#">Измельчители</a></li>
+            <li class="bort-listing-item"><a href="#">Клининг</a></li>
+            <li class="bort-listing-item"><a href="#">Автотовары</a></li>
+            <li class="bort-listing-item"><a href="#">Бытовая техника</a></li>
+            <li class="bort-listing-item"><a href="#">Товары для сада</a></li>
+            <li class="bort-listing-item">
+              <a href="#">Ручные инструменты</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="item__news__wrapper">
+          <div class="card bort-news-card bort__news">
+            <span class="bort-news-card__date">05/11/2020</span>
+            <h3 class="bort-news-card__title">
+              Сам себе клиннер! Проводим профессиональную очистку помещения при
+              помощи строительного пылесоса bort.
+            </h3>
+            <p class="bort-news-card__info">
+              Вы знаете, что для того, чтобы полностью устранить из помещения
+              все следы ремонта, не навредив при этом своему здоровью, нужно
+              проводить профессиональную очистку?
+            </p>
+            <a href="#" class="bort-news-card__link">Подробнее</a>
+          </div>
+        </div>
+        <div class="checkbox-wrapper">
+          <input type="checkbox" class="bort-checkbox" id="bcheck" />
+          <label for="bcheck" class="bort-checkbox-label">Default</label>
+          <input
+            type="checkbox"
+            class="bort-checkbox-disabled"
+            id="bcheckdis"
+          />
+          <label for="bcheckdis" class="bort-checkbox-disabled-label"
+            >Disabled</label
+          >
+        </div>
+        <div class="select-wrapper">
+          <input type="radio" class="bort-select" id="bselect" />
+          <label for="bselect" class="bort-select-label">Default</label>
+          <input type="radio" class="bort-select-disabled" id="bselectdis" />
+          <label for="bselectdis" class="bort-select-disabled-label"
+            >Disabled</label
+          >
+        </div>
+      </div>
+      <div class="input__form">
+        <div class="input-wrapper">
+          <span class="bort-input-title">Заголовок</span
+          ><input type="text" class="bort-input45" placeholder="Button name" />
+          <span class="bort-input-title-disabled">Заголовок</span
+          ><input
+            type="text"
+            class="bort-input45-disabled"
+            disabled="disabled"
+            placeholder="Button name"
+          />
+          <span class="bort-input-title">Заголовок</span
+          ><input type="text" class="bort-input50" placeholder="Button name" />
+          <span class="bort-input-title-disabled">Заголовок</span
+          ><input
+            type="text"
+            class="bort-input50-disabled"
+            disabled="disabled"
+            placeholder="Button name"
+          />
+        </div>
+        <div class="bort__menu">
+          <div class="bort-menu-item">
+            <span>Что такое дропшиппинг?</span>
+          </div>
+          <div class="bort-menu-item">
+            <span>Как это работает</span>
+          </div>
+          <div class="bort-menu-item">
+            <span>Требования к сайтам</span>
+          </div>
+          <div class="bort-menu-item">
+            <span>Способы доставки</span>
+          </div>
+          <div class="bort-menu-item">
+            <span>API</span>
+          </div>
+          <div class="bort-menu-item">
+            <span>Документация API v.1.02</span>
+          </div>
+          <div class="bort-menu-item">
+            <span>Подключить дропшиппинг</span>
+          </div>
+          <div class="bort-menu-item">
+            <span>Документы</span>
+          </div>
+        </div>
+      </div>
+      <a href="tel:74997001034" target="_blank" class="bort-support-phone"
+        >+7 <span class="bort-support-phone-code">(499)</span> 700-10-34</a
+      >
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/vendor.js"></script>
+    <script src="js/foundation.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.mask.min-copy.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
