@@ -15,6 +15,7 @@ import TwitterIcon from '../../static/image/Twitter.svg'
 const Header = () => {
   return (
     <header class="header">
+      
       <div class="navigation">
         <div class="grid-container">
           <div class="navigation-wrapper">
@@ -64,6 +65,7 @@ const Header = () => {
               <span class="geolocation__title geolocation__title_searchmobile">Ваш город: </span>
               <span class="geolocation__city">Москва</span>
             </div>
+
             <ul class="searchmobile-wrapper">
               <li class="searchmobile-item">
                 <div class="searchmobile-item-wrapper searchmobile-tool">
@@ -713,6 +715,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+
     </header>
   )
 }
