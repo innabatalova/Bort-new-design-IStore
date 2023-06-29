@@ -1,9 +1,10 @@
+window.$ = window.jQuery = require('jquery');
+
+setTimeout(() => {
 const dropshipping = () => {
   //переключение табов для дропшипинга
-
   let newWindowWidth = $(window).width();
-
-  $(".dropshipping-menu-item-drop").click(function () {
+  $(".dropshipping-menu-item-drop").on('click', function () {
     if (newWindowWidth > 740) {
       $(".dropshipping-info-block").removeClass(
         "dropshipping-info-block-visible"
@@ -18,7 +19,7 @@ const dropshipping = () => {
     }
   });
 
-  $(".dropshipping-menu-item-work").click(function () {
+  $(".dropshipping-menu-item-work").on('click', function () {
     if (newWindowWidth > 740) {
       $(".dropshipping-info-block").removeClass(
         "dropshipping-info-block-visible"
@@ -33,7 +34,7 @@ const dropshipping = () => {
     }
   });
 
-  $(".dropshipping-menu-item-site").click(function () {
+  $(".dropshipping-menu-item-site").on('click', function () {
     if (newWindowWidth > 740) {
       $(".dropshipping-info-block").removeClass(
         "dropshipping-info-block-visible"
@@ -48,7 +49,7 @@ const dropshipping = () => {
     }
   });
 
-  $(".dropshipping-menu-item-delivery").click(function () {
+  $(".dropshipping-menu-item-delivery").on('click', function () {
     if (newWindowWidth > 740) {
       $(".dropshipping-info-block").removeClass(
         "dropshipping-info-block-visible"
@@ -63,7 +64,7 @@ const dropshipping = () => {
     }
   });
 
-  $(".dropshipping-menu-item-api").click(function () {
+  $(".dropshipping-menu-item-api").on('click', function () {
     if (newWindowWidth > 740) {
       $(".dropshipping-info-block").removeClass(
         "dropshipping-info-block-visible"
@@ -78,7 +79,7 @@ const dropshipping = () => {
     }
   });
 
-  $(".dropshipping-menu-item-docapi").click(function () {
+  $(".dropshipping-menu-item-docapi").on('click', function () {
     if (newWindowWidth > 740) {
       $(".dropshipping-info-block").removeClass(
         "dropshipping-info-block-visible"
@@ -93,7 +94,7 @@ const dropshipping = () => {
     }
   });
 
-  $(".dropshipping-menu-item-opendrop").click(function () {
+  $(".dropshipping-menu-item-opendrop").on('click', function () {
     if (newWindowWidth > 740) {
       $(".dropshipping-info-block").removeClass(
         "dropshipping-info-block-visible"
@@ -108,7 +109,7 @@ const dropshipping = () => {
     }
   });
 
-  $(".dropshipping-menu-item-docs").click(function () {
+  $(".dropshipping-menu-item-docs").on('click', function () {
     if (newWindowWidth > 740) {
       $(".dropshipping-info-block").removeClass(
         "dropshipping-info-block-visible"
@@ -124,7 +125,6 @@ const dropshipping = () => {
   });
 
   //переключение выделения цветом у активного блока меню дропшипинг
-
   $(".dropshipping-menu-item").on("mouseup", function (e) {
     let s = $(".dropshipping-menu-item-active");
     if (!s.is(e.target) && s.has(e.target).length === 0) {
@@ -133,8 +133,7 @@ const dropshipping = () => {
   });
 
   // переключение на поле ввода данных по кнопке "подключить дропшиппинг"
-
-  $(".dropshipping-info-button").click(function () {
+  $(".dropshipping-info-button").on('click', function () {
     if (newWindowWidth > 740) {
       $(".dropshipping-menu-item-opendrop").addClass(
         "dropshipping-menu-item-active"
@@ -156,7 +155,7 @@ const dropshipping = () => {
   });
 
   // переключение на поле ввода данных по ссылке "подключить дропшиппинг"
-  $(".dropshipping-info-link-opendrop").click(function () {
+  $(".dropshipping-info-link-opendrop").on('click', function () {
     if (newWindowWidth > 740) {
       $(".dropshipping-menu-item-opendrop").addClass(
         "dropshipping-menu-item-active"
@@ -178,7 +177,7 @@ const dropshipping = () => {
   });
 
   // переключение на поле ввода данных по ссылке "документация API"
-  $(".dropshipping-info-link-docapi").click(function () {
+  $(".dropshipping-info-link-docapi").on('click', function () {
     if (newWindowWidth > 740) {
       $(".dropshipping-menu-item-docapi").addClass(
         "dropshipping-menu-item-active"
@@ -200,7 +199,7 @@ const dropshipping = () => {
   });
 
   // переключение на поле ввода данных по ссылке "регистрация дропшиппинг партнера"
-  $(".dropshipping-info-link-regdrop").click(function () {
+  $(".dropshipping-info-link-regdrop").on('click', function () {
     if (newWindowWidth > 740) {
       $(".dropshipping-menu-item-opendrop").addClass(
         "dropshipping-menu-item-active"
@@ -223,3 +222,4 @@ const dropshipping = () => {
 };
 
 dropshipping();
+}, 0)

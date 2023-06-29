@@ -1,9 +1,10 @@
+window.$ = window.jQuery = require('jquery');
+
+setTimeout(() => {
 const cabinet = () => {
   //переключение табов для личного кабинета
-
   let newWindowWidth = $(window).width();
-
-  $(".cabinet-menu-item-userinfo").click(function () {
+  $(".cabinet-menu-item-userinfo").on('click', function () {
     if (newWindowWidth > 980) {
       $(".cabinet-info-block").removeClass("cabinet-info-block-visible"),
         $(".cabinet-info-block-userinfo").addClass(
@@ -16,7 +17,7 @@ const cabinet = () => {
     }
   });
 
-  $(".cabinet-menu-item-sert").click(function () {
+  $(".cabinet-menu-item-sert").on('click', function () {
     if (newWindowWidth > 980) {
       $(".cabinet-info-block").removeClass("cabinet-info-block-visible"),
         $(".cabinet-info-block-sert").addClass("cabinet-info-block-visible"),
@@ -28,7 +29,6 @@ const cabinet = () => {
   });
 
   //переключение выделения цветом у активного блока меню личного кабинета
-
   $(".cabinet-menu-item").on("mouseup", function (e) {
     let s = $(".cabinet-menu-item-active");
     if (!s.is(e.target) && s.has(e.target).length === 0) {
@@ -38,3 +38,4 @@ const cabinet = () => {
 };
 
 cabinet();
+}, 0)

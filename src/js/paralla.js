@@ -1,11 +1,14 @@
+window.$ = window.jQuery = require('jquery');
+
+setTimeout(() => {
+
 const paralla = () => {
   //паралакс эффект для product-card
-
   let scrollParallax = $(".parallax-section");
   let counter = 0;
   let x = 130;
 
-  $(window).scroll(function () {
+  $(window).on('scroll', function () {
     let scroll = $(window).scrollTop() + $(window).height();
     let offset = scrollParallax.offset().top + x;
 
@@ -19,7 +22,7 @@ const paralla = () => {
 
   let scrollParallax2 = $(".parallax-section2");
 
-  $(window).scroll(function () {
+  $(window).on('scroll', function () {
     let scroll2 = $(window).scrollTop() + $(window).height();
     let offset2 = scrollParallax2.offset().top + x;
 
@@ -33,7 +36,7 @@ const paralla = () => {
 
   let scrollParallax3 = $(".parallax-section3");
 
-  $(window).scroll(function () {
+  $(window).on('scroll', function () {
     let scroll3 = $(window).scrollTop() + $(window).height();
     let offset3 = scrollParallax3.offset().top + x;
 
@@ -47,7 +50,7 @@ const paralla = () => {
 
   let scrollParallax4 = $(".parallax-section4");
 
-  $(window).scroll(function () {
+  $(window).on('scroll', function () {
     let scroll4 = $(window).scrollTop() + $(window).height();
     let offset4 = scrollParallax4.offset().top;
 
@@ -61,3 +64,4 @@ const paralla = () => {
 };
 
 paralla();
+}, 0)

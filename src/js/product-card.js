@@ -1,3 +1,9 @@
+window.$ = window.jQuery = require('jquery');
+let owl_carousel = require('owl.carousel');
+window.fn = owl_carousel;
+
+setTimeout(() => {
+
 const productCard = () => {
   // галерея карточки товара
 
@@ -37,7 +43,6 @@ const productCard = () => {
   //вывод картинки в большую область просмотра по клику
 
   let smallBigBackground = $(".product-card-gallery-image");
-
   smallBigBackground.on("click", function () {
     let backgroungUrl = $(this).attr("src");
     $(".product-card-gallery-view").css({
@@ -47,7 +52,7 @@ const productCard = () => {
 
   //убрать прозрачность для выделенного блока в галерее
 
-  $(".product-card-gallery-item").click(function () {
+  $(".product-card-gallery-item").on("click", function () {
     $(this).addClass("view");
   });
 
@@ -76,7 +81,7 @@ const productCard = () => {
 
   //создание блоков с якорями для мобильного разрешения navline__item
 
-  $(".navline__item").click(function () {
+  $(".navline__item").on("click", function () {
     if ($(window).width() < 740) {
       let clickN = $(this).children("a").attr("href");
       location.href = clickN;
@@ -128,3 +133,4 @@ const productCard = () => {
 };
 
 productCard();
+}, 0)

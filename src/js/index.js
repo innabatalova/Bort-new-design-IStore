@@ -1,3 +1,9 @@
+window.$ = window.jQuery = require('jquery');
+let owl_carousel = require('owl.carousel');
+window.fn = owl_carousel;
+
+setTimeout(() => {
+
 const index = () => {
   //получение размера отступа для внутреннего контента в main-slider
   let left = $(".grid-container").offset().left;
@@ -5,9 +11,7 @@ const index = () => {
   $(".main-card-wrapper").css("left", marginLeft + "px");
 
   //создание кликабельности для кнопки "Стать дилером" на главной странице
-
   let linkDealer = $(".be-dealer-button-link");
-
   linkDealer.on("click", function () {
     window.open("be-dealer.html"); //ссылки на странички категорий
   });
@@ -15,13 +19,11 @@ const index = () => {
   //карусель index main-slider
 
   //инициализация слайдера
-
   $(function () {
     $(".main-slider").owlCarousel();
   });
 
   //адаптив карусели index main-slider
-
   $(".main-slider").owlCarousel({
     items: 1,
     loop: true,
@@ -42,11 +44,9 @@ const index = () => {
   //карусель index novelty-slider
 
   //инициализация слайдера
-
   $(function () {
     $(".novelty-slider").owlCarousel();
   });
-
   //адаптив карусели index novelty-slider
 
   $(".novelty-slider").owlCarousel({
@@ -89,13 +89,10 @@ const index = () => {
   //карусель index popular-slider
 
   //инициализация слайдера
-
   $(function () {
     $(".popular-slider").owlCarousel();
   });
-
   //адаптив карусели popular-slider
-
   $(".popular-slider").owlCarousel({
     items: 1,
     margin: -40,
@@ -134,18 +131,16 @@ const index = () => {
   });
 
   //создание кликабельности для ссылки "Где купить?" с открытием в новой вкладке
-
   let linkNoveltyCard = $(".novelty-card");
-
   linkNoveltyCard.on("click", function () {
     window.open("product-card.html"); //ссылки на странички категорий
   });
-
   let linkPopularCard = $(".popular-card");
-
   linkPopularCard.on("click", function () {
     window.open("product-card.html"); //ссылки на странички категорий
   });
 };
 
 index();
+
+}, 0)
