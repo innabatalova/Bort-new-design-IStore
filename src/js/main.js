@@ -210,12 +210,12 @@ setTimeout(() => {
     });
 
     //проверка вложенности для элементов меню (если есть подпункты - показывается стрелочка вложенности)
-    let nestingСheck = $(".searchbar-menu-item");
-    nestingСheck.each(function (item, value) {
-      if (!(value.childElementCount == 2)) {
-        this.style = "background-image:none;";
+    let nestingСheck = document.querySelectorAll(".searchbar__submenu__wrapper");
+    nestingСheck.forEach(item => {
+      if (item.childNodes.length === 1) {
+        item.parentNode.style = "background-image:none;";
       }
-    });
+    })
 
     //открытие мобильного меню
     let openMobileTool = $(".searchmobile-tool");

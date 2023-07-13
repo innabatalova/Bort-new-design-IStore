@@ -1,7 +1,7 @@
-import React, { useState, useContext } from 'react'
+import React from 'react'
 //import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Header from './Header/Header'
+import Header from './HeaderComp/Header/Header'
 
 const LayoutBlock = () => {
   return (
