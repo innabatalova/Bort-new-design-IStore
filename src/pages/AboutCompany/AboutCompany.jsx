@@ -2,6 +2,10 @@ import React from 'react'
 
 import BreadcrumbListItem from '../../components/PagesComp/ListingProduct/BreadcrumbListItem'
 
+import AboutCompanyImgOne from '../../static/image/about-company-one.jpg'
+import AboutCompanyImgTwo from '../../static/image/about-company-two.jpg'
+import AboutCompanyImgThree from '../../static/image/about-company-three.jpg'
+
 const AboutCompany = () => {
     const breadcrumbListItemProps = [
         ['index', 'onelevel-breadcrumb-nav', 'Главная'],
@@ -58,12 +62,12 @@ const AboutCompany = () => {
                         </div>
                         <div className="about-company__info__image">
                             <img
-                                src="image/about-company-one.jpg"
+                                src={AboutCompanyImgOne}
                                 alt="about-company picture"
                                 className="about-company__info__img"
                             />
                             <img
-                                src="image/about-company-two.jpg"
+                                src={AboutCompanyImgTwo}
                                 alt="about-company picture"
                                 className="about-company__info__img"
                             />
@@ -74,12 +78,10 @@ const AboutCompany = () => {
                                 линейки электроинструментов, который находит одобрение у
                                 потребителей.
                             </p>
-
                             <p>
                                 В 2012 году принимается решение о реорганизации холдинга SBM
                                 group в международную компанию Bort Global.
                             </p>
-
                             <p>
                                 Тенденции рынка в 2015 году, обусловленные повышением объемов
                                 продаж и интенсивным спросом на продукцию, диктуют новые этапы
@@ -88,12 +90,10 @@ const AboutCompany = () => {
                                 первые модели хозяйственных, промышленных и строительных
                                 пылесосов.
                             </p>
-
                             <p>
                                 В 2017 году появляется новая линейка в группе товаров – eXtreme
                                 серия.
                             </p>
-
                             <p>
                                 Серия отличается повышенной эргономичностью и надежностью
                                 изделий. В ассортимент линейки входят товары, пользующиеся
@@ -108,7 +108,6 @@ const AboutCompany = () => {
                                 применения в сфере электрооборудования, клининговой техники,
                                 автомобильных товаров и товаров для сада.
                             </p>
-
                             <p>
                                 С момента основания команда Bort Global преследует главные цели
                                 - доступность, эргономичность и качество инструментов,
@@ -117,7 +116,7 @@ const AboutCompany = () => {
                         </div>
                         <div className="about-company__info__image">
                             <img
-                                src="image/about-company-three.jpg"
+                                src={AboutCompanyImgThree}
                                 alt="about-company picture"
                             />
                         </div>
@@ -130,7 +129,6 @@ const AboutCompany = () => {
                                 специалисты нашего головного офиса в Гонконге, заботятся о 100%
                                 проверке заказов, что свидетельствует о качестве сервиса.
                             </p>
-
                             <p>
                                 Комплексный подход и грамотный менеджмент позволяют осуществлять
                                 доставку товара на самых выгодных для клиента условиях. На
@@ -147,7 +145,6 @@ const AboutCompany = () => {
                                 На каждый инструмент ТМ Bort распространяется стандартная
                                 гарантия – 2 года и расширенная гарантия - до 5 лет.
                             </p>
-
                             <p>
                                 Разветвленная сеть авторизованных сервисных центров, более 550
                                 объектов по всему миру и 700 дилеров, позволяют оперативно
@@ -167,33 +164,23 @@ const AboutCompany = () => {
                             </p>
                         </div>
                     </div>
-
                     <div className="dealer-wrapper">
                         <div className="dealer-board">
                             <h3 className="dealer-board-title">Будьте нашим партнером!</h3>
-
                             <p className="dealer-board-info">
                                 Компания Bort Global имеет обширную дилерскую сеть на территории
                                 Российской Федерации и за рубежом. Мы заинтересованы в её
                                 развитии и приглашаем московские и региональные организации к
                                 долгосрочному и взаимовыгодному сотрудничеству.
                             </p>
-
                             <button
-                                className="
-                    bort-button-orange45
-                    dealer-board-button
-                    be-dealer-button-link
-                  "
-                            >
+                                className="bort-button-orange45 dealer-board-button be-dealer-button-link">
                                 Стать дилером
                             </button>
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </main>
     )
 }
