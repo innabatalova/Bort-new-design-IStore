@@ -17,7 +17,7 @@ const Header = () => {
     ['be-dealer.html', 'Контакты', ' '],
     ['#', 'Гарантия и сервис', ' '],
     ['#', 'Оптовый портал', ' '],
-    ['#', 'Расширенная гарантия', 'navbar__item_garanty']
+    ['#', 'Расширенная гарантия', 'over-garanty']
   ]
 
   const sortNavbarProps = navbarProps.map((item, index) =>

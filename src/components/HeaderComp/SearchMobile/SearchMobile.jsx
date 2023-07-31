@@ -1,7 +1,7 @@
 import React from 'react'
 
 import SearchMobileItem from '../SearchMobileItem/SearchMobileItem'
-import FooterMobileListingItem from '../FooterMobileListingItem/FooterMobileListingItem'
+import FooterMobileListingItem from '../../FooterComp/FooterMobileListingItem/FooterMobileListingItem'
 
 import YoutubeIcon from '../../../static/image/Youtube.svg'
 import VKIcon from '../../../static/image/VK.svg'
