@@ -8,6 +8,8 @@ const paralla = () => {
   let counter = 0;
   let x = 130;
 
+  if(!scrollParallax === undefined){
+
   $(window).on('scroll', function () {
     let scroll = $(window).scrollTop() + $(window).height();
     let offset = scrollParallax.offset().top + x;
@@ -61,6 +63,7 @@ const paralla = () => {
       $(".parallax-object4").css({ transform: "translateY(0)" });
     }
   });
+}
 };
 
 paralla();

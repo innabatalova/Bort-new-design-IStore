@@ -1649,12 +1649,12 @@ embed {
   position: absolute;
 }
 .banner-card_one {
-  background: url(../image/banner-1.png);
+  background: url(http://localhost:3000/img/banner-1.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 .banner-card_two {
-  background: url(../image/banner-2.png);
+  background: url(http://localhost:3000/img/banner-2.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1686,7 +1686,7 @@ embed {
   cursor: pointer;
 }
 .banner__arrow:before {
-  content: url(../image/banner-arrow.svg);
+  content: url(http://localhost:3000/img/banner-arrow.svg);
   position: absolute;
   top: 60px;
   right: 25px;
