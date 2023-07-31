@@ -91,7 +91,7 @@
     padding-top: 20px
 
     &-product
-      background: url(../../static/image/BG-listing-mobile.jpg)
+      background: url(http://localhost:3000/img/BG-listing-mobile.jpg)
       background-repeat: no-repeat
       background-size: cover
       padding-top: 20px
@@ -133,4 +133,25 @@
 
       &-info
         display: none
+
+@media screen and ( max-width: 560px )
+  .listing
+
+    &-product
+
+      &-card
+        // variant 2
+        // &::after
+        //   bottom: 60%
+
+@media screen and ( max-width: 420px )
+  .listing
+
+    &-product
+
+      &-card
+        max-width: 48%
+        // variant 2
+        // &::after
+        //   bottom: 50%
 

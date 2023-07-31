@@ -11,6 +11,7 @@ import ModalOpen from './components/ModalOpen/ModalOpen'
 
 import Listing from './pages/Listing/Listing'
 import AboutCompany from './pages/AboutCompany/AboutCompany'
+import Authorization from './pages/Authorization/Authorization'
 
 const LayoutBlock = () => {
   return (
@@ -19,6 +20,7 @@ const LayoutBlock = () => {
       <Routes>
         <Route path="*" element={<Listing />} />
         <Route path="about-company" element={<AboutCompany />} />
+        <Route path="authorization" element={<Authorization />} />
       </Routes>
       <News />
       <Banner />
