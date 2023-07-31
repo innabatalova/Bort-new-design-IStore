@@ -4,8 +4,8 @@ import FooterArrow from '../../static/image/footer-arrow.svg'
 
 const ScrollArrow = () => {
     return (
-        <div class="scroll-arrow">
-            <img src={FooterArrow} alt="arrow top" class="scroll-img" />
+        <div className="scroll-arrow">
+            <img src={FooterArrow} alt="arrow top" className="scroll-img" />
         </div>
     )
 }

@@ -14,14 +14,14 @@ const News = () => {
             'Вы знаете, что для того, чтобы полностью устранить из помещения все следы ремонта, не навредив при этом своему здоровью, нужно проводить профессиональную очистку?']
     ]
     const sortCarouselItemCardProps = CarouselItemCardProps.map((item, index) =>
-        <CarouselItemCard dateCarouselItemCardProps={item[0]} titleCarouselItemCardProps={item[1]}
+        <CarouselItemCard key={index} dateCarouselItemCardProps={item[0]} titleCarouselItemCardProps={item[1]}
             infoCarouselItemCardProps={item[2]} />
     )
     return (
-        <section class="news">
-            <div class="grid-container">
-                <h2 class="news__title">Новости компании / блог</h2>
-                <div class="owl-carousel slide-category">
+        <section className="news">
+            <div className="grid-container">
+                <h2 className="news__title">Новости компании / блог</h2>
+                <div className="owl-carousel slide-category">
                     {sortCarouselItemCardProps}
                 </div>
             </div>

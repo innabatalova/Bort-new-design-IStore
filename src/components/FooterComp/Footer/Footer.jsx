@@ -39,67 +39,67 @@ const Footer = () => {
 
 
     return (
-        <footer class="footer">
-            <div class="grid-container">
-                <div class="footer-wrapper">
-                    <div class="footer-contacts index-link">
-                        <img src={FooterLogo} alt="bort logo" class="footer__logo" />
-                        <a href="tel:74997001034" target="_blank" class="footer-phone bort-support-phone">+7<span
-                            class="footer-phone-code bort-support-phone-code">(499)</span>700-10-34</a>
-                        <div class="footer-address">
+        <footer className="footer">
+            <div className="grid-container">
+                <div className="footer-wrapper">
+                    <div className="footer-contacts index-link">
+                        <img src={FooterLogo} alt="bort logo" className="footer__logo" />
+                        <a href="tel:74997001034" target="_blank" className="footer-phone bort-support-phone">+7<span
+                            className="footer-phone-code bort-support-phone-code">(499)</span>700-10-34</a>
+                        <div className="footer-address">
                             Россия, Москва, Авиационная улица, 79В
                         </div>
-                        <div class="footer-map">
+                        <div className="footer-map">
                             <a href="#" target="_blank">Показать на карте</a>
                         </div>
-                        <div class="icons">
-                            <a href="#" target="_blank" class="footer-link">
-                                <img src={YouTubeIcon} alt="Youtube icon" class="icons-image" />
+                        <div className="icons">
+                            <a href="#" target="_blank" className="footer-link">
+                                <img src={YouTubeIcon} alt="Youtube icon" className="icons-image" />
                             </a>
-                            <a href="#" target="_blank" class="footer-link">
-                                <img src={VKIcon} alt="VK icon" class="icons-image" />
+                            <a href="#" target="_blank" className="footer-link">
+                                <img src={VKIcon} alt="VK icon" className="icons-image" />
                             </a>
-                            <a href="#" target="_blank" class="footer-link">
-                                <img src={OKIcon} alt="OK icon" class="icons-image" />
+                            <a href="#" target="_blank" className="footer-link">
+                                <img src={OKIcon} alt="OK icon" className="icons-image" />
                             </a>
-                            <a href="#" target="_blank" class="footer-link"><img src={TwitterIcon} alt="Twitter icon"
-                                class="icons-image" /></a>
+                            <a href="#" target="_blank" className="footer-link"><img src={TwitterIcon} alt="Twitter icon"
+                                className="icons-image" /></a>
                         </div>
                     </div>
-                    <div class="footer-listing">
-                        <div class="listing-wrapper grid-x">
-                            <div class="footer__catalog small-6 large-3 cell">
+                    <div className="footer-listing">
+                        <div className="listing-wrapper grid-x">
+                            <div className="footer__catalog small-6 large-3 cell">
                                 <ul>
-                                    <li class="bort-listing-title listing-title">
+                                    <li className="bort-listing-title listing-title">
                                         каталог товаров
                                     </li>
                                     {sortFooterListingItemPropsCatalog}
                                 </ul>
                             </div>
-                            <div class="small-6 large-3 cell">
+                            <div className="small-6 large-3 cell">
                                 <ul>
-                                    <li class="bort-listing-title listing-title">
+                                    <li className="bort-listing-title listing-title">
                                         присоединяйтесь!
                                     </li>
                                     {sortFooterListingItemPropsSocial}
                                 </ul>
                             </div>
-                            <div class="small-6 large-3 cell">
+                            <div className="small-6 large-3 cell">
                                 <ul>
-                                    <li class="bort-listing-title listing-title">О КОМПАНИИ</li>
+                                    <li className="bort-listing-title listing-title">О КОМПАНИИ</li>
                                     {sortFooterListingItemPropsCompany}
                                 </ul>
                             </div>
-                            <div class="small-6 large-3 cell">
+                            <div className="small-6 large-3 cell">
                                 <ul>
-                                    <li class="bort-listing-title listing-title">
+                                    <li className="bort-listing-title listing-title">
                                         ДОПОЛНИТЕЛЬНО
                                     </li>
                                     {sortFooterListingItemPropOther}
                                 </ul>
                             </div>
                         </div>
-                        <span class="copyright">Все права защищены © 2016-2020 Bort-global.ru</span>
+                        <span className="copyright">Все права защищены © 2016-2020 Bort-global.ru</span>
                     </div>
                 </div>
             </div>

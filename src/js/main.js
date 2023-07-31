@@ -65,7 +65,7 @@ setTimeout(() => {
     });
 
     //маска для проверки ввода номера
-    $(".bort-phone").mask("+7 (900) 000 00 00", (minlength = 10));
+    $(".bort-phone").mask("+7 (900) 000 00 00", (minLength = 10));
 
     //выпадающее меню searchbar
     let menuFocusTool = $(".searchbar__item__tool");

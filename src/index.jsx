@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client';
 
 import "./js/be-dealer"
 import "./js/cabinet"
@@ -21,9 +21,10 @@ import "../css/owl.theme.default.min.scss"
 import "../css/owl.theme.green.scss"
 import './scss/style.scss'
 
-import LayoutBlock from "./components/LayoutBlock"
+import LayoutBlock from "./LayoutBlock"
 
-ReactDOM.render(<LayoutBlock />, document.getElementById('root'))
+const root = createRoot(document.getElementById('root'));
+root.render(<LayoutBlock />);
 
 
 
