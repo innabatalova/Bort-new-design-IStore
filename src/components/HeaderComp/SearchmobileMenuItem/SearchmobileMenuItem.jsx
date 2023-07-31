@@ -4,8 +4,8 @@ import SearchmobileSubmenuItem from '../SearchmobileSubmenuItem/SearchmobileSubm
 
 const SearchmobileMenuItem = ({ hrefSearchmobileMenuItemProps, titleSearchmobileMenuItemProps, classSearchmobileMenuItemProps, arraySearchmobileMenuItemProps }) => {
 
-  const sortSearchmobileSubmenuItems = arraySearchmobileMenuItemProps.map((item) => 
-    <SearchmobileSubmenuItem hrefSearchmobileSubmenuItemProps={item[0]} titleSearchmobileSubmenuItemProps={item[1]}
+  const sortSearchmobileSubmenuItems = arraySearchmobileMenuItemProps.map((item, index) => 
+    <SearchmobileSubmenuItem key={index} hrefSearchmobileSubmenuItemProps={item[0]} titleSearchmobileSubmenuItemProps={item[1]}
       classSearchmobileSubmenuItemProps={item[2]}/>
   );
 

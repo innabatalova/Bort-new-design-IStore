@@ -9,6 +9,25 @@ import OKIcon from '../../../static/image/OK.svg'
 import TwitterIcon from '../../../static/image/Twitter.svg'
 
 const SearchMobile = () => {
+  
+  const footerMobileListingLeft = [
+    ['about-company.html', 'О компании'], ['#', 'Новости'], ['guarantee.html', 'Гарантия и сервис'], 
+    ['be-dealer.html', 'Стать дилером'], ['contacts.html', 'Контакты'], ['about-company.html', 'О компании']
+  ]
+
+  const footerMobileListingRight = [
+    ['#', 'Конфиденциальность'], ['be-dealer.html', 'Стать дилером'], ['dropshipping.html', 'Дропшиппинг'], 
+    ['#', 'Оптовый портал'], ['#', 'Сервисные центры'], ['#', 'Наши партнеры']
+  ]
+
+  const sortFooterMobileListingLeft = footerMobileListingLeft.map((item, index) =>
+    <FooterMobileListingItem key={index} hrefProps={item[0]} titleProps={item[1]} />
+  )
+
+  const sortFooterMobileListingRight = footerMobileListingRight.map((item, index) =>
+    <FooterMobileListingItem key={index} hrefProps={item[0]} titleProps={item[1]} />
+  )
+
   return (
     <div className="searchmobile">
       <span className="searchmobile-shadow"></span>
@@ -21,16 +40,16 @@ const SearchMobile = () => {
         <SearchMobileItem hrefSearchMobileItemProps='listing.html' titleSearchMobileItemProps='инструменты' classSearchMobileItemProps='tool'
           arraySearchMobileItemProps={[
             ['category.html', 'Пилы', 'saws',
-            [['product-card.html', 'Лобзики электрические'], ['product-card.html', 'Пилы циркулярные'], ['product-card.html', 'Сабельные пилы', 'searchmobile-submenu-item-last']]],
+              [['product-card.html', 'Лобзики электрические'], ['product-card.html', 'Пилы циркулярные'], ['product-card.html', 'Сабельные пилы', 'searchmobile-submenu-item-last']]],
             ['category.html', 'Дрели и миксеры', 'drill',
               [['#', 'Сетевые дрели'], ['#', 'Дрели ударные'], ['#', 'Сетевые шуруповерты'], ['#', 'Граверы', 'searchmobile-submenu-item-last']]],
             ['#', 'Перфораторы', '',
               []],
             ['#', 'Аккумуляторный инструмент', 'cordless',
               [['#', 'Болгарки (УШМ) аккумуляторные'], ['#', 'Перфораторы аккумуляторные'], ['#', 'Дрели-шуруповерты аккумуляторые'], ['#', 'Гайковерты аккумуляторные'],
-                ['#', 'Лобзики аккумуляторные'], ['#', 'Пилы сабельные аккумуляторные'], ['#', 'Реноваторы аккумуляторные'], ['#', 'Аккумуляторы для инструмента', 'searchmobile-submenu-item-last']]],
+              ['#', 'Лобзики аккумуляторные'], ['#', 'Пилы сабельные аккумуляторные'], ['#', 'Реноваторы аккумуляторные'], ['#', 'Аккумуляторы для инструмента', 'searchmobile-submenu-item-last']]],
             ['#', 'Рубанки', '',
-            []],
+              []],
             ['#', 'Фрезеры', '',
               []],
             ['#', 'Шлифмашины', 'grinder',
@@ -92,20 +111,10 @@ const SearchMobile = () => {
       <div className="footer-mobile">
         <div className="footer-mobile-listing-wrapper">
           <ul className="footer-mobile-listing">
-            <FooterMobileListingItem hrefProps='about-company.html' titleProps='О компании' />
-            <FooterMobileListingItem titleProps='Новости' />
-            <FooterMobileListingItem hrefProps='guarantee.html' titleProps='Гарантия и сервис' />
-            <FooterMobileListingItem hrefProps='be-dealer.html' titleProps='Стать дилером' />
-            <FooterMobileListingItem hrefProps='contacts.html' titleProps='Контакты' />
-            <FooterMobileListingItem hrefProps='about-company.html' titleProps='О компании' />
+            {sortFooterMobileListingLeft}
           </ul>
           <ul className="footer-mobile-listing">
-            <FooterMobileListingItem titleProps='Конфиденциальность' />
-            <FooterMobileListingItem hrefProps='be-dealer.html' titleProps='Стать дилером' />
-            <FooterMobileListingItem hrefProps='dropshipping.html' titleProps='Дропшиппинг' />
-            <FooterMobileListingItem titleProps='Оптовый портал' />
-            <FooterMobileListingItem titleProps='Сервисные центры' />
-            <FooterMobileListingItem titleProps='Наши партнеры' />
+            {sortFooterMobileListingRight}
           </ul>
         </div>
 

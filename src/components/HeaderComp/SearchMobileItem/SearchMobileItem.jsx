@@ -5,8 +5,8 @@ import SearchmobileMenuItem from '../SearchmobileMenuItem/SearchmobileMenuItem'
 const SearchMobileItem = ({ hrefSearchMobileItemProps, titleSearchMobileItemProps, classSearchMobileItemProps,
   arraySearchMobileItemProps }) => {
 
-  const sortSearchmobileMenuItem = arraySearchMobileItemProps.map((item) =>
-    <SearchmobileMenuItem hrefSearchmobileMenuItemProps={item[0]} titleSearchmobileMenuItemProps={item[1]} classSearchmobileMenuItemProps={item[2]}
+  const sortSearchmobileMenuItem = arraySearchMobileItemProps.map((item, index) =>
+    <SearchmobileMenuItem key={index} hrefSearchmobileMenuItemProps={item[0]} titleSearchmobileMenuItemProps={item[1]} classSearchmobileMenuItemProps={item[2]}
       arraySearchmobileMenuItemProps={item[3]}
       />
   );

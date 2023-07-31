@@ -2,12 +2,11 @@ import React from 'react'
 
 import SearchbarSubmenuItem from '../SearchbarSubmenuItem/SearchbarSubmenuItem'
 
-const SearchbarMenuItem = ({ hrefSearchbarMenuItemProps, titleSearchbarMenuItemProps, classSearchbarMenuItemProps, classSearchbarMenuItemPropsList, arraySearchbarSubmenuItemProps, arraySearchbarSubmenuItemProps1 }) => {
+const SearchbarMenuItem = ({ hrefSearchbarMenuItemProps, titleSearchbarMenuItemProps, classSearchbarMenuItemProps, 
+  classSearchbarMenuItemPropsList, arraySearchbarSubmenuItemProps }) => {
 
-  console.log(typeof arraySearchbarSubmenuItemProps);
-  console.log(typeof arraySearchbarSubmenuItemProps1);
-  const sortSearchbarSubmenuItems = arraySearchbarSubmenuItemProps.map((item) =>
-    <SearchbarSubmenuItem hrefSearchbarSubmenuItemProps={item[0]} titleSearchbarSubmenuItemProps={item[1]} />
+  const sortSearchbarSubmenuItems = arraySearchbarSubmenuItemProps.map((item, index) =>
+    <SearchbarSubmenuItem key={index} hrefSearchbarSubmenuItemProps={item[0]} titleSearchbarSubmenuItemProps={item[1]} />
   );
 
   return (

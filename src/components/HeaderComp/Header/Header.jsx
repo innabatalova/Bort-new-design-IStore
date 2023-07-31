@@ -11,6 +11,19 @@ import CloseMobileIcon from '../../../static/image/close-mobile-icon.svg'
 
 
 const Header = () => {
+  const navbarProps = [
+    ['about-company.html', 'О компании', ' '],
+    ['guarantee.html', 'Оплата и доставка', ' '],
+    ['be-dealer.html', 'Контакты', ' '],
+    ['#', 'Гарантия и сервис', ' '],
+    ['#', 'Оптовый портал', ' '],
+    ['#', 'Расширенная гарантия', 'navbar__item_garanty']
+  ]
+
+  const sortNavbarProps = navbarProps.map((item, index) =>
+    <NavbarItem key={index} hrefProps={item[0]} itemProps={item[1]} classProps={item[2]} />
+  )
+
   return (
     <header className="header">
 
@@ -23,12 +36,7 @@ const Header = () => {
             </div>
             <div className="navigation__sub">
               <ul className="navbar">
-                <NavbarItem hrefProps='about-company.html' itemProps='О компании' />
-                <NavbarItem hrefProps='guarantee.html"' itemProps='Оплата и доставка' />
-                <NavbarItem hrefProps='be-dealer.html' itemProps='Контакты' />
-                <NavbarItem hrefProps='#' itemProps='Гарантия и сервис' />
-                <NavbarItem hrefProps='#' itemProps='Оптовый портал' />
-                <NavbarItem hrefProps='#' itemProps='Расширенная гарантия' classProps='navbar__item_garanty' />
+                {sortNavbarProps}
               </ul>
               <div>
                 <a href="cabinet.html" className="account">Личный кабинет</a>
@@ -57,7 +65,7 @@ const Header = () => {
             </button>
           </form>
 
-          <SearchMobile/>
+          <SearchMobile />
 
           <div className="info-wrapper">
             <div className="info">
@@ -75,7 +83,7 @@ const Header = () => {
       </div>
 
       <div className="grid-container">
-        <Searchbar/>
+        <Searchbar />
       </div>
 
     </header>

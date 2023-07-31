@@ -6,14 +6,7 @@ import BortLogo1 from '../../../static/image/Bort_logo_1.svg'
 import SearchImg from '../../../static/image/search.svg'
 
 const Searchbar = () => {
-  const test = [[['product-card.html'], ['Карточка товара']],
-  [['#'], ['Подменю Аккумуляторный инструмент']],
-  [['#'], ['Подменю Аккумуляторный инструмент']],
-  [['#'], ['Подменю Аккумуляторный инструмент']],
-  [['#'], ['Подменю Аккумуляторный инструмент']]
-  ]
-
-  return(
+  return (
     <div className="searchbar">
 
       <div className="searchbar-scrolling-wrapper">
@@ -22,280 +15,106 @@ const Searchbar = () => {
 
         <ul className="searchbar__list">
 
-          <SearchbarItem titleSearchbarItemProps='инструменты' classSearchbarItemProps='tool' 
-            hrefSearchbarMenuItemProps='category.html' titleSearchbarMenuItemProps='Аккумуляторный инструмент'
-            classSearchbarMenuItemProps='searchbar__menu__item__tool searchbar-menu-item-cordless'
-            classSearchbarMenuItemPropsList='cordless'
-            arraySearchbarSubmenuItemProps1={[[['product-card.html'], ['Карточка товара']],
-            [['#'], ['Подменю Аккумуляторный инструмент']],
-            [['#'], ['Подменю Аккумуляторный инструмент']],
-            [['#'], ['Подменю Аккумуляторный инструмент']],
-            [['#'], ['Подменю Аккумуляторный инструмент']]
+          <SearchbarItem titleSearchbarItemProps='инструменты' classSearchbarItemProps='tool'
+            hrefSearchbarMenuItemProps='category.html'
+            arraySearchbarMenuItemProps={[
+              [['#'], ['Аккумуляторный инструмент'], ['searchbar__menu__item__tool searchbar-menu-item-cordless'],
+                'cordless', [
+                [['product-card.html'], ['Карточка товара']],
+                [['#'], ['Подменю Аккумуляторный инструмент']],
+                [['#'], ['Подменю Аккумуляторный инструмент']],
+                [['#'], ['Подменю Аккумуляторный инструмент']],
+                [['#'], ['Подменю Аккумуляторный инструмент']]
+              ]],
+              [['#'], ['Дрели и миксеры'], ['searchbar__menu__item__tool searchbar-menu-item-drills'],
+                'drills', []],
+              [['#'], ['Перфораторы'], ['searchbar__menu__item__tool searchbar-menu-item-hammers'],
+                'hammers', []],
+              [['#'], ['Пилы'], ['searchbar__menu__item__tool searchbar-menu-item-saws'],
+                'saws', []],
+              [['#'], ['Рубанки электрические'], ['searchbar__menu__item__tool searchbar-menu-item-planers'],
+                'planers', []],
+              [['#'], ['Фрезеры электрические'], ['searchbar__menu__item__tool searchbar-menu-item-milling'],
+                'milling', []],
+              [['#'], ['Шлифмашины'], ['searchbar__menu__item__tool searchbar-menu-item-grinders'],
+                'grinders', [
+                [['#'], ['Орбитальные шлифмашины']],
+                [['#'], ['Ленточные шлифмашины']],
+                [['#'], ['Граверы']],
+                [['#'], ['Болгарки (УШМ)']],
+                [['#'], ['Многофункциональные']],
+                [['#'], ['Машины шлифовальные вибрационные']]
+              ]],
+              [['#'], ['Фены технические'], ['searchbar__menu__item__tool searchbar-menu-item-dryers'],
+                'dryers', []],
+              [['#'], ['Краскопульты'], ['searchbar__menu__item__tool searchbar-menu-item-spray'],
+                'spray', []],
+              [['#'], ['Измерительные инструменты'], ['searchbar__menu__item__tool searchbar-menu-item-measuring'],
+                'measuring', []],
+              [['#'], ['Сварочное оборудование'], ['searchbar__menu__item__tool searchbar-menu-item-welding'],
+                'welding', []]
             ]}
           />
-
-          <SearchbarItem titleSearchbarItemProps='автотовары' classSearchbarItemProps='car' />
-
-          {/* <li className="searchbar__item searchbar__item__tool">
-            инструменты
-
-            <ul className="searchbar__menu__wrapper__tool searchbar-menu-wrapper">
-              <li className="searchbar__menu__topline"></li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item
-                      searchbar__menu__item__tool
-                      searchbar-menu-item-cordless
-                    ">
-                <a href="category.html">Аккумуляторный инструмент</a>
-                <ul className="searchbar__submenu__wrapper__cordless">
-                  <li className="searchbar__submenu__topline"></li>
-                  <li className="bort-menu-item searchbar__submenu__item">
-                    <a href="product-card.html">Карточка товара</a>
-                  </li>
-                  <li className="bort-menu-item searchbar__submenu__item">
-                    <a href="#">Подменю Аккумуляторный инструмент</a>
-                  </li>
-                  <li className="bort-menu-item searchbar__submenu__item">
-                    <a href="#">Подменю Аккумуляторный инструмент</a>
-                  </li>
-                  <li className="bort-menu-item searchbar__submenu__item">
-                    <a href="#">Подменю Аккумуляторный инструмент</a>
-                  </li>
-                </ul>
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item
-                      searchbar__menu__item__tool
-                      searchbar-menu-item-drills
-                    ">
-                <a href="#">Дрели и миксеры</a>
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item
-                      searchbar__menu__item__tool
-                      searchbar-menu-item-hammers
-                    ">
-                <a href="#">Перфораторы</a>
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item
-                      searchbar__menu__item__tool
-                      searchbar-menu-item-saws
-                    ">
-                <a href="#">Пилы</a>
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item
-                      searchbar__menu__item__tool
-                      searchbar-menu-item-planers
-                    ">
-                <a href="#">Рубанки электрические</a>
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item
-                      searchbar__menu__item__tool
-                      searchbar-menu-item-milling
-                    ">
-                <a href="#">Фрезеры электрические</a>
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item
-                      searchbar__menu__item__tool
-                      searchbar-menu-item-grinders
-                    ">
-                <a href="#">Шлифмашины</a>
-                <ul className="searchbar__submenu__wrapper__grinders">
-                  <li className="searchbar__submenu__topline"></li>
-                  <li className="bort-menu-item searchbar__submenu__item">
-                    <a href="#">Орбитальные шлифмашины</a>
-                  </li>
-                  <li className="bort-menu-item searchbar__submenu__item">
-                    <a href="#">Ленточные шлифмашины</a>
-                  </li>
-                  <li className="bort-menu-item searchbar__submenu__item">
-                    <a href="#">Граверы</a>
-                  </li>
-                  <li className="bort-menu-item searchbar__submenu__item">
-                    <a href="#">Болгарки (УШМ)</a>
-                  </li>
-                  <li className="bort-menu-item searchbar__submenu__item">
-                    <a href="#">Многофункциональные</a>
-                  </li>
-                  <li className="bort-menu-item searchbar__submenu__item">
-                    <a href="#">Машины шлифовальные вибрационные</a>
-                  </li>
-                </ul>
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item
-                      searchbar__menu__item__tool
-                      searchbar-menu-item-dryers
-                    ">
-                <a href="#">Фены технические</a>
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item
-                      searchbar__menu__item__tool
-                      searchbar-menu-item-spray
-                    ">
-                <a href="#">Краскопульты</a>
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item
-                      searchbar__menu__item__tool
-                      searchbar-menu-item-measuring
-                    ">
-                <a href="#">Измерительные инструменты</a>
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item
-                      searchbar__menu__item__tool
-                      searchbar-menu-item-welding
-                    ">
-                <a href="#">Сварочное оборудование</a>
-              </li>
-            </ul>
-          </li>
-
-          <li className="searchbar__item searchbar__item__clining">
-            клининг
-            <ul className="
-                    searchbar-menu-wrapper searchbar__menu__wrapper__clining
-                  ">
-              <li className="searchbar__menu__topline"></li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item searchbar__menu__item
-                    ">
-                Меню клининг
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item searchbar__menu__item
-                    ">
-                Меню клининг
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item searchbar__menu__item
-                    ">
-                Меню клининг
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item searchbar__menu__item
-                    ">
-                Меню клининг
-              </li>
-            </ul>
-          </li>
-
-          <li className="searchbar__item searchbar__item__car">
-            автотовары
-            <ul className="searchbar-menu-wrapper searchbar__menu__wrapper__car">
-              <li className="searchbar__menu__topline"></li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item searchbar__menu__item
-                    ">
-                Меню автотовары
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item searchbar__menu__item
-                    ">
-                Меню автотовары
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item searchbar__menu__item
-                    ">
-                Меню автотовары
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item searchbar__menu__item
-                    ">
-                Меню автотовары
-              </li>
-            </ul>
-          </li>
-
-          <li className="searchbar__item searchbar__item__tech">
-            бытовая техника
-            <ul className="searchbar-menu-wrapper searchbar__menu__wrapper__tech">
-              <li className="searchbar__menu__topline"></li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item searchbar__menu__item
-                    ">
-                Меню бытовая техника
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item searchbar__menu__item
-                    ">
-                Меню бытовая техника
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item searchbar__menu__item
-                    ">
-                Меню бытовая техника
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item searchbar__menu__item
-                    ">
-                Меню бытовая техника
-              </li>
-            </ul>
-          </li>
-
-          <li className="searchbar__item searchbar__item__handtool">
-            ручные инструменты
-            <ul className="
-                    searchbar-menu-wrapper searchbar__menu__wrapper__handtool
-                  ">
-              <li className="searchbar__menu__topline"></li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item searchbar__menu__item
-                    ">
-                Меню ручные инструменты
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item searchbar__menu__item
-                    ">
-                Меню ручные инструменты
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item searchbar__menu__item
-                    ">
-                Меню ручные инструменты
-              </li>
-              <li className="
-                      bort-menu-item
-                      searchbar-menu-item searchbar__menu__item
-                    ">
-                Меню ручные инструменты
-              </li>
-            </ul>
-          </li> */}
-
+          <SearchbarItem titleSearchbarItemProps='клининг' classSearchbarItemProps='clining'
+            hrefSearchbarMenuItemProps='#'
+            arraySearchbarMenuItemProps={[
+              [['#'], ['Меню клининг'], ['searchbar__menu__item__tool'],
+                '', []],
+              [['#'], ['Меню клининг'], ['searchbar__menu__item__tool'],
+                '', []],
+              [['#'], ['Меню клининг'], ['searchbar__menu__item__tool'],
+                '', []],
+              [['#'], ['Меню клининг'], ['searchbar__menu__item__tool'],
+                '', []],
+              [['#'], ['Меню клининг'], ['searchbar__menu__item__tool'],
+                '', []]
+            ]}
+          />
+          <SearchbarItem titleSearchbarItemProps='автотовары' classSearchbarItemProps='car'
+            hrefSearchbarMenuItemProps='#'
+            arraySearchbarMenuItemProps={[
+              [['#'], ['Меню автотовары'], ['searchbar__menu__item__tool'],
+                '', []],
+              [['#'], ['Меню автотовары'], ['searchbar__menu__item__tool'],
+                '', []],
+              [['#'], ['Меню автотовары'], ['searchbar__menu__item__tool'],
+                '', []],
+              [['#'], ['Меню автотовары'], ['searchbar__menu__item__tool'],
+                '', []],
+              [['#'], ['Меню автотовары'], ['searchbar__menu__item__tool'],
+                '', []]
+            ]}
+          />
+          <SearchbarItem titleSearchbarItemProps='бытовая техника' classSearchbarItemProps='tech'
+            hrefSearchbarMenuItemProps='#'
+            arraySearchbarMenuItemProps={[
+              [['#'], ['Меню бытовая техника'], ['searchbar__menu__item__tool'],
+                '', []],
+              [['#'], ['Меню бытовая техника'], ['searchbar__menu__item__tool'],
+                '', []],
+              [['#'], ['Меню бытовая техника'], ['searchbar__menu__item__tool'],
+                '', []],
+              [['#'], ['Меню бытовая техника'], ['searchbar__menu__item__tool'],
+                '', []],
+              [['#'], ['Меню бытовая техника'], ['searchbar__menu__item__tool'],
+                '', []]
+            ]}
+          />
+          <SearchbarItem titleSearchbarItemProps='ручные инструменты' classSearchbarItemProps='handtool'
+            hrefSearchbarMenuItemProps='#'
+            arraySearchbarMenuItemProps={[
+              [['#'], ['Меню ручные инструменты'], ['searchbar__menu__item__tool'],
+                '', []],
+              [['#'], ['Меню ручные инструменты'], ['searchbar__menu__item__tool'],
+                '', []],
+              [['#'], ['Меню ручные инструменты'], ['searchbar__menu__item__tool'],
+                '', []],
+              [['#'], ['Меню ручные инструменты'], ['searchbar__menu__item__tool'],
+                '', []],
+              [['#'], ['Меню ручные инструменты'], ['searchbar__menu__item__tool'],
+                '', []]
+            ]}
+          />
         </ul>
 
         <form action="#" className="search">
