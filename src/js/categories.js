@@ -10,5 +10,5 @@ const categories = () => {
 };
 
 categories();
-}, 0)
+}, 100)
 

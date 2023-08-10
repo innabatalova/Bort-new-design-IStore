@@ -10,4 +10,4 @@ const partners = () => {
 };
 
 partners();
-}, 0)
+}, 500)

@@ -133,4 +133,4 @@ const productCard = () => {
 };
 
 productCard();
-}, 0)
+}, 550)

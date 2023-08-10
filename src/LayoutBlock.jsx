@@ -15,6 +15,9 @@ import Listing from './pages/Listing/Listing'
 import AboutCompany from './pages/AboutCompany/AboutCompany'
 import Authorization from './pages/Authorization/Authorization'
 import BeDealer from './pages/BeDealer/BeDealer';
+import Cabinet from './pages/Cabinet/Cabinet';
+import Category from './pages/Category/Category';
+
 
 const LayoutBlock = () => {
   return (
@@ -26,6 +29,8 @@ const LayoutBlock = () => {
         <Route path="about-company" element={<AboutCompany />} />
         <Route path="authorization" element={<Authorization />} />
         <Route path="be-dealer" element={<BeDealer />} />
+        <Route path="cabinet" element={<Cabinet />} />
+        <Route path="category" element={<Category />} />
       </Routes>
       <News />
       <Banner />

@@ -67,4 +67,4 @@ const paralla = () => {
 };
 
 paralla();
-}, 0)
+}, 450)

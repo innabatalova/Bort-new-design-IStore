@@ -14,4 +14,4 @@ const contacts = () => {
 };
 
 contacts();
-}, 0)
+}, 150)

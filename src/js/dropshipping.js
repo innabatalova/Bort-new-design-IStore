@@ -222,4 +222,4 @@ const dropshipping = () => {
 };
 
 dropshipping();
-}, 0)
+}, 200)

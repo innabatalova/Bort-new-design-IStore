@@ -38,4 +38,4 @@ const cabinet = () => {
 };
 
 cabinet();
-}, 0)
+}, 50)
