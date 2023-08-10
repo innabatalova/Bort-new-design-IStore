@@ -72,7 +72,7 @@ const Header = () => {
               <span className="info__span">Доступность, эргономичность и качество инструментов,
                 <br />создаваемых для вас и вашего бизнеса.
               </span>
-              <span className="info__span info__work">Работаем с 1993 года!</span>
+              <span className="info__span info__work"> Работаем с 1993 года!</span>
             </div>
 
             <button className="bort-button-orange45 bort-button-orange45_ready">

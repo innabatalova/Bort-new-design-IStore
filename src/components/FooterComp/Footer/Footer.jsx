@@ -1,6 +1,6 @@
 import React from 'react'
 
-import FooterListingItem from '../FooterListingItem/FooterListingItem'
+import FooterListingItem from '../../DesignComponents/FooterListingItem'
 
 import FooterLogo from '../../../static/image/Bort_logo_footer.svg'
 import YouTubeIcon from '../../../static/image/Youtube.svg'
@@ -10,32 +10,39 @@ import TwitterIcon from '../../../static/image/Twitter.svg'
 
 const Footer = () => {
     const FooterListingItemPropsCatalog = [
-        ['#', 'Инструменты'], ['#', 'Измельчители'], ['#', 'Клининг'], ['#', 'Автотовары'], ['#', 'Бытовая техника'],
-        ['#', 'Товары для сада'], ['#', 'Ручные инструменты']
+        ['listing-item', '#', 'Инструменты'], ['listing-item', '#', 'Измельчители'], ['listing-item', '#', 'Клининг'], ['listing-item', '#', 'Автотовары'], 
+        ['listing-item', '#', 'Бытовая техника'], ['listing-item', '#', 'Товары для сада'], ['listing-item', '#', 'Ручные инструменты']
     ]
     const sortFooterListingItemPropsCatalog = FooterListingItemPropsCatalog.map((item, index) =>
-        <FooterListingItem key={index} hrefProps={item[0]} titleProps={item[1]} />)
+        <FooterListingItem key={index} classFooterListingItemProps={item[0]}
+        hrefFooterListingItemProps={item[1]} titleFooterListingItemProps={item[2]} />)
 
     const FooterListingItemPropsSocial = [
-        ['#', 'Youtube'], ['#', 'Facebook'], ['#', 'Instagram'], ['#', 'Pinterest'], ['#', 'Яндекс Дзен'],
-        ['#', 'Drive2']
+        ['listing-item', '#', 'Youtube'], ['listing-item', '#', 'Facebook'], ['listing-item', '#', 'Instagram'], 
+        ['listing-item', '#', 'Pinterest'], ['listing-item', '#', 'Яндекс Дзен'],
+        ['listing-item', '#', 'Drive2']
     ]
     const sortFooterListingItemPropsSocial = FooterListingItemPropsSocial.map((item, index) =>
-        <FooterListingItem key={index} hrefProps={item[0]} titleProps={item[1]} />)
+        <FooterListingItem key={index} classFooterListingItemProps={item[0]}
+            hrefFooterListingItemProps={item[1]} titleFooterListingItemProps={item[2]} />)
 
     const FooterListingItemPropsCompany = [
-        ['#', 'О компании'], ['#', 'Контакты'], ['#', 'Гарантия'], ['#', 'Сервисные центры'], ['#', 'Конфидециальность'],
-        ['#', 'Drive2']
+        ['listing-item', '#', 'О компании'], ['listing-item', '#', 'Контакты'], ['listing-item', '#', 'Гарантия'], 
+        ['listing-item', '#', 'Сервисные центры'], ['listing-item', '#', 'Конфидециальность'],
+        ['listing-item', '#', 'Drive2']
     ]
     const sortFooterListingItemPropsCompany = FooterListingItemPropsCompany.map((item, index) =>
-    <FooterListingItem key={index} hrefProps={item[0]} titleProps={item[1]} />)
+        <FooterListingItem key={index} classFooterListingItemProps={item[0]}
+            hrefFooterListingItemProps={item[1]} titleFooterListingItemProps={item[2]} />)
 
     const FooterListingItemPropsOther = [
-        ['#', 'Блог'], ['#', 'Каталог товаров'], ['#', 'Каталог клининг'], ['#', 'Акции и новости'], ['#', 'eXtreme серия'],
-        ['#', 'Карта сайта']
+        ['listing-item', '#', 'Блог'], ['listing-item', '#', 'Каталог товаров'], ['listing-item', '#', 'Каталог клининг'], 
+        ['listing-item', '#', 'Акции и новости'], ['listing-item', '#', 'eXtreme серия'],
+        ['listing-item', '#', 'Карта сайта']
     ]
     const sortFooterListingItemPropOther = FooterListingItemPropsOther.map((item, index) =>
-    <FooterListingItem key={index} hrefProps={item[0]} titleProps={item[1]} />)
+        <FooterListingItem key={index} classFooterListingItemProps={item[0]}
+            hrefFooterListingItemProps={item[1]} titleFooterListingItemProps={item[2]} />)
 
 
     return (

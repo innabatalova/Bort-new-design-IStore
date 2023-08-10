@@ -1,6 +1,6 @@
 import React from 'react'
 
-import BreadcrumbListItem from '../../components/PagesComp/ListingProduct/BreadcrumbListItem'
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
 import FormField from '../../components/PagesComp/FormField/FormField'
 
 const Authorization = () => {
@@ -8,18 +8,11 @@ const Authorization = () => {
         ['index', 'onelevel-breadcrumb-nav', 'Главная'],
         ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Авторизация']
     ]
-    const sortBreadcrumbListItemProps = breadcrumbListItemProps.map((item, index) =>
-        <BreadcrumbListItem key={index} hrefBreadcrumbListItemProps={item[0]} classBreadcrumbListItemProps={item[1]}
-            titleBreadcrumbListItemProps={item[2]} />
-    )
+
     return (
         <main className="authorization">
             <div className="grid-container">
-                <nav className="breadcrumb">
-                    <ul className="breadcrumb-list onelevel-breadcrumb-list">
-                        {sortBreadcrumbListItemProps}
-                    </ul>
-                </nav>
+                <Breadcrumb breadcrumbListItemProps={breadcrumbListItemProps} />
                 <h2 className="authorization-title">Авторизация</h2>
                 <div className="bort-modal authorization-modal">
                     <form action="#" className="bort-modal-form authorization-form">

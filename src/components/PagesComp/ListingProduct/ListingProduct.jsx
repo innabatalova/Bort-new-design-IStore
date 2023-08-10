@@ -1,6 +1,6 @@
 import React from 'react'
 
-import BreadcrumbListItem from './BreadcrumbListItem'
+import Breadcrumb from '../../Breadcrumb/Breadcrumb'
 
 const ListingProduct = () => {
     const breadcrumbListItemProps = [
@@ -8,18 +8,11 @@ const ListingProduct = () => {
         ['index.html', 'breadcrumb-list__nav', 'Инструменты'],
         ['index.html', ' ', 'Аккумуляторный инструмент']
     ]
-    const sortBreadcrumbListItemProps = breadcrumbListItemProps.map((item, index) =>
-        <BreadcrumbListItem key={index} hrefBreadcrumbListItemProps={item[0]} classBreadcrumbListItemProps={item[1]}
-            titleBreadcrumbListItemProps={item[2]} />
-    )
+
     return (
         <main className="listing-product">
             <div className="grid-container">
-                <nav className="breadcrumb listing-product-breadcrumb">
-                    <ul className="breadcrumb-list">
-                        {sortBreadcrumbListItemProps}
-                    </ul>
-                </nav>
+                <Breadcrumb breadcrumbListItemProps={breadcrumbListItemProps} />
                 <h1 className="listing-product-title">АККУМУЛЯТОРНЫЙ ИНСТРУМЕНT</h1>
             </div>
         </main>

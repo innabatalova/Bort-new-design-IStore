@@ -1,6 +1,6 @@
 import React from 'react'
 
-import BreadcrumbListItem from '../../components/PagesComp/ListingProduct/BreadcrumbListItem'
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
 
 import AboutCompanyImgOne from '../../static/image/about-company-one.jpg'
 import AboutCompanyImgTwo from '../../static/image/about-company-two.jpg'
@@ -11,20 +11,11 @@ const AboutCompany = () => {
         ['index', 'onelevel-breadcrumb-nav', 'Главная'],
         ['about-company', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'О компании']
     ]
-    const sortBreadcrumbListItemProps = breadcrumbListItemProps.map((item, index) =>
-        <BreadcrumbListItem key={index} hrefBreadcrumbListItemProps={item[0]} classBreadcrumbListItemProps={item[1]}
-            titleBreadcrumbListItemProps={item[2]} />
-    )
+
     return (
         <main className="about-company">
             <div className="grid-container">
-
-                <nav className="breadcrumb">
-                    <ul className="breadcrumb-list onelevel-breadcrumb-list">
-                        {sortBreadcrumbListItemProps}
-                    </ul>
-                </nav>
-
+                <Breadcrumb breadcrumbListItemProps={breadcrumbListItemProps}/>
                 <div className="about-company-wrapper">
                     <div className="about-company-info-wrapper">
                         <h2 className="about-company-title">О компании</h2>

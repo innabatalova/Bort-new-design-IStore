@@ -1,6 +1,6 @@
 import React from 'react'
 
-import CarouselItemCard from './CarouselItemCard'
+import CarouselItemCard from '../DesignComponents/CarouselItemCard'
 
 const News = () => {
     const CarouselItemCardProps = [
