@@ -1,7 +1,7 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Design from './components/DesignComponents/Design';
+import Design from './components/DesignComponents/Design'
 
 import Header from './components/HeaderComp/Header/Header'
 import News from './components/News/News'
@@ -14,9 +14,12 @@ import ModalOpen from './components/ModalOpen/ModalOpen'
 import Listing from './pages/Listing/Listing'
 import AboutCompany from './pages/AboutCompany/AboutCompany'
 import Authorization from './pages/Authorization/Authorization'
-import BeDealer from './pages/BeDealer/BeDealer';
-import Cabinet from './pages/Cabinet/Cabinet';
-import Category from './pages/Category/Category';
+import BeDealer from './pages/BeDealer/BeDealer'
+import Cabinet from './pages/Cabinet/Cabinet'
+import Category from './pages/Category/Category'
+import Contacts from './pages/Сontacts/Сontacts'
+import Dropshipping from './pages/Dropshipping/Dropshipping'
+
 
 
 const LayoutBlock = () => {
@@ -31,6 +34,8 @@ const LayoutBlock = () => {
         <Route path="be-dealer" element={<BeDealer />} />
         <Route path="cabinet" element={<Cabinet />} />
         <Route path="category" element={<Category />} />
+        <Route path="contacts" element={<Contacts />} />
+        <Route path="dropshipping" element={<Dropshipping />} />
       </Routes>
       <News />
       <Banner />
