@@ -19,6 +19,9 @@ import Cabinet from './pages/Cabinet/Cabinet'
 import Category from './pages/Category/Category'
 import Contacts from './pages/Сontacts/Сontacts'
 import Dropshipping from './pages/Dropshipping/Dropshipping'
+import Guarantee from './pages/Guarantee/Guarantee'
+import NewsPreview from './pages/NewsPreview/NewsPreview'
+import NewsView from './pages/NewsView/NewsView'
 
 
 
@@ -36,6 +39,9 @@ const LayoutBlock = () => {
         <Route path="category" element={<Category />} />
         <Route path="contacts" element={<Contacts />} />
         <Route path="dropshipping" element={<Dropshipping />} />
+        <Route path="guarantee" element={<Guarantee />} />
+        <Route path="news-preview" element={<NewsPreview />} />
+        <Route path="news-view" element={<NewsView />} />
       </Routes>
       <News />
       <Banner />

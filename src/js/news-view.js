@@ -10,4 +10,4 @@ const newsView = () => {
 };
 
 newsView();
-}, 400)
+}, 115)

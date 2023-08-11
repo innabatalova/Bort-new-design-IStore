@@ -8,13 +8,10 @@ import SearchImg from '../../../static/image/search.svg'
 const Searchbar = () => {
   return (
     <div className="searchbar">
-
       <div className="searchbar-scrolling-wrapper">
         <a href="index.html" className="searchbar-scrolling-link"><img src={BortLogo1} alt="Bort logo"
           className="searchbar-scrolling-logo" /></a>
-
         <ul className="searchbar__list">
-
           <SearchbarItem titleSearchbarItemProps='инструменты' classSearchbarItemProps='tool'
             hrefSearchbarMenuItemProps='category.html'
             arraySearchbarMenuItemProps={[
@@ -116,7 +113,6 @@ const Searchbar = () => {
             ]}
           />
         </ul>
-
         <form action="#" className="search">
           <input type="text" className="search-input" />
           <button className="search-button">

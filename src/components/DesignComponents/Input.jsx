@@ -10,7 +10,7 @@ const Input = ({ classInputProps, classInputSpanProps, titleInputProps,
         name={nameInputProps}
         className={classInputFieldProps}
         required
-        minlength={minlengthInputProps}
+        minLength={minlengthInputProps}
       />
     </div>
   )

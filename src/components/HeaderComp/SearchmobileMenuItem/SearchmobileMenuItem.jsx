@@ -11,14 +11,12 @@ const SearchmobileMenuItem = ({ hrefSearchmobileMenuItemProps, titleSearchmobile
 
   return (
     <li className="searchmobile-menu-item">
-
       <div className={`searchmobile-item-wrapper searchmobile-` + classSearchmobileMenuItemProps}>
         <span className="searchmobile-menu-title">
           <a href={hrefSearchmobileMenuItemProps}>{titleSearchmobileMenuItemProps}</a>
         </span>
         <span className="subplus searchmobile-menu-plus">+</span>
       </div>
-
       <ul className={`searchmobile-submenu submenu-` + classSearchmobileMenuItemProps}>
         {sortSearchmobileSubmenuItems}
       </ul>

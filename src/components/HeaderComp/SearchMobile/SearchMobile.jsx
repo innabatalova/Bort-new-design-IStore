@@ -35,7 +35,6 @@ const SearchMobile = () => {
         <span className="geolocation__title geolocation__title_searchmobile">Ваш город: </span>
         <span className="geolocation__city">Москва</span>
       </div>
-
       <ul className="searchmobile-wrapper">
         <SearchMobileItem hrefSearchMobileItemProps='listing.html' titleSearchMobileItemProps='инструменты' classSearchMobileItemProps='tool'
           arraySearchMobileItemProps={[
@@ -107,7 +106,6 @@ const SearchMobile = () => {
           ]}
         />
       </ul>
-
       <div className="footer-mobile">
         <div className="footer-mobile-listing-wrapper">
           <ul className="footer-mobile-listing">
@@ -117,28 +115,22 @@ const SearchMobile = () => {
             {sortFooterMobileListingRight}
           </ul>
         </div>
-
         <div className="footer-contacts">
           <a href="tel:74997001034" target="_blank" className="footer-phone">+7 <span
             className="footer-phone-code">(499)</span> 700-10-34</a>
-
           <div className="footer-address">
             Россия, Москва, Авиационная улица, 79В
           </div>
-
           <div className="footer-map">
             <a href="#" target="_blank">Показать на карте</a>
           </div>
-
           <div className="icons">
             <a href="#" target="_blank" className="footer-link">
               <img src={YoutubeIcon} alt="Youtube icon" className="icons-image" />
             </a>
-
             <a href="#" target="_blank" className="footer-link">
               <img src={VKIcon} alt="VK icon" className="icons-image" />
             </a>
-
             <a href="#" target="_blank" className="footer-link">
               <img src={OKIcon} alt="OK icon" className="icons-image" />
             </a>

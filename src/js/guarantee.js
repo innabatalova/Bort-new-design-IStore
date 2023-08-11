@@ -14,4 +14,4 @@ const guarantee = () => {
 };
 
 guarantee();
-}, 250)
+}, 125)

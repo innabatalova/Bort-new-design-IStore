@@ -26,7 +26,6 @@ const Header = () => {
 
   return (
     <header className="header">
-
       <div className="navigation">
         <div className="grid-container">
           <div className="navigation-wrapper">
@@ -46,7 +45,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-
       <div className="grid-container">
         <div className="logo-wrapper">
           <button type="button" className="logo-mobile">
@@ -56,7 +54,6 @@ const Header = () => {
           </button>
           <img src={CloseMobileIcon} alt="close mobile icon" className="logo-close" />
           <a href="index.html"><img src={BortLogo1} alt="Bort logo" className="logo-image" /></a>
-
           <form action="#" className="logo-search">
             <img src={SearchImg} alt="icon search" className="logo-search-image" />
             <input type="text" className="logo-search-input" placeholder="Поиск по каталогу" />
@@ -64,9 +61,7 @@ const Header = () => {
               <img src={LogoSearchArrow} alt="logo search arrow" className="logo-search-arrow" />
             </button>
           </form>
-
           <SearchMobile />
-
           <div className="info-wrapper">
             <div className="info">
               <span className="info__span">Доступность, эргономичность и качество инструментов,
@@ -74,18 +69,15 @@ const Header = () => {
               </span>
               <span className="info__span info__work"> Работаем с 1993 года!</span>
             </div>
-
             <button className="bort-button-orange45 bort-button-orange45_ready">
               Написать нам
             </button>
           </div>
         </div>
       </div>
-
       <div className="grid-container">
         <Searchbar />
       </div>
-
     </header>
   )
 }

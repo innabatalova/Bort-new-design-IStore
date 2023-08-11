@@ -14,12 +14,10 @@ const SearchbarItem = ({ titleSearchbarItemProps, classSearchbarItemProps, array
   return (
     <li className={`searchbar__item searchbar__item__` + classSearchbarItemProps}>
       {titleSearchbarItemProps}
-
       <ul className={`searchbar-menu-wrapper ` + `searchbar__menu__wrapper__` + classSearchbarItemProps}>
         <li className="searchbar__menu__topline"></li>
         {sortSearchbarMenuItemProps}
       </ul>
-
     </li>
   )
 }

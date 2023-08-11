@@ -8,9 +8,8 @@ const paralla = () => {
   let counter = 0;
   let x = 130;
 
-  if(!scrollParallax === undefined){
-
-  $(window).on('scroll', function () {
+  if(!(scrollParallax === undefined)){
+    $(window).on('scroll', function () {
     let scroll = $(window).scrollTop() + $(window).height();
     let offset = scrollParallax.offset().top + x;
 
@@ -50,7 +49,7 @@ const paralla = () => {
     }
   });
 
-  let scrollParallax4 = $(".parallax-section4");
+  let scrollParallax4 = $(".parallax-section3");
 
   $(window).on('scroll', function () {
     let scroll4 = $(window).scrollTop() + $(window).height();
@@ -67,4 +66,4 @@ const paralla = () => {
 };
 
 paralla();
-}, 450)
+}, 120)

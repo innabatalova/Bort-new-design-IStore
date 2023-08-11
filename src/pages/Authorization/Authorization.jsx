@@ -2,6 +2,7 @@ import React from 'react'
 
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
 import FormField from '../../components/PagesComp/FormField/FormField'
+import Button from '../../components/DesignComponents/Button'
 
 const Authorization = () => {
     const breadcrumbListItemProps = [
@@ -25,9 +26,8 @@ const Authorization = () => {
                             <label htmlFor="bcheck" className="bort-checkbox-label">Запомнить меня</label>
                             <a href="#" target="_blank" className="authorization-form-link">Забыли пароль?</a>
                         </div>
-                        <button className="bort-modal-button bort-button-orange45 authorization-form-button">
-                            Войти
-                        </button>
+                        <Button classDesignButtonProps='orange' classSizeButtonProps='45'
+                            classButtonProps='bort-modal-button authorization-form-button' titleButtonProps='Войти' />
                         <div>
                             <a href="registration.html" target="_blank" className="authorization-form-newlink">Создать новую учетную запись</a>
                         </div>

@@ -19,11 +19,11 @@ const Dropshipping = () => {
   ]
 
   return(
-    <main class="dropshipping">
-      <div class="grid-container">
+    <main className="dropshipping">
+      <div className="grid-container">
         <Breadcrumb breadcrumbListItemProps={breadcrumbListItemProps} />
-        <h2 class="dropshipping-title">Дропшиппинг</h2>
-        <div class="dropshipping-wrapper">
+        <h2 className="dropshipping-title">Дропшиппинг</h2>
+        <div className="dropshipping-wrapper">
           <DropshippingBlock classTopDropshippingBlockProps='drop dropshipping-menu-item-active' 
             classBottomDropshippingBlockProps='drop dropshipping-info-block-visible'
             titleDropshippingBlockProps='Что такое дропшиппинг?' infoDropshippingBlockProps={<DropshippingInfoDrop/>}/>

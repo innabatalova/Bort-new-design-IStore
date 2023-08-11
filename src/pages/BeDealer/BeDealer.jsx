@@ -4,6 +4,7 @@ import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
 import BeDealerBoardDesc from '../../components/PagesComp/BeDealerBoardDesc/BeDealerBoardDesc'
 import Input from '../../components/DesignComponents/Input'
 import Button from '../../components/DesignComponents/Button'
+import TextParagraph from '../../components/TextParagraph/TextParagraph'
 
 import BeDealerBoardOne from '../../static/image/be-dealer-board-one.svg'
 import BeDealerBoardTwo from '../../static/image/be-dealer-board-two.svg'
@@ -22,13 +23,11 @@ const BeDealer = () => {
       <div className="grid-container">
         <Breadcrumb breadcrumbListItemProps={breadcrumbListItemProps} />
         <h2 className="be-dealer-title">СТАТЬ ДИЛЕРОМ</h2>
-        <p className="be-dealer-subtitle">
-          Компания Bort Global имеет обширную дилерскую сеть на территории
+        <TextParagraph classTextParagraphProps='be-dealer-subtitle'
+          textTextParagraphProps='Компания Bort Global имеет обширную дилерскую сеть на территории
           Российской Федерации и за рубежом. Мы заинтересованы в её развитии и
           приглашаем московские и региональные организации к долгосрочному и
-          взаимовыгодному сотрудничеству.
-        </p>
-
+          взаимовыгодному сотрудничеству.'/>
         <h3 className="be-dealer__title">Став нашим дилером, Вы получите:</h3>
         <div className="be-dealer__board__wrapper">
           <BeDealerBoardDesc scrBeDealerBoardDescProps={BeDealerBoardOne} titleBeDealerBoardDescProps='Выгодные условия'
@@ -57,51 +56,38 @@ const BeDealer = () => {
             ]} />
         </div>
         <h3 className="be-dealer__info__title">Кто может стать дилером?</h3>
-        <p className="be-dealer__info__text">
-          Нашим дилером может стать любая организация или индивидуальный
-          предприниматель, осуществляющие регулярные закупки.
-        </p>
-
+        <TextParagraph classTextParagraphProps='be-dealer__info__text'
+          textTextParagraphProps='Нашим дилером может стать любая организация или индивидуальный
+          предприниматель, осуществляющие регулярные закупки.'/>
         <h3 className="be-dealer__info__title">Как стать дилером?</h3>
-        <p className="be-dealer__info__text">
-          Стать дилером компании Bort Global несложно. Об условиях получения
+        <TextParagraph classTextParagraphProps='be-dealer__info__text'
+          textTextParagraphProps='Стать дилером компании Bort Global несложно. Об условиях получения
           статуса дилера, Вы можете узнать у наших менеджеров по телефону:
           8(499)700-10-34, отправив запрос на электронный адрес:
           b2b-service@bort-global.com или заполнив форму ниже. Наш специалист
-          свяжется с вами в течение двух рабочих дней.
-        </p>
-
+          свяжется с вами в течение двух рабочих дней.'/>
         <form className="be-dealer__form__wrapper">
-
           <Input classInputProps='be-dealer__input' classInputSpanProps='bort-modal-text be-dealer__input__req' 
             titleInputProps='Название компании' typeInputProps='text' nameInputProps='name' 
             classInputFieldProps='bort-modal-contacts be-dealer__input__field' minlengthInputProps='2' />
-
           <Input classInputProps='be-dealer__input' classInputSpanProps='bort-modal-text'
             titleInputProps='Адрес сайта' typeInputProps='text' nameInputProps='name'
             classInputFieldProps='bort-modal-contacts be-dealer__input__field' minlengthInputProps='2' />
-
           <Input classInputProps='be-dealer__input' classInputSpanProps='bort-modal-text be-dealer__input__req'
             titleInputProps='Сфера деятельности' typeInputProps='text' nameInputProps='name'
             classInputFieldProps='bort-modal-contacts be-dealer__input__field' minlengthInputProps='2' />
-
           <Input classInputProps='be-dealer__input' classInputSpanProps='bort-modal-text'
             titleInputProps='Адрес офис' typeInputProps='text' nameInputProps='name'
             classInputFieldProps='bort-modal-contacts be-dealer__input__field' minlengthInputProps='2' />
-
           <Input classInputProps='be-dealer__input' classInputSpanProps='bort-modal-text be-dealer__input__req'
             titleInputProps='ФИО' typeInputProps='text' nameInputProps='name'
             classInputFieldProps='bort-modal-contacts be-dealer__input__field' minlengthInputProps='2' />
-
           <Input classInputProps='be-dealer__input' classInputSpanProps='bort-modal-text be-dealer__input__req'
             titleInputProps='Контактный телефон' typeInputProps='tel' nameInputProps='phone'
             classInputFieldProps='bort-phone bort-modal-contacts invalid be-dealer__input__field' minlengthInputProps='18' />
-
           <Input classInputProps='be-dealer__input' classInputSpanProps='bort-modal-text be-dealer__input__req'
             titleInputProps='E-mail' typeInputProps='email' nameInputProps='Email'
             classInputFieldProps='bort-modal-contacts invalid be-dealer__input__field' minlengthInputProps='2' />
-
-
           <div className="be-dealer__area">
             <span className="bort-modal-text be-dealer__input__req">Дополнительная информация</span>
             <textarea
@@ -111,12 +97,9 @@ const BeDealer = () => {
               className="bort-modal-message be-dealer__area__field"
             ></textarea>
           </div>
-
           <Button classDesignButtonProps='orange' classSizeButtonProps='45'
             classButtonProps='bort-modal-button be-dealer__button' titleButtonProps='Отправить' />
-
         </form>
-
       </div>
     </main>
   )

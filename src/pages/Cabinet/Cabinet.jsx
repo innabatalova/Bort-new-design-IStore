@@ -3,6 +3,7 @@ import React from 'react'
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
 import Button from '../../components/DesignComponents/Button'
 import CabinetSertItem from '../../components/CabinetSertItem/CabinetSertItem'
+import TextParagraph from '../../components/TextParagraph/TextParagraph'
 
 const Cabinet = () => {
   const breadcrumbListItemProps = [
@@ -13,20 +14,16 @@ const Cabinet = () => {
   return (
     <main className="cabinet">
       <div className="grid-container">
-
         <Breadcrumb breadcrumbListItemProps={breadcrumbListItemProps} />
-
         <h2 className="cabinet-title">Личный кабинет</h2>
-
         <div className="cabinet-wrapper">
-
           <div className="bort-menu-item cabinet-menu-item cabinet-menu-item-userinfo">
             <span>Информация</span>
           </div>
           <div className="cabinet-info-block cabinet-info-block-userinfo">
-            <p className="cabinet-userinfo">Информация о пользователе</p>
+            <TextParagraph classTextParagraphProps='cabinet-userinfo'
+              textTextParagraphProps='Информация о пользователе'/>
           </div>
-
           <div
             className="
               bort-menu-item
@@ -47,7 +44,6 @@ const Cabinet = () => {
               <Button classDesignButtonProps='orange' classSizeButtonProps='45'
                 classButtonProps='cabinet-info-button' titleButtonProps='Добавить' />
             </form>
-
             <div className="cabinet-sert-wrapper">
               <table>
                 <thead>
@@ -154,12 +150,10 @@ const Cabinet = () => {
               </table>
             </div>
           </div>
-
           <div className="bort-menu-item cabinet-menu-item cabinet-menu-item-close">
             <span>Выход</span>
           </div>
         </div>
-
       </div>
     </main>
   )

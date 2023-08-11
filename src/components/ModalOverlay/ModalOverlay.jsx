@@ -1,31 +1,34 @@
 import React from 'react'
 
+import Input from '../DesignComponents/Input'
+import Button from '../DesignComponents/Button'
+
 const ModalOverlay = () => {
     return (
         <div className="modal-overlay">
             <div className="bort-modal modal-overlay-form-modal">
                 <h3 className="bort-modal-title modal-overlay-title">написать нам</h3>
                 <form action="#" className="bort-modal-form modal-overlay-modal-form">
-                    <div>
-                        <span className="bort-modal-text">Ваше ФИО</span>
-                        <input type="text" name="name" className="bort-modal-contacts modal-overlay-form-modal-contacts" required
-                            minLength="2" />
-                    </div>
-                    <div>
-                        <span className="bort-modal-text">Контактный телефон</span>
-                        <input name="phone" type="tel" className="bort-phone bort-modal-contacts invalid modal-overlay-form-modal-contacts" required minLength="18" />
-                    </div>
-                    <div>
-                        <span className="bort-modal-text">E-mail</span>
-                        <input name="Email" type="email" className="bort-modal-contacts invalid modal-overlay-form-modal-contacts" required minLength="2" />
-                    </div>
+                    <Input classInputSpanProps='bort-modal-text' titleInputProps='Ваше ФИО' 
+                        typeInputProps='text' nameInputProps='name' 
+                        classInputFieldProps='bort-modal-contacts modal-overlay-form-modal-contacts'
+                        minlengthInputProps='2' />
+                    <Input classInputSpanProps='bort-modal-text' titleInputProps='Контактный телефон'
+                        typeInputProps='tel' nameInputProps='phone'
+                        classInputFieldProps='bort-phone bort-modal-contacts invalid modal-overlay-form-modal-contacts'
+                        minlengthInputProps='18' />
+                    <Input classInputSpanProps='bort-modal-text' titleInputProps='E-mail'
+                        typeInputProps='email' nameInputProps='Email'
+                        classInputFieldProps='bort-modal-contacts invalid modal-overlay-form-modal-contacts'
+                        minlengthInputProps='2' />
                     <div>
                         <span className="bort-modal-text">Ваше сообщение</span>
                         <textarea name="message" cols="30" rows="10" className="bort-modal-message modal-overlay-form-modal-contacts modal-overlay-modal-message"></textarea>
                     </div>
-                    <button className="bort-modal-button bort-button-orange50 modal-overlay-modal-button">
-                        Отправить
-                    </button>
+                    <Button classDesignButtonProps='orange' classSizeButtonProps='50' 
+                        classButtonProps='bort-modal-button modal-overlay-modal-button'
+                        titleButtonProps='Отправить'
+                    />
                 </form>
             </div>
         </div>

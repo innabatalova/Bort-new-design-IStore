@@ -1,6 +1,7 @@
 import React from 'react'
 
 import ListingProductCardItem from './ListingProductCard'
+import TextParagraph from '../../TextParagraph/TextParagraph'
 
 import ListingCardOne from '../../../static/listing_image/listing-card-one.jpg'
 import ListingCardTwo from '../../../static/listing_image/listing-card-two.jpg'
@@ -26,15 +27,12 @@ const ListingProductCards = () => {
 
     return (
         <section className="listing-product-cards">
-
             <div className="grid-container">
-
                 <div className="listing-product-cards-wrapper">
                     {sortListingProductCardItemProps}
                 </div>
-
-                <p className="listing-product-info">
-                    Аккумуляторная дрель-шуруповерт поможет быстро открутить и закрутить
+                <TextParagraph classTextParagraphProps='listing-product-info'
+                    textTextParagraphProps='Аккумуляторная дрель-шуруповерт поможет быстро открутить и закрутить
                     гайки, винты, саморезы и прочий крепеж. Безударные модели работают с
                     деревом, пластиком, гипсокартном, а для работы с твердыми материалами,
                     такими как камень, бетон или кирпичная кладка, подойдут ударные
@@ -49,9 +47,7 @@ const ListingProductCards = () => {
                     30–35 Нм подойдут для большинства типовых задач. Аккумуляторные
                     дрели-шуруповерты Bort обладают современными функциями, такими как
                     реверс, быстрозажимной патрон, подсветка рабочей зоны, 2 скорости
-                    работы.
-                </p>
-
+                    работы.'/>
             </div>
         </section>
     )

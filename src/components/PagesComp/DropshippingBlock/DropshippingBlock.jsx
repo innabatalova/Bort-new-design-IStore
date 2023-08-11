@@ -4,10 +4,10 @@ const DropshippingBlock = ({ classTopDropshippingBlockProps, classBottomDropship
   return(
     <>
       <div
-        class={`bort-menu-item dropshipping-menu-item dropshipping-menu-item-` + classTopDropshippingBlockProps}>
+        className={`bort-menu-item dropshipping-menu-item dropshipping-menu-item-` + classTopDropshippingBlockProps}>
         <span>{titleDropshippingBlockProps}</span>
       </div>
-      <div class={`dropshipping-info-block dropshipping-info-block-` + classBottomDropshippingBlockProps}>
+      <div className={`dropshipping-info-block dropshipping-info-block-` + classBottomDropshippingBlockProps}>
         {infoDropshippingBlockProps}
       </div>
     </>

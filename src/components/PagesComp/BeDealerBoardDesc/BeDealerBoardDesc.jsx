@@ -19,7 +19,6 @@ const BeDealerBoardDesc = ({ scrBeDealerBoardDescProps, titleBeDealerBoardDescPr
         <h4 className="be-dealer__board__title">{titleBeDealerBoardDescProps}</h4>
       </div>
       <span className="be-dealer__board__bar"></span>
-
       <ul className="be-dealer__board__list">
         {sortItemsBeDealerBoardDescProps}
       </ul>

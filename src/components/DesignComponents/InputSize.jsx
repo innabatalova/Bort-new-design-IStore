@@ -1,10 +1,11 @@
 import React from 'react'
 
-const InputSize = ({ classInputSizeSpanProps, titleInputSizeProps, classInputSizeInputProps, typeInputSizeProps, disabledInputSizeProps, placeholderInputSizeProps }) => {
+const InputSize = ({ classInputSizeSpanProps, titleInputSizeProps, classInputSizeInputProps, typeInputSizeProps, nameInputSizeProps, disabledInputSizeProps, placeholderInputSizeProps }) => {
   return (
     <>
-      <span class={classInputSizeSpanProps}>{titleInputSizeProps}</span>
-      <input class={classInputSizeInputProps} type={typeInputSizeProps} disabled={disabledInputSizeProps} placeholder={placeholderInputSizeProps} />
+      <span className={classInputSizeSpanProps}>{titleInputSizeProps}</span>
+      <input className={classInputSizeInputProps} type={typeInputSizeProps} name={nameInputSizeProps}
+      disabled={disabledInputSizeProps} placeholder={placeholderInputSizeProps} />
     </>
   )
 }

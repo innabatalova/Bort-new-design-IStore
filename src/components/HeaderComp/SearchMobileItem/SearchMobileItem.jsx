@@ -20,7 +20,6 @@ const SearchMobileItem = ({ hrefSearchMobileItemProps, titleSearchMobileItemProp
       <ul className={`searchmobile-menu menu-` + classSearchMobileItemProps}>
         {sortSearchmobileMenuItem}
       </ul>
-
     </li>
   )
 }
