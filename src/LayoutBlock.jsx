@@ -22,8 +22,7 @@ import Dropshipping from './pages/Dropshipping/Dropshipping'
 import Guarantee from './pages/Guarantee/Guarantee'
 import NewsPreview from './pages/NewsPreview/NewsPreview'
 import NewsView from './pages/NewsView/NewsView'
-
-
+import Partners from './pages/Partners/Partners'
 
 const LayoutBlock = () => {
   return (
@@ -42,6 +41,7 @@ const LayoutBlock = () => {
         <Route path="guarantee" element={<Guarantee />} />
         <Route path="news-preview" element={<NewsPreview />} />
         <Route path="news-view" element={<NewsView />} />
+        <Route path="partners" element={<Partners />} />
       </Routes>
       <News />
       <Banner />
