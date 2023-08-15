@@ -23,6 +23,8 @@ import Guarantee from './pages/Guarantee/Guarantee'
 import NewsPreview from './pages/NewsPreview/NewsPreview'
 import NewsView from './pages/NewsView/NewsView'
 import Partners from './pages/Partners/Partners'
+import Politics from './pages/Politics/Politics'
+import Registration from './pages/Registration/Registration'
 
 const LayoutBlock = () => {
   return (
@@ -42,6 +44,8 @@ const LayoutBlock = () => {
         <Route path="news-preview" element={<NewsPreview />} />
         <Route path="news-view" element={<NewsView />} />
         <Route path="partners" element={<Partners />} />
+        <Route path="politics" element={<Politics />} />
+        <Route path="registration" element={<Registration />} />
       </Routes>
       <News />
       <Banner />
