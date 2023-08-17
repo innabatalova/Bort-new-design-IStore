@@ -11,6 +11,7 @@ import ScrollArrow from './components/ScrollArrow/ScrollArrow'
 import ModalOverlay from './components/ModalOverlay/ModalOverlay'
 import ModalOpen from './components/ModalOpen/ModalOpen'
 
+import Main from './pages/Main/Main'
 import Listing from './pages/Listing/Listing'
 import AboutCompany from './pages/AboutCompany/AboutCompany'
 import Authorization from './pages/Authorization/Authorization'
@@ -32,7 +33,8 @@ const LayoutBlock = () => {
       <Header />
       <Routes>
         <Route path="design" element={<Design />} />
-        <Route path="*" element={<Listing />} />
+        <Route path="*" element={<Main />} />
+        <Route path="listing" element={<Listing />} />
         <Route path="about-company" element={<AboutCompany />} />
         <Route path="authorization" element={<Authorization />} />
         <Route path="be-dealer" element={<BeDealer />} />

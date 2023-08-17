@@ -9,6 +9,11 @@ const index = () => {
   let left = $('.grid-container').offset().left;
   let marginLeft = left + 15;
   $(".main-card-wrapper").css("left", marginLeft + "px");
+  $(window).on("resize", function () {
+    let left = $('.grid-container').offset().left;
+    let marginLeft = left + 15;
+    $(".main-card-wrapper").css("left", marginLeft + "px");
+  });
 
   //создание кликабельности для кнопки "Стать дилером" на главной странице
   let linkDealer = $(".be-dealer-button-link");
@@ -32,8 +37,8 @@ const index = () => {
     navContainer: ".main-slider-navigation",
     dotsEach: true,
     navText: [
-      "<img src='image/main-prev.svg'>",
-      "<img src='image/main-next.svg'>",
+      "<img src='http://localhost:3000/img/main-prev.svg'>",
+      "<img src='http://localhost:3000/img/main-next.svg'>"
     ],
   });
 
@@ -57,8 +62,8 @@ const index = () => {
     nav: false,
     navContainer: ".novelty-slider-navigation",
     navText: [
-      "<img src='image/novelty-slider-prev.svg'>",
-      "<img src='image/novelty-slider-next.svg'>",
+      "<img src='http://localhost:3000/img/novelty-slider-prev.svg'>",
+      "<img src='http://localhost:3000/img/novelty-slider-next.svg'>"
     ],
     responsive: {
       360: {
@@ -101,8 +106,8 @@ const index = () => {
     nav: false,
     navContainer: ".popular-slider-navigation",
     navText: [
-      "<img src='image/novelty-slider-prev.svg'>",
-      "<img src='image/novelty-slider-next.svg'>",
+      "<img src='http://localhost:3000/img/novelty-slider-prev.svg'>",
+      "<img src='http://localhost:3000/img/novelty-slider-next.svg'>"
     ],
     responsive: {
       360: {
@@ -143,4 +148,4 @@ const index = () => {
 
 index();
 
-}, 300)
+}, 100)
