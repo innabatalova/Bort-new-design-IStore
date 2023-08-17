@@ -102,8 +102,8 @@ const productCard = () => {
     nav: false,
     navContainer: ".related-slider-navigation",
     navText: [
-      "<img src='image/novelty-slider-prev.svg'>",
-      "<img src='image/novelty-slider-next.svg'>",
+      "<img src='http://localhost:3000/img/novelty-slider-prev.svg'>",
+      "<img src='http://localhost:3000/img/novelty-slider-next.svg'>"
     ],
     responsive: {
       360: {
