@@ -18,17 +18,17 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(s[ac]ss|css)$/i,
         exclude: /node_modules/,
         use: ["style-loader", "css-loader", "postcss-loader", "resolve-url-loader", "sass-loader"],
       },
-          {
-                    test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                    loader: "file-loader",
-                    options: {
-                      name: 'img/[name].[ext]',
-                    },
-                },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        loader: "file-loader",
+        options: {
+          name: 'img/[name].[ext]',
+        },
+      },
       { test: /\.(jsx)?$/, use: "babel-loader" },
       { test: /\.(js)?$/, use: "babel-loader" },
     ],

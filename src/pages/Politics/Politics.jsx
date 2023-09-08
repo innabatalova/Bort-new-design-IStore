@@ -7,7 +7,7 @@ import Button from '../../components/DesignComponents/Button'
 
 const Politics = () => {
   const breadcrumbListItemProps = [
-    ['index', 'onelevel-breadcrumb-nav', 'Главная'],
+    ['/', 'onelevel-breadcrumb-nav', 'Главная'],
     ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Политика конфиденциальности']
   ]
 
@@ -400,9 +400,7 @@ const Politics = () => {
                   странице по адресу
                   <a
                     className="politics-text-link"
-                    href="http://ru.bort-global.com/politika-konfidencialnosti.html"
-                  >http://ru.bort-global.com/politika-konfidencialnosti.html</a
-                  >
+                    href="http://ru.bort-global.com/politika-konfidencialnosti.html">http://ru.bort-global.com/politika-konfidencialnosti.html</a>
                 </p>
                 <TextParagraph classTextParagraphProps='politics-text'
                   textTextParagraphProps='Обновлено: 25 Сентября 2018 года'

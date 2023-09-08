@@ -4,9 +4,9 @@ import Breadcrumb from '../../Breadcrumb/Breadcrumb'
 
 const ListingProduct = () => {
     const breadcrumbListItemProps = [
-        ['index.html', 'breadcrumb-list__nav', 'Главная'],
-        ['index.html', 'breadcrumb-list__nav', 'Инструменты'],
-        ['index.html', ' ', 'Аккумуляторный инструмент']
+        ['/', 'breadcrumb-list__nav', 'Главная'],
+        ['/', 'breadcrumb-list__nav', 'Инструменты'],
+        ['/', ' ', 'Аккумуляторный инструмент']
     ]
 
     return (

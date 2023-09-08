@@ -13,8 +13,8 @@ import RichImgFourFive from '../../static/rich_image/rich-section-five.jpg'
 
 const NewsView = () => {
   const breadcrumbListItemProps = [
-    ['index', 'onelevel-breadcrumb-nav', 'Главная'],
-    ['index', 'onelevel-breadcrumb-nav', 'Новости'],
+    ['/', 'onelevel-breadcrumb-nav', 'Главная'],
+    ['/', 'onelevel-breadcrumb-nav', 'Новости'],
     ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Как выбрать пылесос из всего многообразия моделей, представленного на рынке.']
   ]
 

@@ -26,7 +26,7 @@ setTimeout(() => {
     //создание кликабельности для кнопки "Стать дилером"
     let indexLogoLink = $(".index-link");
     indexLogoLink.on("click", function () {
-      window.open("index.html"); //ссылки на странички категорий
+      window.open("/"); //ссылки на странички категорий
     });
 
     //создание кликабельности стрелочки banner с открытием в новой вкладке
@@ -94,7 +94,7 @@ setTimeout(() => {
     });
 
     menuFocusTool.on("click", function () {
-      location.href = "listing.html"; //ссылки на странички категорий
+      location.href = "/listing"; //ссылки на странички категорий
     });
 
     menuFocusClining.on("mouseover", function () {
@@ -112,7 +112,7 @@ setTimeout(() => {
     });
 
     menuFocusClining.on("click", function () {
-      location.href = "listing.html"; //ссылки на странички категорий
+      location.href = "/listing"; //ссылки на странички категорий
     });
 
     menuFocusCar.on("mouseover", function () {
@@ -130,7 +130,7 @@ setTimeout(() => {
     });
 
     menuFocusCar.on("click", function () {
-      location.href = "listing.html"; //ссылки на странички категорий
+      location.href = "/listing"; //ссылки на странички категорий
     });
 
     menuFocusTech.on("mouseover", function () {
@@ -148,7 +148,7 @@ setTimeout(() => {
     });
 
     menuFocusTech.on("click", function () {
-      location.href = "listing.html"; //ссылки на странички категорий
+      location.href = "/listing"; //ссылки на странички категорий
     });
 
     menuFocusHandtool.on("mouseover", function () {
@@ -166,7 +166,7 @@ setTimeout(() => {
     });
 
     menuFocusHandtool.on("click", function () {
-      location.href = "listing.html"; //ссылки на странички категорий
+      location.href = "/listing"; //ссылки на странички категорий
     });
 
     //раскрывающийся пункт подменю (index decktop)

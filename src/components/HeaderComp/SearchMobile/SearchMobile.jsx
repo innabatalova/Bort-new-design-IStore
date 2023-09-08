@@ -11,12 +11,12 @@ import TwitterIcon from '../../../static/image/Twitter.svg'
 const SearchMobile = () => {
   
   const footerMobileListingLeft = [
-    ['about-company.html', 'О компании'], ['#', 'Новости'], ['guarantee.html', 'Гарантия и сервис'], 
-    ['be-dealer.html', 'Стать дилером'], ['contacts.html', 'Контакты'], ['about-company.html', 'О компании']
+    ['/about-company', 'О компании'], ['#', 'Новости'], ['/guarantee', 'Гарантия и сервис'], 
+    ['/be-dealer', 'Стать дилером'], ['/contacts', 'Контакты'], ['/about-company', 'О компании']
   ]
 
   const footerMobileListingRight = [
-    ['#', 'Конфиденциальность'], ['be-dealer.html', 'Стать дилером'], ['dropshipping.html', 'Дропшиппинг'], 
+    ['#', 'Конфиденциальность'], ['/be-dealer', 'Стать дилером'], ['/dropshipping', 'Дропшиппинг'], 
     ['#', 'Оптовый портал'], ['#', 'Сервисные центры'], ['#', 'Наши партнеры']
   ]
 
@@ -36,11 +36,11 @@ const SearchMobile = () => {
         <span className="geolocation__city">Москва</span>
       </div>
       <ul className="searchmobile-wrapper">
-        <SearchMobileItem hrefSearchMobileItemProps='listing.html' titleSearchMobileItemProps='инструменты' classSearchMobileItemProps='tool'
+        <SearchMobileItem hrefSearchMobileItemProps='/listing' titleSearchMobileItemProps='инструменты' classSearchMobileItemProps='tool'
           arraySearchMobileItemProps={[
-            ['category.html', 'Пилы', 'saws',
-              [['product-card.html', 'Лобзики электрические'], ['product-card.html', 'Пилы циркулярные'], ['product-card.html', 'Сабельные пилы', 'searchmobile-submenu-item-last']]],
-            ['category.html', 'Дрели и миксеры', 'drill',
+            ['/category', 'Пилы', 'saws',
+              [['/product-card', 'Лобзики электрические'], ['/product-card', 'Пилы циркулярные'], ['/product-card', 'Сабельные пилы', 'searchmobile-submenu-item-last']]],
+            ['/category', 'Дрели и миксеры', 'drill',
               [['#', 'Сетевые дрели'], ['#', 'Дрели ударные'], ['#', 'Сетевые шуруповерты'], ['#', 'Граверы', 'searchmobile-submenu-item-last']]],
             ['#', 'Перфораторы', '',
               []],

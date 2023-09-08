@@ -18,7 +18,7 @@ const index = () => {
   //создание кликабельности для кнопки "Стать дилером" на главной странице
   let linkDealer = $(".be-dealer-button-link");
   linkDealer.on("click", function () {
-    window.open("be-dealer.html"); //ссылки на странички категорий
+    window.open("/be-dealer"); //ссылки на странички категорий
   });
 
   //карусель index main-slider
@@ -43,7 +43,7 @@ const index = () => {
   });
 
   $(".main__button").on("click", function () {
-    location.href = "product-card.html"; //ссылки на странички категорий
+    location.href = "/product-card"; //ссылки на странички категорий
   });
 
   //карусель index novelty-slider
@@ -138,11 +138,11 @@ const index = () => {
   //создание кликабельности для ссылки "Где купить?" с открытием в новой вкладке
   let linkNoveltyCard = $(".novelty-card");
   linkNoveltyCard.on("click", function () {
-    window.open("product-card.html"); //ссылки на странички категорий
+    window.open("/product-card"); //ссылки на странички категорий
   });
   let linkPopularCard = $(".popular-card");
   linkPopularCard.on("click", function () {
-    window.open("product-card.html"); //ссылки на странички категорий
+    window.open("/product-card"); //ссылки на странички категорий
   });
 };
 

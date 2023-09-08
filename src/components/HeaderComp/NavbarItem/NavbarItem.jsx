@@ -1,9 +1,9 @@
 import React from 'react'
 
-const NavbarItem = ({hrefProps, itemProps, classProps}) => {
+const NavbarItem = ({ hrefProps, itemProps, classProps, targetProps}) => {
     return(
       <li className={`navbar__item ` + classProps}  >
-        <a href={hrefProps} target="_blank">{itemProps}</a>
+        <a href={hrefProps} target={targetProps}>{itemProps}</a>
       </li>
     )
 }

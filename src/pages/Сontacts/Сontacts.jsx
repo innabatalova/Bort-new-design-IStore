@@ -6,7 +6,7 @@ import Input from '../../components/DesignComponents/Input'
 
 const Contacts = () => {
   const breadcrumbListItemProps = [
-    ['index', 'onelevel-breadcrumb-nav', 'Главная'],
+    ['/', 'onelevel-breadcrumb-nav', 'Главная'],
     ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Контакты']
   ]
 

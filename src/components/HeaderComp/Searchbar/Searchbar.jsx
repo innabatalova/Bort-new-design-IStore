@@ -9,15 +9,15 @@ const Searchbar = () => {
   return (
     <div className="searchbar">
       <div className="searchbar-scrolling-wrapper">
-        <a href="index.html" className="searchbar-scrolling-link"><img src={BortLogo1} alt="Bort logo"
+        <a href="/" className="searchbar-scrolling-link"><img src={BortLogo1} alt="Bort logo"
           className="searchbar-scrolling-logo" /></a>
         <ul className="searchbar__list">
           <SearchbarItem titleSearchbarItemProps='инструменты' classSearchbarItemProps='tool'
-            hrefSearchbarMenuItemProps='category.html'
+            hrefSearchbarMenuItemProps='/category'
             arraySearchbarMenuItemProps={[
               [['#'], ['Аккумуляторный инструмент'], ['searchbar__menu__item__tool searchbar-menu-item-cordless'],
                 'cordless', [
-                [['product-card.html'], ['Карточка товара']],
+                [['/product-card'], ['Карточка товара']],
                 [['#'], ['Подменю Аккумуляторный инструмент']],
                 [['#'], ['Подменю Аккумуляторный инструмент']],
                 [['#'], ['Подменю Аккумуляторный инструмент']],

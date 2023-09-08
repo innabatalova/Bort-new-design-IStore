@@ -120,24 +120,87 @@
   100%
     opacity: 1
 
-.account
-  color: $orange
-  font-family: Roboto
-  font-style: normal
-  font-weight: bold
-  font-size: 12px
-  line-height: 14px
-  text-align: right
-  margin-left: 5px
+.profile-wrapper
+  display: flex
 
-  &:hover, &:focus
+.account
+  position: relative
+
+  &__link
+    color: $orange
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 14px
+    text-align: right
+    margin-left: 5px
+    cursor: pointer
+
+    &:hover
+      color: $grey
+
+    &:focus, &:active, &:link
+        color: $orange
+
+  &__popup
+    display: none
+    top: 30px
+    right: 0
+    padding: 20px
+    background-color: $lighest_grey
+    position: absolute
+    z-index: 5
+
+    &_visible
+      display: block
+
+  &__navbar
+    font-family: Roboto
+    font-size: 12px
+    font-weight: 400
+    line-height: 14px
+    color: $grey
+
+    &__item
+      margin: 13px 0
+      cursor: pointer
+
+      &:hover,&:focus
+        color: $dark_grey
+
+  &__navbar:first-child li
+    margin-top: 0
+
+  &__input
+    min-height: 45px
+    background: url('http://localhost:3000/img/account-arrow.svg') no-repeat
+    background-position-x: 95%
+    background-position-y: center
+    cursor: pointer
+
+  &__input::placeholder
+    font-family: Roboto
+    font-size: 12px
+    font-weight: 400
+    line-height: 14px
     color: $grey
 
 .busket
-  color: $white
+  position: relative
 
-  &:hover, &:focus
-    color: $grey
+  &__link
+    color: $white
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 14px
+    text-align: right
+    margin-left: 5px
+
+    &:hover, &:focus
+      color: $grey
 
 .logo
 
@@ -212,7 +275,6 @@
 
     &-input
       width: 150px
-
 
 @media screen and ( max-width: 920px )
   .geolocation

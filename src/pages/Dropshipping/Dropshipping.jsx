@@ -14,7 +14,7 @@ import DropshippingInfoDocs from '../../components/PagesComp/DropshippingBlock/D
 
 const Dropshipping = () => {
     const breadcrumbListItemProps = [
-    ['index', 'onelevel-breadcrumb-nav', 'Главная'],
+    ['/', 'onelevel-breadcrumb-nav', 'Главная'],
       ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Дропшиппинг']
   ]
 

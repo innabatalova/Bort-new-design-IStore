@@ -6,7 +6,7 @@ import Button from '../../components/DesignComponents/Button'
 
 const Partners = () => {
   const breadcrumbListItemProps = [
-    ['index', 'onelevel-breadcrumb-nav', 'Главная'],
+    ['/', 'onelevel-breadcrumb-nav', 'Главная'],
     ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Наши партнеры']
   ]
 

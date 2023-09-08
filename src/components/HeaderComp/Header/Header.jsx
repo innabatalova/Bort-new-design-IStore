@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import Searchbar from '../Searchbar/Searchbar'
 import NavbarItem from '../NavbarItem/NavbarItem'
 import SearchMobile from '../SearchMobile/SearchMobile'
+import PopupProfile from '../PopupProfile/PopupProfile'
 
 import BortLogo1 from '../../../static/image/Bort_logo_1.svg'
 import SearchImg from '../../../static/image/search.svg'
@@ -12,17 +13,22 @@ import CloseMobileIcon from '../../../static/image/close-mobile-icon.svg'
 
 const Header = () => {
   const navbarProps = [
-    ['about-company.html', 'О компании', ' '],
-    ['guarantee.html', 'Оплата и доставка', ' '],
-    ['be-dealer.html', 'Контакты', ' '],
+    ['/about-company', 'О компании', ' '],
+    ['/guarantee', 'Оплата и доставка', ' '],
+    ['/be-dealer', 'Контакты', ' '],
     ['#', 'Гарантия и сервис', ' '],
-    ['#', 'Оптовый портал', ' '],
-    ['#', 'Расширенная гарантия', 'over-garanty']
+    ['#', 'Оптовый портал', ' ', '_blank'],
+    ['#', 'Расширенная гарантия', 'over-garanty', '_blank']
   ]
 
   const sortNavbarProps = navbarProps.map((item, index) =>
-    <NavbarItem key={index} hrefProps={item[0]} itemProps={item[1]} classProps={item[2]} />
+    <NavbarItem key={index} hrefProps={item[0]} itemProps={item[1]} classProps={item[2]} targetProps={item[3]} />
   )
+  
+  const [toggleAccoutPopup, setToggleAccoutPopup] = useState('')
+  const openMenuAccount = () => {
+    toggleAccoutPopup == '' ? setToggleAccoutPopup('account__popup_visible') : setToggleAccoutPopup('')
+  }
 
   return (
     <header className="header">
@@ -37,9 +43,14 @@ const Header = () => {
               <ul className="navbar">
                 {sortNavbarProps}
               </ul>
-              <div>
-                <a href="cabinet.html" className="account">Личный кабинет</a>
-                <a href="cabinet.html" className="account busket">Корзина (0)</a>
+              <div className='profile-wrapper'>
+                <div className="account">
+                  <span className='account__link' onClick={openMenuAccount}>Личный кабинет</span>
+                  <PopupProfile classPopupProfileProps={toggleAccoutPopup}/>
+                </div>
+                <div className="busket">
+                  <a href="/cabinet" className="busket__link">Корзина (0)</a>
+                </div>
               </div>
             </div>
           </div>
@@ -53,7 +64,7 @@ const Header = () => {
             <span className="logo-line logo-end"></span>
           </button>
           <img src={CloseMobileIcon} alt="close mobile icon" className="logo-close" />
-          <a href="index.html"><img src={BortLogo1} alt="Bort logo" className="logo-image" /></a>
+          <a href="/"><img src={BortLogo1} alt="Bort logo" className="logo-image" /></a>
           <form action="#" className="logo-search">
             <img src={SearchImg} alt="icon search" className="logo-search-image" />
             <input type="text" className="logo-search-input" placeholder="Поиск по каталогу" />
@@ -78,6 +89,7 @@ const Header = () => {
       <div className="grid-container">
         <Searchbar />
       </div>
+      
     </header>
   )
 }

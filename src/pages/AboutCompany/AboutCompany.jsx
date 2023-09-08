@@ -10,8 +10,8 @@ import AboutCompanyImgThree from '../../static/image/about-company-three.jpg'
 
 const AboutCompany = () => {
     const breadcrumbListItemProps = [
-        ['index', 'onelevel-breadcrumb-nav', 'Главная'],
-        ['about-company', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'О компании']
+        ['/', 'onelevel-breadcrumb-nav', 'Главная'],
+        ['/about-company', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'О компании']
     ]
 
     return (

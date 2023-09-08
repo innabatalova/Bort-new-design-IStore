@@ -14,7 +14,7 @@ import BeDealerBoardFour from '../../static/image/be-dealer-board-four.svg'
 
 const BeDealer = () => {
   const breadcrumbListItemProps = [
-    ['index', 'onelevel-breadcrumb-nav', 'Главная'],
+    ['/', 'onelevel-breadcrumb-nav', 'Главная'],
     ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Стать дилером']
   ]
 

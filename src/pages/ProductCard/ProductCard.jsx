@@ -8,6 +8,8 @@ import ProductCardSpecificationListItem from '../../components/ProductCardSpecif
 import ProductCardSetListItem from '../../components/ProductCardSetListItem/ProductCardSetListItem'
 import MainSlider from '../../components/MainSlider/MainSlider'
 
+import ProductCarChartImg from '../../static/image/product-card-chart.svg'
+
 import ProductCardGalleryImg1 from '../../static/product-card-image/BAB-10,8X_1.jpg'
 import ProductCardGalleryImg2 from '../../static/product-card-image/BAB-10,8X_2.jpg'
 import ProductCardGalleryImg3 from '../../static/product-card-image/BAB-10,8X_3.jpg'
@@ -83,13 +85,13 @@ const ProductCard = () => {
         <div className="grid-container">
           <nav className="breadcrumb">
             <ul className="breadcrumb-list product-card__breadcrumb__list">
-              <BreadcrumbListItem hrefBreadcrumbListItemProps='index.html' classBreadcrumbListItemProps='product-card__breadcrumb__nav'
+              <BreadcrumbListItem hrefBreadcrumbListItemProps='/' classBreadcrumbListItemProps='product-card__breadcrumb__nav'
                 titleBreadcrumbListItemProps='Главная' />
               <BreadcrumbListItem hrefBreadcrumbListItemProps='#' classBreadcrumbListItemProps='product-card__breadcrumb__nav'
                 titleBreadcrumbListItemProps='Инструменты' />
-              <BreadcrumbListItem hrefBreadcrumbListItemProps='category.html' classBreadcrumbListItemProps='product-card__breadcrumb__nav'
+              <BreadcrumbListItem hrefBreadcrumbListItemProps='/category' classBreadcrumbListItemProps='product-card__breadcrumb__nav'
                 titleBreadcrumbListItemProps='Аккумуляторный инструмент' />
-              <BreadcrumbListItem hrefBreadcrumbListItemProps='category.html' classBreadcrumbListItemProps='product-card__breadcrumb__nav product-card__breadcrumb__nav__last'
+              <BreadcrumbListItem hrefBreadcrumbListItemProps='/category' classBreadcrumbListItemProps='product-card__breadcrumb__nav product-card__breadcrumb__nav__last'
                 titleBreadcrumbListItemProps='Аккумуляторные дрели / шуруповерты' />
             </ul>
           </nav>
@@ -111,7 +113,7 @@ const ProductCard = () => {
                   <span>Код товара: 91272560 </span>
                   <span>
                     <img
-                      src="image/product-card-chart.svg"
+                      src={ProductCarChartImg}
                       alt="chart card icon"
                     />
                     <span><a href="#">Добавить в сравнение</a></span>

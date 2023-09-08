@@ -6,7 +6,7 @@ import Button from '../../components/DesignComponents/Button'
 
 const Authorization = () => {
     const breadcrumbListItemProps = [
-        ['index', 'onelevel-breadcrumb-nav', 'Главная'],
+        ['/', 'onelevel-breadcrumb-nav', 'Главная'],
         ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Авторизация']
     ]
 
@@ -29,7 +29,7 @@ const Authorization = () => {
                         <Button classDesignButtonProps='orange' classSizeButtonProps='45'
                             classButtonProps='bort-modal-button authorization-form-button' titleButtonProps='Войти' />
                         <div>
-                            <a href="registration.html" target="_blank" className="authorization-form-newlink">Создать новую учетную запись</a>
+                            <a href="/registration" target="_blank" className="authorization-form-newlink">Создать новую учетную запись</a>
                         </div>
                     </form>
                 </div>
