@@ -1,7 +1,13 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { tooglePopup } from '../../../store/popupSlice'
 
 import SearchMobileItem from '../SearchMobileItem/SearchMobileItem'
 import FooterMobileListingItem from '../../FooterComp/FooterMobileListingItem/FooterMobileListingItem'
+import PopupProfile from '../PopupProfile/PopupProfile'
+
+import BasketIcon from '../../../static/mobile-basket-icon/basket-icon.svg'
+import UserIcon from '../../../static/mobile-basket-icon/user-icon.svg'
 
 import YoutubeIcon from '../../../static/image/Youtube.svg'
 import VKIcon from '../../../static/image/VK.svg'
@@ -9,14 +15,14 @@ import OKIcon from '../../../static/image/OK.svg'
 import TwitterIcon from '../../../static/image/Twitter.svg'
 
 const SearchMobile = () => {
-  
+
   const footerMobileListingLeft = [
-    ['/about-company', 'О компании'], ['#', 'Новости'], ['/guarantee', 'Гарантия и сервис'], 
+    ['/about-company', 'О компании'], ['#', 'Новости'], ['/guarantee', 'Гарантия и сервис'],
     ['/be-dealer', 'Стать дилером'], ['/contacts', 'Контакты'], ['/about-company', 'О компании']
   ]
 
   const footerMobileListingRight = [
-    ['#', 'Конфиденциальность'], ['/be-dealer', 'Стать дилером'], ['/dropshipping', 'Дропшиппинг'], 
+    ['#', 'Конфиденциальность'], ['/be-dealer', 'Стать дилером'], ['/dropshipping', 'Дропшиппинг'],
     ['#', 'Оптовый портал'], ['#', 'Сервисные центры'], ['#', 'Наши партнеры']
   ]
 
@@ -28,12 +34,29 @@ const SearchMobile = () => {
     <FooterMobileListingItem key={index} hrefProps={item[0]} titleProps={item[1]} />
   )
 
+  const popupVisible = useSelector((state) => state.popup.classVisible)
+  const dispatch = useDispatch()
+
   return (
     <div className="searchmobile">
       <span className="searchmobile-shadow"></span>
-      <div className="geolocation geolocation_searchmobile">
-        <span className="geolocation__title geolocation__title_searchmobile">Ваш город: </span>
-        <span className="geolocation__city">Москва</span>
+      <div className="searchmobile-account">
+        <div className="geolocation geolocation_searchmobile">
+          <span className="geolocation__title geolocation__title_searchmobile">Ваш город: </span>
+          <span className="geolocation__city">Москва</span>
+        </div>
+        <div className="searchmobile-account__wrapper">
+          <div className="searchmobile-account__user" onClick={() => dispatch(tooglePopup())}>
+            <img src={UserIcon} alt="Личный кабинет" />
+            <PopupProfile classPopupProfileProps={popupVisible + ' searchmobile-account__popup'} classPopupProfileCloseProps='account__close_hidden'/>
+          </div>
+          <div className="searchmobile-account__basket" >
+            <img src={BasketIcon} alt="Корзина" />
+          </div>
+        </div>
+        <div className="searchmobile-account__over-garanty over-garanty">
+          <a href="#" target='_blank'>Расширенная гарантия</a>
+        </div>
       </div>
       <ul className="searchmobile-wrapper">
         <SearchMobileItem hrefSearchMobileItemProps='/listing' titleSearchMobileItemProps='инструменты' classSearchMobileItemProps='tool'

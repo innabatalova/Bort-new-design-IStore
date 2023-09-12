@@ -1,5 +1,7 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client';
+import store from '../src/store/store'
+import { Provider } from 'react-redux'
 
 import "./js/be-dealer"
 import "./js/cabinet"
@@ -24,7 +26,11 @@ import './scss/style.scss'
 import LayoutBlock from "./LayoutBlock"
 
 const root = createRoot(document.getElementById('root'));
-root.render(<LayoutBlock />);
+root.render(
+  <Provider store={store}>
+    <LayoutBlock />
+  </Provider>
+);
 
 
 

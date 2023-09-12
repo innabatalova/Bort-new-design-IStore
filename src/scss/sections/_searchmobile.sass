@@ -8,10 +8,37 @@
   left: 0
   z-index: 15
 
+  &-account
+    display: flex
+    justify-content: space-between
+    padding: 25px 15px 15px
+
+    &__wrapper
+      display: flex
+      justify-content: space-between
+      min-width: 100px
+
+    &__basket, &__user
+      display: flex
+      align-items: center
+      justify-content: center
+
+    &__basket img, &__user img
+      width: 25px
+      height: 25px
+
+    &__over-garanty
+      padding: 17px
+
+    &__popup
+      top: 80px
+      left: 20px
+      right: 20px
+
   &-wrapper
     display: flex
     flex-direction: column
-    margin-top: 30px
+    margin-top: 5px
 
   &-title
     font-family: Russo One
@@ -47,7 +74,6 @@
     font-size: 13px
     margin-top: 15px
     margin-left: 10px
-    
 
   &-shadow
     display: block
@@ -199,9 +225,22 @@
   &-close
     display: none
 
+.geolocation_searchmobile
+  margin: 15px 0 15px 0
+
 @media screen and ( max-width: 450px )
   .searchmobile
 
+    &-account
+
+      &__wrapper
+        min-width: 70px
+
+      &__over-garanty
+        padding: 12px
+        height: 50px
+        width: 100px
+        text-align: center
+
     &-button
       width: 100%
-      

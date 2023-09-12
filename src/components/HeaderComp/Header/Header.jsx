@@ -1,4 +1,6 @@
-import React, {useState} from 'react'
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { tooglePopup } from '../../../store/popupSlice'
 
 import Searchbar from '../Searchbar/Searchbar'
 import NavbarItem from '../NavbarItem/NavbarItem'
@@ -25,10 +27,8 @@ const Header = () => {
     <NavbarItem key={index} hrefProps={item[0]} itemProps={item[1]} classProps={item[2]} targetProps={item[3]} />
   )
   
-  const [toggleAccoutPopup, setToggleAccoutPopup] = useState('')
-  const openMenuAccount = () => {
-    toggleAccoutPopup == '' ? setToggleAccoutPopup('account__popup_visible') : setToggleAccoutPopup('')
-  }
+  const popupVisible = useSelector((state) => state.popup.classVisible)
+  const dispatch = useDispatch()
 
   return (
     <header className="header">
@@ -45,11 +45,11 @@ const Header = () => {
               </ul>
               <div className='profile-wrapper'>
                 <div className="account">
-                  <span className='account__link' onClick={openMenuAccount}>Личный кабинет</span>
-                  <PopupProfile classPopupProfileProps={toggleAccoutPopup}/>
+                  <span className='account__link' onClick={() => dispatch(tooglePopup())}>Личный кабинет</span>
+                  <PopupProfile classPopupProfileProps={popupVisible} classPopupProfileCloseProps=''/>
                 </div>
                 <div className="busket">
-                  <a href="/cabinet" className="busket__link">Корзина (0)</a>
+                  <span className="busket__link">Корзина (0)</span>
                 </div>
               </div>
             </div>

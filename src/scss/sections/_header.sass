@@ -126,6 +126,15 @@
 .account
   position: relative
 
+  &__close
+    position: absolute
+    top: 20px
+    right: 20px
+    cursor: pointer
+
+    &_hidden
+      display: none
+
   &__link
     color: $orange
     font-family: Roboto
@@ -269,12 +278,35 @@
     line-height: 12px
 
 //адаптив под средний размер
+@media screen and ( max-width: 1210px )
+  .navigation
+
+    &__sub
+      padding-left: 0
 
 @media screen and ( max-width: 1200px )
   .search
 
     &-input
       width: 150px
+
+@media screen and ( max-width: 1180px )
+  .over-garanty
+    margin-right: 0
+
+  .geolocation, .busket__link, .account__link
+    font-size: 10px
+
+  .navbar__item
+    margin-right: 5px
+
+  .account, .busket
+    max-width: 60px
+    line-height: 0 !important
+
+    &__link
+      margin-left: 0
+
 
 @media screen and ( max-width: 920px )
   .geolocation
@@ -288,6 +320,10 @@
       font-size: 10px
 
 @media screen and ( max-width: 740px )
+  .account
+
+    &__button
+      width: 100%
 
   .navigation, .info-wrapper, .searchbar
     display: none
@@ -383,5 +419,4 @@
           outline: none
           box-shadow: none
 
-  .geolocation
-    min-width: 100px
+  
