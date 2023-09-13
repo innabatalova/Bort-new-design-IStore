@@ -9,6 +9,9 @@
     margin-top: 30px
     color: $white
 
+    &-sections
+      display: flex
+
     &-title
       text-transform: uppercase
       margin-top: 70px
@@ -21,7 +24,15 @@
 
     &-cards
 
-      &-wrapper
+      &__filters
+        width: 25%
+        margin: 40px 0
+        padding: 0 10px
+
+      &__wrapper
+        width: 75%
+
+      &-wrap
         display: flex
         justify-content: space-between
         flex-wrap: wrap
@@ -33,7 +44,7 @@
       max-width: 320px
       position: relative
 
-      &::after 
+      &::after
         position: absolute
         left: 0
         top: 0
@@ -46,7 +57,6 @@
         text-transform: uppercase
         background-color: orange
         background: linear-gradient(-45deg, transparent 15px, orange 0)
-
 
       &-title
         display: flex
@@ -83,6 +93,118 @@
       line-height: 26px
       color: $dark_grey
 
+.filter
+  padding: 20px
+  border: 1px solid $grey
+
+  &__title
+    display: flex
+    justify-content: space-between
+
+  &__name
+    text-transform: uppercase
+    font-family: Roboto
+    font-size: 12px
+    font-weight: 500
+    line-height: 14px
+    color: $black
+
+  &__arrow
+    transform: rotate(270deg)
+
+    &_open
+      transform: rotate(90deg)
+
+  &__content
+    display: none
+    margin-top: 15px
+
+    &_open
+      display: flex
+      flex-direction: column
+
+    &_open label
+      margin-bottom: 10px
+
+  &-checkbox input
+    display: none
+
+  &-checkbox
+
+    &-label
+      position: relative
+      margin-left: 25px !important
+      padding-top: 2px
+      color: $black
+
+      &:before
+        top: 0
+        left: -25px
+
+      &:after
+        top: 0
+        left: -25px
+
+  &-slider
+
+    &__values
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+    &__field
+      min-width: 120px
+      padding: 10px 15px
+      border: 1px solid $grey
+      font-family: Roboto
+      font-size: 14px
+      font-weight: 500
+      line-height: 24px
+
+    &__dash
+      width: 13px
+      height: 1px
+      background-color: $grey
+
+    &__bar
+
+      &_price
+        display: flex
+        justify-content: space-between
+
+      &_price span
+        font-family: Roboto
+        font-size: 14px
+        font-weight: 500
+        line-height: 24px
+
+//адаптив под средний размер
+@media screen and ( max-width: 1300px )
+  .listing
+
+    &-product
+      
+      &-cards
+        
+        &__filters
+          width: 35%
+
+        &__wrapper
+          width: 65%
+
+@media screen and ( max-width: 1000px )
+  .listing
+
+    &-product
+      
+      &-cards
+
+        &-wrap
+          justify-content: center
+
+        &__filters
+          width: 45%
+
 //адаптив под мобильные устройств
 
 @media screen and ( max-width: 740px )
@@ -97,6 +219,20 @@
       padding-top: 20px
       padding-bottom: 20px
       margin-top: 0
+
+      &-sections
+        flex-direction: column
+
+      &-cards
+
+        &-wrap
+          justify-content: space-between
+        
+        &__filters
+          width: 100%
+
+        &__wrapper
+          width: 100%
 
       &-breadcrumb
         width: 150%
@@ -154,4 +290,3 @@
         // variant 2
         // &::after
         //   bottom: 50%
-

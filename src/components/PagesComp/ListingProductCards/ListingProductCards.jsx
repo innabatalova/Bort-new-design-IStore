@@ -2,6 +2,7 @@ import React from 'react'
 
 import ListingProductCardItem from './ListingProductCard'
 import TextParagraph from '../../TextParagraph/TextParagraph'
+import Filters from './Filters'
 
 import ListingCardOne from '../../../static/listing_image/listing-card-one.jpg'
 import ListingCardTwo from '../../../static/listing_image/listing-card-two.jpg'
@@ -22,17 +23,23 @@ const ListingProductCards = () => {
     ]
     const sortListingProductCardItemProps = listingProductCardItemProps.map((item, index) =>
         <ListingProductCardItem key={index} imgListingProductCardItemProps={item[0]} altListingProductCardItemProps={item[1]}
-        titleListingProductCardItemProps={item[2]} />
+            titleListingProductCardItemProps={item[2]} />
     )
+
 
     return (
         <section className="listing-product-cards">
             <div className="grid-container">
-                <div className="listing-product-cards-wrapper">
-                    {sortListingProductCardItemProps}
-                </div>
-                <TextParagraph classTextParagraphProps='listing-product-info'
-                    textTextParagraphProps='Аккумуляторная дрель-шуруповерт поможет быстро открутить и закрутить
+                <div className="listing-product-sections">
+                    <div className="listing-product-cards__filters">
+                        <Filters />
+                    </div>
+                    <div className="listing-product-cards__wrapper">
+                        <div className="listing-product-cards-wrap">
+                            {sortListingProductCardItemProps}
+                        </div>
+                        <TextParagraph classTextParagraphProps='listing-product-info'
+                            textTextParagraphProps='Аккумуляторная дрель-шуруповерт поможет быстро открутить и закрутить
                     гайки, винты, саморезы и прочий крепеж. Безударные модели работают с
                     деревом, пластиком, гипсокартном, а для работы с твердыми материалами,
                     такими как камень, бетон или кирпичная кладка, подойдут ударные
@@ -48,6 +55,8 @@ const ListingProductCards = () => {
                     дрели-шуруповерты Bort обладают современными функциями, такими как
                     реверс, быстрозажимной патрон, подсветка рабочей зоны, 2 скорости
                     работы.'/>
+                    </div>
+                </div>
             </div>
         </section>
     )
