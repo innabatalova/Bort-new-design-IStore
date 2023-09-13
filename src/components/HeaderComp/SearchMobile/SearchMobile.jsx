@@ -1,10 +1,12 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { tooglePopup } from '../../../store/popupSlice'
+import { toogleAccountPopupMobile } from '../../../store/popupAccountSliceMobile'
+import { toogleBusketPopupMobile } from '../../../store/popupBusketSliceMobile'
 
 import SearchMobileItem from '../SearchMobileItem/SearchMobileItem'
 import FooterMobileListingItem from '../../FooterComp/FooterMobileListingItem/FooterMobileListingItem'
 import PopupProfile from '../PopupProfile/PopupProfile'
+import PopupBasket from '../PopupBasket/PopupBasket'
 
 import BasketIcon from '../../../static/mobile-basket-icon/basket-icon.svg'
 import UserIcon from '../../../static/mobile-basket-icon/user-icon.svg'
@@ -34,7 +36,8 @@ const SearchMobile = () => {
     <FooterMobileListingItem key={index} hrefProps={item[0]} titleProps={item[1]} />
   )
 
-  const popupVisible = useSelector((state) => state.popup.classVisible)
+  const popupAccountVisible = useSelector((state) => state.popupAccountMobile.classVisible)
+  const popupBusketVisible = useSelector((state) => state.popupBusketMobile.classVisible)
   const dispatch = useDispatch()
 
   return (
@@ -46,12 +49,13 @@ const SearchMobile = () => {
           <span className="geolocation__city">Москва</span>
         </div>
         <div className="searchmobile-account__wrapper">
-          <div className="searchmobile-account__user" onClick={() => dispatch(tooglePopup())}>
+          <div className="searchmobile-account__user" onClick={() => dispatch(toogleAccountPopupMobile())}>
             <img src={UserIcon} alt="Личный кабинет" />
-            <PopupProfile classPopupProfileProps={popupVisible + ' searchmobile-account__popup'} classPopupProfileCloseProps='account__close_hidden'/>
+            <PopupProfile classPopupProfileProps={popupAccountVisible + ' searchmobile-account__popup'} classPopupProfileCloseProps='account__close_hidden'/>
           </div>
           <div className="searchmobile-account__basket" >
-            <img src={BasketIcon} alt="Корзина" />
+            <img src={BasketIcon} alt="Корзина" onClick={() => dispatch(toogleBusketPopupMobile())} />
+            <PopupBasket classBusketProfileProps={popupBusketVisible + ' searchmobile-busket__popup'}/>
           </div>
         </div>
         <div className="searchmobile-account__over-garanty over-garanty">

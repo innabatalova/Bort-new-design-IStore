@@ -1,11 +1,13 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { tooglePopup } from '../../../store/popupSlice'
+import { toogleAccountPopup } from '../../../store/popupAccountSlice'
+import { toogleBusketPopup } from '../../../store/popupBusketSlice'
 
 import Searchbar from '../Searchbar/Searchbar'
 import NavbarItem from '../NavbarItem/NavbarItem'
 import SearchMobile from '../SearchMobile/SearchMobile'
 import PopupProfile from '../PopupProfile/PopupProfile'
+import PopupBasket from '../PopupBasket/PopupBasket'
 
 import BortLogo1 from '../../../static/image/Bort_logo_1.svg'
 import SearchImg from '../../../static/image/search.svg'
@@ -27,7 +29,8 @@ const Header = () => {
     <NavbarItem key={index} hrefProps={item[0]} itemProps={item[1]} classProps={item[2]} targetProps={item[3]} />
   )
   
-  const popupVisible = useSelector((state) => state.popup.classVisible)
+  const popupAccountVisible = useSelector((state) => state.popupAccount.classVisible)
+  const popupBusketVisible = useSelector((state) => state.popupBusket.classVisible)
   const dispatch = useDispatch()
 
   return (
@@ -45,11 +48,15 @@ const Header = () => {
               </ul>
               <div className='profile-wrapper'>
                 <div className="account">
-                  <span className='account__link' onClick={() => dispatch(tooglePopup())}>Личный кабинет</span>
-                  <PopupProfile classPopupProfileProps={popupVisible} classPopupProfileCloseProps=''/>
+                  <span className='account__link' onClick={() => dispatch(toogleAccountPopup())}>Личный кабинет</span>
+                  <PopupProfile classPopupProfileProps={popupAccountVisible} classPopupProfileCloseProps=''/>
                 </div>
                 <div className="busket">
-                  <span className="busket__link">Корзина (0)</span>
+                  <div className="busket__link" onClick={() => dispatch(toogleBusketPopup())}>
+                    <span>Корзина</span>
+                    <span>(4 товара, 15 232 ₽)</span>
+                  </div>
+                  <PopupBasket classBusketProfileProps={popupBusketVisible} />
                 </div>
               </div>
             </div>

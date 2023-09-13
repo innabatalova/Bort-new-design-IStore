@@ -1,8 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit'
-import popupReduser from './popupSlice'
+import popupAccountReduser from './popupAccountSlice'
+import popupBusketReduser from './popupBusketSlice'
+import popupAccountMobileReduser from './popupAccountSliceMobile'
+import popupBusketMobileReduser from './popupBusketSliceMobile'
 
 export default configureStore({
   reducer: {
-    popup: popupReduser
+    popupAccount: popupAccountReduser,
+    popupBusket: popupBusketReduser,
+    popupAccountMobile: popupAccountMobileReduser,
+    popupBusketMobile: popupBusketMobileReduser
   },
 })

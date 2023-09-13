@@ -150,7 +150,7 @@
       color: $grey
 
     &:focus, &:active, &:link
-        color: $orange
+      color: $orange
 
   &__popup
     display: none
@@ -197,8 +197,14 @@
 
 .busket
   position: relative
+  margin-left: 10px
 
   &__link
+    display: flex
+    flex-direction: column
+    cursor: pointer
+
+  &__link span
     color: $white
     font-family: Roboto
     font-style: normal
@@ -208,8 +214,54 @@
     text-align: right
     margin-left: 5px
 
-    &:hover, &:focus
+    &:hover
       color: $grey
+
+  &__popup
+    display: none
+    position: absolute
+    top: 30px
+    right: 0
+    padding: 0 15px
+    background-color: $white
+    min-width: 360px
+    z-index: 5
+
+    &_visible
+      display: block
+
+    &__item
+      display: flex
+      justify-content: space-between
+      padding: 15px 0
+      border-bottom: 1px solid $light_grey
+
+      &__wrapper
+        display: flex
+        flex-direction: column
+
+      &__title
+        margin-bottom: 10px
+        font-family: Russo One
+        font-size: 12px
+        font-weight: 400
+        line-height: 14px
+        color: $black
+
+      &__price
+        font-family: Roboto
+        font-size: 12px
+        font-weight: 400
+        line-height: 13px
+        color: $dark_grey
+
+    &__buttons
+      display: flex
+      justify-content: space-between
+      padding: 25px 0
+
+    &__button
+      width: 155px
 
 .logo
 
@@ -272,6 +324,13 @@
       box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.25)
 
 @media screen and ( max-width: 1330px )
+  .account
+    width: 60px
+    line-height: 0
+
+    &__link
+      margin-left: 0
+
   .over-garanty
     border: none
     font-size: 12px
@@ -290,23 +349,29 @@
     &-input
       width: 150px
 
+  .navbar
+    
+    &__item
+      margin-right: 20px
+
 @media screen and ( max-width: 1180px )
   .over-garanty
     margin-right: 0
 
-  .geolocation, .busket__link, .account__link
+  .geolocation, .busket__link span, .account__link
     font-size: 10px
 
   .navbar__item
     margin-right: 5px
 
-  .account, .busket
-    max-width: 60px
-    line-height: 0 !important
+  .busket
 
     &__link
-      margin-left: 0
+      line-height: 0 !important
 
+@media screen and ( max-width: 1000px )
+  .account
+    width: 40px
 
 @media screen and ( max-width: 920px )
   .geolocation
@@ -324,6 +389,17 @@
 
     &__button
       width: 100%
+
+  .busket
+
+    &__popup
+
+      &__buttons
+        flex-direction: column
+
+      &__button
+        width: 100%
+        margin-bottom: 15px
 
   .navigation, .info-wrapper, .searchbar
     display: none
@@ -418,5 +494,3 @@
           border: none
           outline: none
           box-shadow: none
-
-  
