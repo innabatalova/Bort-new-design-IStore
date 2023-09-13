@@ -22,6 +22,20 @@
       font-size: 40px
       line-height: 30px
 
+    &-stars
+      color: #D9760F
+
+    &-price
+      margin-bottom: 20px
+      font-family: Russo One
+      font-size: 24px
+      font-weight: 400
+      line-height: 29px
+      color: $black
+
+    &-button
+      width: 100%
+
     &-cards
 
       &__filters
@@ -43,6 +57,17 @@
       padding: 40px
       max-width: 320px
       position: relative
+
+      &-icons
+        position: absolute
+        top: 20px
+        right: 20px
+        width: 25px
+        height: 25px
+        cursor: pointer
+
+      &-list
+        top: 50px
 
       &::after
         position: absolute
@@ -67,7 +92,7 @@
         font-weight: normal
         font-size: 15px
         line-height: 18px
-        margin-top: 50px
+        margin-top: 20px
         margin-bottom: 15px
 
       &-button
@@ -116,6 +141,7 @@
       transform: rotate(90deg)
 
   &__content
+    position: relative
     display: none
     margin-top: 15px
 
@@ -144,6 +170,9 @@
       &:after
         top: 0
         left: -25px
+
+  &-checkbox:hover
+    display: none
 
   &-slider
 
@@ -183,20 +212,20 @@
   .listing
 
     &-product
-      
+
       &-cards
-        
+
         &__filters
           width: 35%
 
         &__wrapper
           width: 65%
 
-@media screen and ( max-width: 1000px )
+@media screen and ( max-width: 1010px )
   .listing
 
     &-product
-      
+
       &-cards
 
         &-wrap
@@ -223,11 +252,15 @@
       &-sections
         flex-direction: column
 
+      &-price
+        font-size: 18px
+        line-height: 22px
+
       &-cards
 
         &-wrap
           justify-content: space-between
-        
+
         &__filters
           width: 100%
 
@@ -247,6 +280,15 @@
         padding: 20px 15px
         max-width: 30%
 
+        &-icons
+          width: 15px
+          height: 15px
+          top: 10px
+          right: 10px
+
+        &-list
+          top: 25px
+
         &::after
           font-size: 9px
           line-height: 12px
@@ -256,7 +298,6 @@
           max-height: 100%
 
         &-title
-          min-height: 40px
           font-size: 9px
           line-height: 12px
           margin-top: 13px
@@ -275,10 +316,8 @@
 
     &-product
 
-      &-card
-        // variant 2
-        // &::after
-        //   bottom: 60%
+      &-button
+        padding: 7px
 
 @media screen and ( max-width: 420px )
   .listing
