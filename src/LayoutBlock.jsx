@@ -27,6 +27,7 @@ import Partners from './pages/Partners/Partners'
 import Politics from './pages/Politics/Politics'
 import Registration from './pages/Registration/Registration'
 import ProductCard from './pages/ProductCard/ProductCard'
+import Orders from './pages/Orders/Orders'
 
 const LayoutBlock = () => {
   return (
@@ -50,6 +51,7 @@ const LayoutBlock = () => {
         <Route path="politics" element={<Politics />} />
         <Route path="registration" element={<Registration />} />
         <Route path="product-card" element={<ProductCard />} />
+        <Route path="orders" element={<Orders />} />
       </Routes>
       <News />
       <Banner />

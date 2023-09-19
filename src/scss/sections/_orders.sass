@@ -1,0 +1,181 @@
+.orders
+
+  &-search
+    padding: 20px
+    border: 1px solid $grey
+    background-color: $lighest_grey
+    margin-bottom: 20px
+
+    &__title
+      display: flex
+      justify-content: space-between
+
+    &__name
+      text-transform: uppercase
+      font-family: Roboto
+      font-size: 12px
+      font-weight: 500
+      line-height: 14px
+      color: $black
+
+    &__arrow
+      transform: rotate(270deg)
+
+      &_open
+        transform: rotate(90deg)
+
+    &__content
+      position: relative
+      display: none
+      margin-top: 15px
+
+      &_open
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+
+      &__wrapper
+        display: flex
+        flex-direction: column
+        min-width: 280px
+
+      &__price
+        display: flex
+        align-items: center
+        justify-content: space-between
+        max-width: 280px
+
+      &__date
+        display: flex
+        align-items: center
+        justify-content: space-between
+        max-width: 280px
+
+      &__select
+        width: 280px
+        height: 45px
+        border: 1px solid $grey
+        font-family: Roboto
+        font-size: 14px
+        font-weight: 500
+        line-height: 24px
+        margin-bottom: 10px
+
+      &__field
+        width: 120px
+        height: 45px
+        padding: 10px 15px
+        border: 1px solid $grey
+        font-family: Roboto
+        font-size: 14px
+        font-weight: 500
+        line-height: 24px
+        background-color: $white
+
+      &__dash
+        width: 13px
+        height: 1px
+        background-color: $black
+
+      &__label
+        margin-bottom: 10px !important
+
+  &-list
+    border: 1px solid $grey
+
+    &__title
+      display: flex
+      padding: 20px
+      border-bottom: 1px solid $grey
+      background-color: $lighest_grey
+
+      &__item
+        width: 20%
+        font-family: Roboto
+        font-size: 12px
+        font-weight: 500
+        line-height: 11px
+        color: $black
+
+    &__result div:last-child
+      border-bottom: none
+
+  &__item
+    display: flex
+    width: 100%
+
+    &__wrapper
+      display: flex
+      background-color: $white
+      padding: 10px 20px
+      border-bottom: 1px solid $grey
+
+    &__mobile
+      display: none
+
+  &__data
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 20%
+    font-family: Roboto
+    font-size: 12px
+    font-weight: 400
+    line-height: 11px
+    color: $dark_grey
+
+    &_link
+      color: #018DA7
+
+@media screen and (max-width: 740px)
+  .orders
+
+    &-list
+
+      &__title
+        display: none
+
+        &__item
+          width: auto
+          height: 20%
+          margin-bottom: 10px
+
+    &__item
+      flex-direction: column
+
+      &__mobile
+        display: flex
+        flex-direction: column
+        min-width: 25%
+
+    &__data
+      width: 100%
+      flex-direction: row
+      margin-bottom: 10px
+
+      &_link
+        margin-left: 10px
+
+    &-search
+
+      &__content
+
+        &__wrapper
+          width: 100%
+          margin-bottom: 20px
+
+        &__orderID
+          width: 100%
+
+        &__price, &__date, &__select
+          width: 100%
+          max-width: 100%
+
+        &__field
+          width: 40%
+
+@media screen and (max-width: 400px)
+  .orders
+
+    &-search
+      padding: 20px 5px 20px
