@@ -1,0 +1,204 @@
+.profiles
+
+  &-navline
+
+    &__item::before
+      width: 70px
+
+  &-content
+    display: flex
+    justify-content: space-between
+
+  &-user
+    display: none
+
+    &_active
+      display: block
+      width: 60%
+
+    &__block
+      margin-bottom: 40px
+
+    &__subtitle
+      position: relative
+      display: inline-block
+      font-family: Roboto
+      font-style: normal
+      font-weight: bold
+      font-size: 18px
+      line-height: 18px
+      margin-bottom: 35px
+
+      &::before
+        content: ''
+        position: absolute
+        top: 30px
+        width: 88px
+        height: 2px
+        background-color: $orange
+
+    &__titleprof
+      display: inline-block
+      margin-bottom: 20px
+      font-family: Roboto
+      font-size: 15px
+      font-weight: 500
+      line-height: 22px
+      color: $black
+
+    &__wrapprof
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      width: 70%
+      margin-bottom: 20px
+      font-family: Roboto
+      font-size: 15px
+      font-weight: 500
+      line-height: 19px
+      color: $dark_grey
+
+    &__linkprof
+      color: $orange
+      text-decoration: underline
+
+    &__overprof
+      position: relative
+      padding-right: 20px
+
+    &__overprof::after
+      position: absolute
+      content: url(http://localhost:3000/img/profile-close.svg)
+      top: 2px
+      right: 0
+
+    &__field
+      width: 100%
+      padding-left: 15px
+
+    &__field:valid
+      font-family: Roboto
+      font-size: 15px
+      font-weight: 400
+      line-height: 15px
+      color: $black
+
+    &__text
+      font-family: Roboto
+      font-size: 15px
+      font-weight: 400
+      line-height: 22px
+      color: $dark_grey
+
+  &-group
+    display: none
+
+    &_active
+      display: flex
+      flex-direction: column
+
+    &__wrapper
+      border-bottom: 1px solid $black
+      border-right: 1px solid $black
+
+    &__comp
+      display: flex
+
+      &__item
+        padding: 10px
+        width: 27vw
+        max-width: 300px
+        font-family: Roboto
+        font-size: 15px
+        font-weight: 700
+        line-height: 22px
+        background-color: $lighest_grey
+        border-top: 1px solid $black
+        border-left: 1px solid $black
+        color: $black
+
+        &_data
+          text-align: center
+          font-weight: 400
+
+  &-info
+    width: 35%
+    padding: 15px
+    font-family: Roboto
+    font-size: 15px
+    font-weight: 500
+    line-height: 22px
+    color: $dark_grey
+
+    &__title
+      display: inline-block
+      color: $black
+      margin-bottom: 20px
+
+    &__ul
+      list-style-type: disc
+      margin-left: 15px
+
+@media screen and ( max-width: 1300px )
+  .profiles
+
+    &-user
+
+      &__wrapprof
+        width: 100%
+
+@media screen and ( max-width: 1150px )
+  .profiles
+
+    &-navline
+      justify-content: flex-start
+
+      &__item
+        margin-right: 40px
+
+@media screen and ( max-width: 866px )
+  .profiles
+
+    &-user
+
+      &__subtitle
+        font-size: 14px
+        line-height: 18px
+
+@media screen and ( max-width: 767px )
+  .profiles
+
+    &-content
+      flex-direction: column
+
+    &-info
+      width: 100%
+
+    &-user
+      width: 100%
+
+      &__subtitle
+        margin-top: 20px
+
+    &-group
+      
+      &__comp
+        
+        &__item
+          width: 50%
+
+@media screen and ( max-width: 740px )
+  .profiles
+
+    &-navline
+
+      &__item
+        margin-right: 0
+
+@media screen and ( max-width: 370px )
+  .profiles
+
+    &-user
+
+      &__subtitle::before
+        top: 35px

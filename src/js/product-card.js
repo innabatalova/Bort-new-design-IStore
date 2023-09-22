@@ -81,7 +81,7 @@ const productCard = () => {
 
   //создание блоков с якорями для мобильного разрешения navline__item
 
-  $(".navline__item").on("click", function () {
+  $(".navline__item_product").on("click", function () {
     if ($(window).width() < 740) {
       let clickN = $(this).children("a").attr("href");
       location.href = clickN;
