@@ -18,12 +18,16 @@ const PopupBasket = ({ classBusketProfileProps }) => {
   const sortPopupBusketProps = popupBusketProps.map((item, index) =>
     <BasketMenuItem key={index} srcBasketMenuItemProps={item[0]} titleBasketMenuItemProps={item[1]} priceBasketMenuItemProps={item[2]} />
   )
+  
+  const linkOnCart = () => {
+    location.href = '/cart'
+  }
 
   return (
     <div className={`busket__popup ` + classBusketProfileProps}>
       {sortPopupBusketProps}
       <div className="busket__popup__buttons">
-        <Button classDesignButtonProps='black' classSizeButtonProps='45' classButtonProps='busket__popup__button' titleButtonProps='Корзина' />
+        <Button clickDesignButtonProps={linkOnCart} classDesignButtonProps='black' classSizeButtonProps='45' classButtonProps='busket__popup__button' titleButtonProps='Корзина' />
         <Button classDesignButtonProps='orange' classSizeButtonProps='45' classButtonProps='busket__popup__button' titleButtonProps='Оформить заказ' />
       </div>
     </div>

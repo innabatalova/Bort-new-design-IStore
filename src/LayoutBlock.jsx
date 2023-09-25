@@ -29,6 +29,7 @@ import Registration from './pages/Registration/Registration'
 import ProductCard from './pages/ProductCard/ProductCard'
 import Orders from './pages/Orders/Orders'
 import Profiles from './pages/Profiles/Profiles'
+import Cart from './pages/Cart/Cart'
 
 const LayoutBlock = () => {
   return (
@@ -54,6 +55,7 @@ const LayoutBlock = () => {
         <Route path="product-card" element={<ProductCard />} />
         <Route path="orders" element={<Orders />} />
         <Route path="profiles" element={<Profiles />} />
+        <Route path="cart" element={<Cart />} />
       </Routes>
       <News />
       <Banner />

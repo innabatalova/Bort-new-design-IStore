@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Button = ({ classDesignButtonProps, classSizeButtonProps, classButtonProps, titleButtonProps }) => {
+const Button = ({ classDesignButtonProps, classSizeButtonProps, classButtonProps, titleButtonProps, clickDesignButtonProps }) => {
   return (
-      <button className={`bort-button-` + classDesignButtonProps + classSizeButtonProps + ` ` + classButtonProps}>
+    <button onClick={clickDesignButtonProps} className={`bort-button-` + classDesignButtonProps + classSizeButtonProps + ` ` + classButtonProps}>
         {titleButtonProps}
       </button>
   )

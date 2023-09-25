@@ -1,0 +1,282 @@
+.cart
+
+  &-buttons
+    display: flex
+    justify-content: space-between
+    padding: 30px
+    background-color: $lighest_grey
+
+    &_top
+      margin-bottom: 20px
+
+    &_bottom
+      margin-top: 20px
+
+    &__wrapper
+      display: flex
+      justify-content: space-between
+      width: 330px
+
+  &-button
+    width: 155px
+    font-size: 12px
+
+    &__blue
+      background-color: $blue
+      border-color: $blue
+
+  &-table
+
+    &__title
+      display: flex
+      padding: 20px
+      background-color: $lighest_grey
+
+      &__item:first-child
+        width: 55%
+
+      &__item
+        width: 15%
+        font-family: Roboto
+        font-size: 12px
+        font-weight: 500
+        line-height: 11px
+        color: $black
+
+    &__comp
+      display: flex
+      padding: 20px
+      border-bottom: 1px solid $light_grey
+
+      &__item:first-child
+        display: flex
+        width: 55%
+        padding-top: 0
+
+      &__item
+        width: 15%
+        padding-top: 20px
+        font-family: Roboto
+        font-size: 15px
+        font-weight: 400
+        line-height: 23px
+        color: $black
+
+      &__img
+        width: 180px
+        height: 180px
+
+      &__text
+        display: flex
+        flex-direction: column
+        padding-top: 20px
+
+      &__name
+        font-family: Roboto
+        font-size: 15px
+        font-weight: 400
+        line-height: 23px
+        color: $black
+
+      &__code
+        font-family: Roboto
+        font-size: 12px
+        font-weight: 400
+        line-height: 11px
+        color: $dark_grey
+
+      &__stock
+        margin: 0 10px
+
+      &__count
+        cursor: pointer
+
+  &-sum
+    padding: 20px
+    background-color: $lighest_grey
+
+    &__result
+      display: flex
+      border-bottom: 1px solid $light_grey
+
+      &__promo
+        width: 70%
+
+      &__input
+        min-height: 45px
+        width: 320px
+        background: url(http://localhost:3000/img/account-arrow.svg) no-repeat
+        background-position-x: 95%
+        background-position-y: center
+        cursor: pointer
+
+      &__input::placeholder
+        font-family: Inter
+        font-size: 12px
+        font-weight: 400
+        line-height: 24px
+        color: $grey
+
+      &__item
+        display: flex
+        align-items: center
+        width: 15%
+        font-family: Roboto
+        font-size: 12px
+        font-weight: 500
+        line-height: 11px
+        color: $black
+
+    &__allsum
+      display: flex
+      margin-top: 20px
+
+      &__item
+        font-family: Roboto
+        font-size: 15px
+        font-weight: 500
+        line-height: 11px
+        color: $black
+
+        &_one
+          width: 60%
+
+        &_two
+          width: 25%
+
+        &_three
+          width: 15%
+
+@media screen and ( max-width: 950px )
+  .cart
+
+    &-buttons
+
+      &__wrapper
+        flex-direction: column
+
+        &_bottom
+          align-items: flex-end
+
+    &-button
+      margin-bottom: 15px
+
+    &-table
+
+      &__comp
+
+        &__img
+          width: 120px
+          height: 120px
+
+@media screen and ( max-width: 767px )
+  .cart
+
+    &-table
+
+      &__title
+        display: none
+
+      &__comp
+        flex-direction: column
+
+        &__item:first-child::before
+          position: absolute
+          content: 'Товар'
+          top: -20px
+          left: 0
+          right: 0
+          background-color: $lighest_grey
+
+        &__item:first-child
+          position: relative
+          flex-direction: column
+          width: 100%
+          text-align: center
+
+        &__item::before
+          position: absolute
+          content: 'Цена за ед.'
+          top: -20px
+          left: 0
+          right: 0
+          background-color: $lighest_grey
+
+        &__item
+          position: relative
+          flex-direction: column
+          width: 100%
+          padding-bottom: 30px
+          text-align: center
+
+          &_three::before
+            content: 'Кол-во'
+
+          &_four::before
+            content: 'Итого'
+
+          &_four
+            padding-bottom: 0
+
+        &__text
+          text-align: center
+
+        &__img
+          align-self: center
+
+    &-sum
+      
+      &__result
+        flex-direction: column
+
+        &__promo, &__input
+          width: 100%
+
+        &__item
+          justify-content: flex-end
+          width: 100%
+          margin-bottom: 10px
+
+      &__allsum
+        justify-content: space-between
+
+        &__item
+
+          &_one
+            display: none
+
+          &_two
+            width: 70%
+
+          &_three
+            text-align: right
+
+@media screen and ( max-width: 500px )
+  .cart
+
+    &-buttons
+      flex-direction: column
+
+      &__wrapper
+        width: 100%
+
+    &-button
+      width: 100%
+
+    &-sum
+
+      &__allsum
+        flex-direction: column
+        align-items: center
+
+        &__item
+          font-size: 12px
+
+          &_two
+            width: 100%
+            margin-bottom: 10px
+            text-align: center
+
+          &_three
+            width: 100%
+            text-align: center

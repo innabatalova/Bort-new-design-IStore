@@ -53,31 +53,33 @@
 @import 'sections/_buy.sass';
 //Подключение стилей для related
 @import 'sections/_related.sass';
-//Подключение стилей для about-company
+//Подключение стилей для страницы "О компании"
 @import 'sections/_about-company.sass';
-//Подключение стилей для politics
+//Подключение стилей для политики конфидециальности
 @import 'sections/_politics.sass';
 //Подключение стилей для contacts
 @import 'sections/_contacts.sass';
-//Подключение стилей для guarantee
+//Подключение стилей для страницы гарантии
 @import 'sections/_guarantee.sass';
 //Подключение стилей для news-preview
 @import 'sections/_news-preview.sass';
 //Подключение стилей для news-view
 @import 'sections/_news-view.sass';
-//Подключение стилей для be-dealer
+//Подключение стилей для страницы дилеров
 @import 'sections/_be-dealer.sass';
-//Подключение стилей для partners
+//Подключение стилей для страницы партнеров
 @import 'sections/_partners.sass';
-//Подключение стилей для dropshipping
+//Подключение стилей для дропшипинга
 @import 'sections/_dropshipping.sass';
-//Подключение стилей для registration
+//Подключение стилей для регистрации
 @import 'sections/_registration.sass';
-//Подключение стилей для authorization
+//Подключение стилей для авторизации
 @import 'sections/_authorization.sass';
-//Подключение стилей для cabinet
+//Подключение стилей для ЛК
 @import 'sections/_cabinet.sass';
-//Подключение стилей для orders
+//Подключение стилей для списка заказов
 @import 'sections/_orders.sass';
-//Подключение стилей для profiles
+//Подключение стилей для учетной записи
 @import 'sections/_profiles.sass';
+//Подключение стилей для корзины
+@import 'sections/_cart.sass';
