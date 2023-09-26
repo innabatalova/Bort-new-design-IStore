@@ -30,6 +30,7 @@ import ProductCard from './pages/ProductCard/ProductCard'
 import Orders from './pages/Orders/Orders'
 import Profiles from './pages/Profiles/Profiles'
 import Cart from './pages/Cart/Cart'
+import Checkout from './pages/Checkout/Checkout'
 
 const LayoutBlock = () => {
   return (
@@ -56,6 +57,7 @@ const LayoutBlock = () => {
         <Route path="orders" element={<Orders />} />
         <Route path="profiles" element={<Profiles />} />
         <Route path="cart" element={<Cart />} />
+        <Route path="checkout" element={<Checkout />} />
       </Routes>
       <News />
       <Banner />

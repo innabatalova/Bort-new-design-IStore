@@ -1,0 +1,154 @@
+.checkout
+
+  &-title
+    position: relative
+
+  &-title::after
+    position: absolute
+    content: url('http://localhost:3000/img/checkout-garant.svg')
+    margin-left: 20px
+    top: 2px
+
+  &-content
+    display: flex
+    justify-content: space-between
+
+  &-payment
+    width: 60%
+    border: 1px solid green
+
+  &-info
+    width: 35%
+
+    &__item
+      padding: 20px
+      border: 1px solid $light_grey
+      border-bottom: none
+
+      &__title
+        display: inline-block
+        margin-bottom: 20px
+        font-family: Roboto
+        font-size: 12px
+        font-weight: 500
+        line-height: 14px
+        color: $black
+        text-transform: uppercase
+
+      &__info
+        display: flex
+        flex-direction: column
+
+      &__text
+        font-family: Roboto
+        font-size: 13px
+        font-weight: 400
+        line-height: 13px
+        color: $black
+
+        &_grey
+          color: $dark_grey
+
+        &_list
+          margin-bottom: 15px
+          font-weight: 500
+
+        &_address
+          margin-bottom: 15px
+
+      &__link
+        color: $blue
+
+    &__item:last-child
+      border-bottom: 1px solid $light_grey
+
+    &__sum
+      display: flex
+      justify-content: space-between
+
+    &__promo
+      margin-top: 25px
+      margin-bottom: 15px
+
+    &__input
+      height: 40px
+      width: 100%
+      background: url(http://localhost:3000/img/account-arrow.svg) no-repeat
+      background-position-x: 95%
+      background-position-y: center
+      cursor: pointer
+
+    &__input::placeholder
+      font-family: Inter
+      font-size: 12px
+      font-weight: 400
+      line-height: 24px
+      color: $grey
+
+    &__product
+      display: flex
+      flex-direction: column
+      padding-bottom: 15px
+      padding-top: 15px
+      font-family: Roboto
+      font-size: 13px
+      font-weight: 400
+      border-bottom: 1px solid $light_grey
+
+      &__title
+        margin-bottom: 5px
+        line-height: 18px
+        color: $blue
+
+      &__price
+        line-height: 13px
+        color: $black
+
+    &__product:first-child
+      padding-top: 0
+
+    &__product:last-child
+      padding-bottom: 0
+      border-bottom: none
+
+@media screen and ( max-width: 767px )
+  .checkout
+
+    &-title::after
+      content: url('http://localhost:3000/img/checkout-garant-mobile.svg')
+      margin-left: 10px
+      top: 0
+
+    &-content
+      flex-direction: column
+
+    &-payment
+      width: 100%
+
+    &-info
+      width: 100%
+
+      &__item
+
+        &__title
+          position: relative
+          width: 100%
+          margin-bottom: 0
+
+          &_active
+            margin-bottom: 20px
+
+          &_active:after
+            transform: rotate(180deg)
+
+        &__title:after
+          content: url('http://localhost:3000/img/navline-arrow.svg')
+          position: absolute
+          right: 0
+
+        &__info
+          display: none
+
+          &_active
+            display: flex
+
