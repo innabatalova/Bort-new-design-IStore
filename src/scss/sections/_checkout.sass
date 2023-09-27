@@ -15,7 +15,104 @@
 
   &-payment
     width: 60%
-    border: 1px solid green
+
+    &__comp
+
+      &__top
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 15px 20px
+        border: 1px solid $light_grey
+        background-color: $lighest_grey
+
+        &__title
+          position: relative
+          padding-left: 20px
+          font-family: Roboto
+          font-size: 12px
+          font-weight: 500
+          line-height: 14px
+          color: $dark_grey
+          text-transform: uppercase
+
+          &_active
+            color: $black
+
+        &__title::before
+          content: url(http://localhost:3000/img/check-checkout.svg)
+          position: absolute
+          left: 0
+          bottom: -5px
+
+        &__title_active::before
+            content: url(http://localhost:3000/img/check-checkout-active.svg)
+            color: $black
+
+        &__link
+          font-family: Roboto
+          font-size: 12px
+          font-weight: 500
+          line-height: 19px
+          color: $orange
+          text-decoration: underline
+          cursor: pointer
+
+          &_active
+            display: none
+
+      &__bottom
+        display: none
+
+        &_active
+          display: flex
+          flex-direction: column
+          padding: 20px 0
+
+      &__overprof::after
+        display: none
+
+      &__form
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+
+      &__wrapfield
+        width: 48%
+
+        &_address
+          width: 100%
+
+      &__field
+        width: 100%
+        padding-left: 15px
+
+      &__auth
+        font-family: Roboto
+        font-size: 14px
+        font-weight: 500
+        line-height: 14px
+        color: $blue
+        margin-bottom: 20px
+        cursor: pointer
+
+      &__checkbox
+        margin-bottom: 20px
+
+      &__result
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        font-size: 13px
+        line-height: 13px
+        margin-bottom: 20px
+
+      &__label::after
+        display: none
+
+      &__textarea
+        resize: none
+        margin-bottom: 20px
 
   &-info
     width: 35%
@@ -152,3 +249,34 @@
           &_active
             display: flex
 
+@media screen and ( max-width: 630px )
+  .checkout
+
+    &-payment
+
+      &__comp
+
+        &__wrapfield
+          width: 100%
+
+        &__wrapprof, &__checkbox label, &__result
+          font-size: 12px
+
+@media screen and ( max-width: 525px )
+  .checkout
+
+    &-payment
+
+      &__comp
+
+        &__top
+
+          &__title, &__link
+            font-size: 9px
+
+        &__auth
+          font-size: 12px
+
+        &__button
+          font-size: 12px
+          width: 100%
