@@ -1,9 +1,9 @@
 import React from 'react'
 
-const DropshippingBlock = ({ classTopDropshippingBlockProps, classBottomDropshippingBlockProps, titleDropshippingBlockProps, infoDropshippingBlockProps }) => {
+const DropshippingBlock = ({ classTopDropshippingBlockProps, classBottomDropshippingBlockProps, titleDropshippingBlockProps, infoDropshippingBlockProps, clickDropshippingBlockProps }) => {
   return(
     <>
-      <div
+      <div onClick={clickDropshippingBlockProps}
         className={`bort-menu-item dropshipping-menu-item dropshipping-menu-item-` + classTopDropshippingBlockProps}>
         <span>{titleDropshippingBlockProps}</span>
       </div>

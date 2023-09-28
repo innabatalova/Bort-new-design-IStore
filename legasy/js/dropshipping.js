@@ -6,13 +6,13 @@ const dropshipping = () => {
   let newWindowWidth = $(window).width();
   $(".dropshipping-menu-item-drop").on('click', function () {
     if (newWindowWidth > 740) {
-      $(".dropshipping-info-block").removeClass(
-        "dropshipping-info-block-visible"
-      ),
-        $(".dropshipping-info-block-drop").addClass(
-          "dropshipping-info-block-visible"
-        ),
-        $(this).addClass("dropshipping-menu-item-active");
+      // $(".dropshipping-info-block").removeClass(
+      //   "dropshipping-info-block-visible"
+      // ),
+      //   $(".dropshipping-info-block-drop").addClass(
+      //     "dropshipping-info-block-visible"
+      //   ),
+      //   $(this).addClass("dropshipping-menu-item-active");
     } else {
       $(".dropshipping-info-block-drop").slideToggle(400),
         $(this).toggleClass("dropshipping-menu-item-transform");
