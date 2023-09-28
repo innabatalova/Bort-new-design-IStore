@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ContextModalOpen } from '../../context/contextModalOpen'
 
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
 import TextParagraph from '../../components/TextParagraph/TextParagraph'
@@ -10,6 +11,12 @@ const Guarantee = () => {
     ['/', 'onelevel-breadcrumb-nav', 'Главная'],
     ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Гарантийное обслуживание']
   ]
+
+  const { openModal, setOpenModal } = useContext(ContextModalOpen)
+  const OpenFeedbackModal = (e) => {
+    e.preventDefault()
+    setOpenModal('modal-open__visible')
+  }
 
   return (
     <main className="guarantee">
@@ -64,7 +71,7 @@ const Guarantee = () => {
           <div className="guarantee-form-wrapper">
             <div className="bort-modal guarantee-form-modal">
               <h3 className="bort-modal-title">обратная связь</h3>
-              <form action="#" className="bort-modal-form">
+              <form className="bort-modal-form" onSubmit={OpenFeedbackModal}>
                 <Input classInputSpanProps='bort-modal-text' titleInputProps='Ваше ФИО'
                   typeInputProps='text' nameInputProps='name'
                   classInputFieldProps='bort-modal-contacts guarantee-form-modal-contacts'

@@ -10,6 +10,8 @@ const Partners = () => {
     ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Наши партнеры']
   ]
 
+  const openBeDealer = () => { location.href = '/be-dealer' }
+
   return(
     <main className="partners">
       <div className="grid-container">
@@ -38,7 +40,7 @@ const Partners = () => {
                 развитии и приглашаем московские и региональные организации к
                 долгосрочному и взаимовыгодному сотрудничеству.'
               />
-              <Button classDesignButtonProps='orange' classSizeButtonProps='45'
+              <Button clickDesignButtonProps={openBeDealer}  classDesignButtonProps='orange' classSizeButtonProps='45'
                 classButtonProps='partners-board-button' titleButtonProps='Стать дилером'/>
             </div>
           </div>

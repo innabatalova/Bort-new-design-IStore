@@ -30,7 +30,7 @@ const BeDealer = () => {
       <main className='be-dealer'>
         <div className="grid-container">
           <Breadcrumb breadcrumbListItemProps={breadcrumbListItemProps} />
-          <h2 className="be-dealer-title" onClick={() => { setOpenClass('light') }}>СТАТЬ ДИЛЕРОМ</h2>
+          <h2 className="be-dealer-title">СТАТЬ ДИЛЕРОМ</h2>
           <TextParagraph classTextParagraphProps='be-dealer-subtitle'
             textTextParagraphProps='Компания Bort Global имеет обширную дилерскую сеть на территории
           Российской Федерации и за рубежом. Мы заинтересованы в её развитии и

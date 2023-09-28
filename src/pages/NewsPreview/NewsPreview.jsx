@@ -18,13 +18,13 @@ const NewsPreview = () => {
   ]
 
   return (
-    <main classNmae="news-preview">
-      <div classNmae="grid-container">
+    <main className="news-preview">
+      <div className="grid-container">
         <Breadcrumb breadcrumbListItemProps={breadcrumbListItemProps} />
-        <div classNmae="news-preview-wrapper">
-          <h2 classNmae="guarantee-title">Новости</h2>
-          <span classNmae="media-title-line"></span>
-          <div classNmae="news-preview-board">
+        <div className="news-preview-wrapper">
+          <h2 className="guarantee-title">Новости</h2>
+          <span className="media-title-line"></span>
+          <div className="news-preview-board">
             <NewsPreviewCard srcNewsPreviewCardProps={NewsImgOne} dateNewsPreviewCardProps='17/04/2020'
               titleNewsPreviewCardProps='ИЗМЕЛЬЧИТЕЛИ ПИЩЕВЫХ ОТХОДОВ, ЧТО ЭТО ТАКОЕ? МИРОВОЙ ОПЫТ ИСПОЛЬЗОВАНИЯ'
               textNewsPreviewCardProps='Как влияют измельчители пищевых отходов на экологию и экономику?

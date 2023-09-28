@@ -18,6 +18,8 @@ const NewsView = () => {
     ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Как выбрать пылесос из всего многообразия моделей, представленного на рынке.']
   ]
 
+  const openNewsPreview = () => { location.href = '/news-preview' }
+
   return (
     <>
       <main className="news-view">
@@ -30,7 +32,7 @@ const NewsView = () => {
                 на рынке.
               </h2>
               <span className="news-view-date">29/08/2020</span>
-              <Button classDesignButtonProps='black' classSizeButtonProps='45' 
+              <Button clickDesignButtonProps={openNewsPreview} classDesignButtonProps='black' classSizeButtonProps='45' 
                 classButtonProps='news-view-button' titleButtonProps='К списку новостей'/>
               <div className="rich-section rich-section-one">
                 <div className="rich-video">
