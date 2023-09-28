@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ContextModalOpen } from '../../context/contextModalOpen'
 
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
 import Button from '../../components/DesignComponents/Button'
@@ -9,6 +10,12 @@ const Contacts = () => {
     ['/', 'onelevel-breadcrumb-nav', 'Главная'],
     ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Контакты']
   ]
+
+  const { openModal, setOpenModal } = useContext(ContextModalOpen)
+  const OpenFeedbackModal = (e) => {
+    e.preventDefault()
+    setOpenModal('modal-open__visible')
+  }
 
   return (
     <main className="contacts">
@@ -31,7 +38,7 @@ const Contacts = () => {
                 Для нас важно ваше мнение! <br />Если у вас возникли вопросы или
                 появились предложения, отправьте нам сообщение.
               </h3>
-              <form action="#" className="bort-modal-form contacts-info-form">
+              <form className="bort-modal-form contacts-info-form" onSubmit={OpenFeedbackModal}>
                 <Input classInputProps='contacts-info-wrap' classInputSpanProps='bort-modal-text contacts-info-subtitle'
                   titleInputProps='Ваше имя' typeInputProps='text' nameInputProps='name' 
                   classInputFieldProps='bort-modal-contacts contacts-info-input' minlengthInputProps='2'

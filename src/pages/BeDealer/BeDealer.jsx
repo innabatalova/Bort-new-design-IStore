@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, {  useContext } from 'react'
 import { ContextModalOpen } from '../../context/contextModalOpen'
 
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
@@ -19,10 +19,10 @@ const BeDealer = () => {
     ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Стать дилером']
   ]
 
-  const { openModal, setOpenModel } = useContext(ContextModalOpen)
+  const { openModal, setOpenModal } = useContext(ContextModalOpen)
   const OpenFeedbackModal = (e) => {
     e.preventDefault()
-    setOpenModel('modal-open__visible')
+    setOpenModal('modal-open__visible')
   }
 
   return (

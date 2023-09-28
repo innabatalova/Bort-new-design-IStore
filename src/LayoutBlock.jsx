@@ -19,7 +19,7 @@ import Authorization from './pages/Authorization/Authorization'
 import BeDealer from './pages/BeDealer/BeDealer'
 import Cabinet from './pages/Cabinet/Cabinet'
 import Category from './pages/Category/Category'
-import Contacts from './pages/Сontacts/Сontacts'
+import Contacts from './pages/Contacts/Сontacts'
 import Dropshipping from './pages/Dropshipping/Dropshipping'
 import Guarantee from './pages/Guarantee/Guarantee'
 import NewsPreview from './pages/NewsPreview/NewsPreview'
@@ -34,11 +34,11 @@ import Cart from './pages/Cart/Cart'
 import Checkout from './pages/Checkout/Checkout'
 
 const LayoutBlock = () => {
-  const [openModal, setOpenModel] = useState('');
+  const [openModal, setOpenModal] = useState('');
 
   return (
     <BrowserRouter>
-      <ContextModalOpen.Provider value={{ openModal, setOpenModel }}>
+      <ContextModalOpen.Provider value={{ openModal, setOpenModal }}>
         <Header />
         <Routes>
           <Route path="design" element={<Design />} />
@@ -68,7 +68,7 @@ const LayoutBlock = () => {
         <Footer />
         <ScrollArrow />
         <ModalOverlay />
-        <ModalOpen/>
+        <ModalOpen />
       </ContextModalOpen.Provider>
     </BrowserRouter>
   )

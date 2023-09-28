@@ -2,7 +2,7 @@ import React from 'react'
 
 const CategoriesCard = ({ classCategoriesCardProps, srcCategoriesCardProps, titleCategoriesCardProps }) => {
   return (
-    <div className={`card categories-card ` + classCategoriesCardProps}>
+    <div className={`card categories-card ` + classCategoriesCardProps} onClick={()=>location.href = '/product-card'}>
       <img
         src={srcCategoriesCardProps}
         alt={titleCategoriesCardProps}

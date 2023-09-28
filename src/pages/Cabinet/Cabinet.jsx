@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
 import Button from '../../components/DesignComponents/Button'
@@ -11,33 +11,25 @@ const Cabinet = () => {
     ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Личный кабинет']
   ]
 
+  const [cabinetActiveTab, setCabinetActiveTab] = useState('sert')
+
   return (
     <main className="cabinet">
       <div className="grid-container">
         <Breadcrumb breadcrumbListItemProps={breadcrumbListItemProps} />
         <h2 className="cabinet-title">Личный кабинет</h2>
         <div className="cabinet-wrapper">
-          <div className="bort-menu-item cabinet-menu-item cabinet-menu-item-userinfo">
+          <div onClick={() => { setCabinetActiveTab('userinfo')}} className={`bort-menu-item cabinet-menu-item ` + (cabinetActiveTab == 'userinfo' ? 'cabinet-menu-item-active' : '')}>
             <span>Информация</span>
           </div>
-          <div className="cabinet-info-block cabinet-info-block-userinfo">
+          <div className={`cabinet-info-block cabinet-info-block-userinfo ` + (cabinetActiveTab == 'userinfo' ? 'cabinet-info-block-visible' : '')}>
             <TextParagraph classTextParagraphProps='cabinet-userinfo'
               textTextParagraphProps='Информация о пользователе'/>
           </div>
-          <div
-            className="
-              bort-menu-item
-              cabinet-menu-item cabinet-menu-item-active cabinet-menu-item-sert
-            "
-          ><span>Зарегистрированные покупки</span>
+          <div onClick={() => { setCabinetActiveTab('sert') }}  className={`bort-menu-item cabinet-menu-item ` + (cabinetActiveTab == 'sert' ? 'cabinet-menu-item-active' : '')}>
+            <span>Зарегистрированные покупки</span>
           </div>
-          <div
-            className="
-              cabinet-info-block
-              cabinet-info-block-visible
-              cabinet-info-block-sert
-            "
-          >
+          <div className={`cabinet-info-block cabinet-info-block-sert ` + (cabinetActiveTab == 'sert' ? 'cabinet-info-block-visible' : '')}>
             <h3 className="cabinet-info-subtitle">Артикул товара:</h3>
             <form action="#" className="cabinet-info-form">
               <input type="text" className="cabinet-info-input" />
@@ -150,7 +142,7 @@ const Cabinet = () => {
               </table>
             </div>
           </div>
-          <div className="bort-menu-item cabinet-menu-item cabinet-menu-item-close">
+          <div onClick={() => { setCabinetActiveTab('exit') }}  className={`bort-menu-item cabinet-menu-item ` + (cabinetActiveTab == 'exit' ? 'cabinet-menu-item-active' : '')}>
             <span>Выход</span>
           </div>
         </div>

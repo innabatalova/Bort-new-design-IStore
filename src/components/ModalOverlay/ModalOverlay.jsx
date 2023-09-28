@@ -1,16 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ContextModalOpen } from '../../context/contextModalOpen'
 
 import Input from '../DesignComponents/Input'
 import Button from '../DesignComponents/Button'
 
 const ModalOverlay = () => {
+    const { openModal, setOpenModal } = useContext(ContextModalOpen)
+    const OpenFeedbackModal = (e) => {
+        e.preventDefault()
+        setOpenModal('modal-open__visible')
+    }
+
     return (
         <div className="modal-overlay">
             <div className="bort-modal modal-overlay-form-modal">
                 <h3 className="bort-modal-title modal-overlay-title">написать нам</h3>
-                <form action="#" className="bort-modal-form modal-overlay-modal-form">
+                <form className="bort-modal-form modal-overlay-modal-form" onSubmit={OpenFeedbackModal}>
                     <Input classInputSpanProps='bort-modal-text' titleInputProps='Ваше ФИО' 
-                        typeInputProps='text' nameInputProps='name' 
+                        typeInputProps='text' nameInputProps='name'
                         classInputFieldProps='bort-modal-contacts modal-overlay-form-modal-contacts'
                         minlengthInputProps='2' />
                     <Input classInputSpanProps='bort-modal-text' titleInputProps='Контактный телефон'
