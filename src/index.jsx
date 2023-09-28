@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client';
 import store from '../src/store/store'
 import { Provider } from 'react-redux'
 
-import "./js/be-dealer"
 import "./js/cabinet"
 import "./js/categories"
 import "./js/contacts"

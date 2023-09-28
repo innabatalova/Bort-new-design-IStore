@@ -14,5 +14,5 @@ setTimeout(() => {
   };
 
   beDealer();
-}, 0)
+}, 150)
 

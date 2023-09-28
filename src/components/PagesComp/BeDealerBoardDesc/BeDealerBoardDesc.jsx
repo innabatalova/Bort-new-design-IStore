@@ -3,7 +3,6 @@ import React from 'react'
 import BeDealerBoardListItem from '../../BeDealerBoardListItem/BeDealerBoardListItem'
 
 const BeDealerBoardDesc = ({ scrBeDealerBoardDescProps, titleBeDealerBoardDescProps, itemsBeDealerBoardDescProps }) => {
-  console.log(itemsBeDealerBoardDescProps);
   const sortItemsBeDealerBoardDescProps = itemsBeDealerBoardDescProps.map((item, index) =>
     <BeDealerBoardListItem key={index} textBeDealerBoardListItemProps={item[0]} />
   )
