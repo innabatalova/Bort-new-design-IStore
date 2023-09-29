@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ContextModalOpen } from './context/contextModalOpen'
+import { ContextProductCardImage } from './context/contextProductCardImage'
 
 import Design from './components/DesignComponents/Design'
 
@@ -33,42 +34,47 @@ import Profiles from './pages/Profiles/Profiles'
 import Cart from './pages/Cart/Cart'
 import Checkout from './pages/Checkout/Checkout'
 
+import ProductCardGalleryImg4 from './static/product-card-image/BAB-10,8X_4.jpg'
+
 const LayoutBlock = () => {
-  const [openModal, setOpenModal] = useState('');
+  const [openModal, setOpenModal] = useState('')
+  const [openImage, setOpenImage] = useState(ProductCardGalleryImg4)
 
   return (
     <BrowserRouter>
       <ContextModalOpen.Provider value={{ openModal, setOpenModal }}>
-        <Header />
-        <Routes>
-          <Route path="design" element={<Design />} />
-          <Route path="*" element={<Main />} />
-          <Route path="listing" element={<Listing />} />
-          <Route path="about-company" element={<AboutCompany />} />
-          <Route path="authorization" element={<Authorization />} />
-          <Route path="be-dealer" element={<BeDealer/>} />
-          <Route path="cabinet" element={<Cabinet />} />
-          <Route path="category" element={<Category />} />
-          <Route path="contacts" element={<Contacts />} />
-          <Route path="dropshipping" element={<Dropshipping />} />
-          <Route path="guarantee" element={<Guarantee />} />
-          <Route path="news-preview" element={<NewsPreview />} />
-          <Route path="news-view" element={<NewsView />} />
-          <Route path="partners" element={<Partners />} />
-          <Route path="politics" element={<Politics />} />
-          <Route path="registration" element={<Registration />} />
-          <Route path="product-card" element={<ProductCard />} />
-          <Route path="orders" element={<Orders />} />
-          <Route path="profiles" element={<Profiles />} />
-          <Route path="cart" element={<Cart />} />
-          <Route path="checkout" element={<Checkout />} />
-        </Routes>
-        <News />
-        <Banner />
-        <Footer />
-        <ScrollArrow />
-        <ModalOverlay />
-        <ModalOpen />
+        <ContextProductCardImage.Provider value={{ openImage, setOpenImage }}>
+          <Header />
+          <Routes>
+            <Route path="design" element={<Design />} />
+            <Route path="*" element={<Main />} />
+            <Route path="listing" element={<Listing />} />
+            <Route path="about-company" element={<AboutCompany />} />
+            <Route path="authorization" element={<Authorization />} />
+            <Route path="be-dealer" element={<BeDealer />} />
+            <Route path="cabinet" element={<Cabinet />} />
+            <Route path="category" element={<Category />} />
+            <Route path="contacts" element={<Contacts />} />
+            <Route path="dropshipping" element={<Dropshipping />} />
+            <Route path="guarantee" element={<Guarantee />} />
+            <Route path="news-preview" element={<NewsPreview />} />
+            <Route path="news-view" element={<NewsView />} />
+            <Route path="partners" element={<Partners />} />
+            <Route path="politics" element={<Politics />} />
+            <Route path="registration" element={<Registration />} />
+            <Route path="product-card" element={<ProductCard />} />
+            <Route path="orders" element={<Orders />} />
+            <Route path="profiles" element={<Profiles />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="checkout" element={<Checkout />} />
+          </Routes>
+          <News />
+          <Banner />
+          <Footer />
+          <ScrollArrow />
+          <ModalOverlay />
+          <ModalOpen />
+        </ContextProductCardImage.Provider>
       </ContextModalOpen.Provider>
     </BrowserRouter>
   )

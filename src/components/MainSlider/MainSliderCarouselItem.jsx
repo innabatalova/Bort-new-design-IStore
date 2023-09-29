@@ -13,7 +13,7 @@ const MainSliderCarouselItem = ({ classMainSliderCarouselItemProps, srcMainSlide
         </h3>
 
         <div className={classMainSliderCarouselItemProps + `-card-wrapper-link`}>
-          <a href="#" className={classMainSliderCarouselItemProps + `-card-link`}>Где купить?</a>
+          <a onClick={() => window.open("/product-card")} className={classMainSliderCarouselItemProps + `-card-link`}>Где купить?</a>
           <img className={classMainSliderCarouselItemProps + `-card-arrow`} src={LinkArrowImg} alt="card link arrow" />
         </div>
       </div>

@@ -69,4 +69,4 @@ const paralla = () => {
 };
 
 paralla();
-}, 120)
+}, 50)

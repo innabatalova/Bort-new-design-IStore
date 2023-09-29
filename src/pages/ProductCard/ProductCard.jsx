@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import OwlCarousel from 'react-owl-carousel'
+import { ContextProductCardImage } from '../../context/contextProductCardImage'
 
 import BreadcrumbListItem from '../../components/Breadcrumb/BreadcrumbListItem'
 import ProductCardGalleryItem from '../../components/ProductCardGalleryItem/ProductCardGalleryItem'
@@ -34,6 +36,41 @@ import NoveltyImg3 from '../../static/image/grinder.jpg'
 import NoveltyImg4 from '../../static/image/milling.jpg'
 
 const ProductCard = () => {
+  const options = {
+    margin: -190,
+    loop: false,
+    items: 1,
+    nav: false,
+    dots: false,
+    mouseDrag: true,
+    responsive: {
+      400: {
+        margin: -190,
+        items: 2,
+        mouseDrag: false,
+      },
+
+      470: {
+        margin: -290,
+        items: 2,
+        mouseDrag: false,
+      },
+
+      740: {
+        margin: -90,
+        items: 4,
+        mouseDrag: false,
+      },
+
+      1050: {
+        items: 5,
+        mouseDrag: false,
+      },
+    },
+  }
+
+  const { openImage } = useContext(ContextProductCardImage)
+
   const arrayProductCardGalleryItems = [
     ['', ProductCardGalleryImg1, 'BAB-10,8X_1'], ['', ProductCardGalleryImg2, 'BAB-10,8X_2'],
     ['', ProductCardGalleryImg3, 'BAB-10,8X_3'], ['view', ProductCardGalleryImg4, 'BAB-10,8X_4'],
@@ -75,8 +112,8 @@ const ProductCard = () => {
     buyBlockItems.push([i])
   }
 
-  const sortBuyBlockItems = buyBlockItems.map(() =>
-    <div className="buy-block__item"></div>
+  const sortBuyBlockItems = buyBlockItems.map((index) =>
+    <div key={index} className="buy-block__item"></div>
   );
 
   return (
@@ -99,10 +136,11 @@ const ProductCard = () => {
         <div className="grid-container">
           <div className="product-card-wrapper">
             <div className="product-card-wrapper-gallery">
-              <div className="owl-carousel owl-theme product-card-gallery">
+
+              <OwlCarousel {...options} className="product-card-gallery">
                 {sortArrayProductCardGalleryItems}
-              </div>
-              <div className="product-card-gallery-view"></div>
+              </OwlCarousel>
+              <div className="product-card-gallery-view" style={{ backgroundImage: 'url(' + openImage + ')' }}></div>
             </div>
             <div className="product-card-wrapper-info">
               <div className="product-card-info">
@@ -148,7 +186,7 @@ const ProductCard = () => {
                   >Купить в магазинах:</span
                   >
                   <div className="product-card-info__buy__die">
-                    <div className="product-card-info__buy__bort">
+                    <div className="product-card-info__buy__bort" onClick={() => location.href = 'https://bort.ru/'}>
                       <img
                         src={BortLogoImg}
                         alt="Официальный интернет-магазин Bort"
@@ -158,7 +196,7 @@ const ProductCard = () => {
                       >Официальный интернет-магазин</span
                       >
                     </div>
-                    <div className="product-card-info__buy__extego">
+                    <div className="product-card-info__buy__extego" onClick={() => location.href = 'https://extego.ru/'}>
                       <img
                         src={ExtegoLogoImg}
                         alt="интернет-магазин Extego"
@@ -359,7 +397,9 @@ const ProductCard = () => {
       <section id="related" className="related">
         <div className="grid-container">
           <ProductCardSectionTitle classProductCardSectionTitleProps='related' titleProductCardSectionTitleProps='Сопутствующие товары' />
-          <MainSlider classMainSliderProps='related-slider' arrayMainSliderCarouselItemProps={[
+
+          <MainSlider classMainSliderProps='related-slider' navigationMainSliderProps='.related-slider-navigation' 
+          arrayMainSliderCarouselItemProps={[
             ['related', NoveltyImg1, 'КОМПРЕССОР АВТОМОБИЛЬНЫЙ BLK-250D-LI'],
             ['related', NoveltyImg2, 'НАБОР РУЧНОГО ИНСТРУМЕНТА BTK-82'],
             ['related', NoveltyImg3, 'МАШИНА ШЛИФОВАЛЬНАЯ УГЛОВАЯ АККУМУЛЯТОРНАЯ BWS-18LI-125'],
@@ -369,6 +409,7 @@ const ProductCard = () => {
             ['related', NoveltyImg1, 'КОМПРЕССОР АВТОМОБИЛЬНЫЙ BLK-250D-LI'],
             ['related', NoveltyImg4, 'ФРЕЗЕР ЭЛЕКТРИЧЕСКИЙ BOF-1080N']
           ]} />
+
         </div>
         <div className="related-slider-navigation"></div>
       </section>

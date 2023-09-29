@@ -1,4 +1,5 @@
 import React from 'react'
+import OwlCarousel from 'react-owl-carousel'
 
 import SliderNavigationPrevNext from '../../components/SliderNavigationPrevNext/SliderNavigationPrevNext'
 import CarouselItemMain from '../../components/CarouselItemMain/CarouselItemMain'
@@ -12,59 +13,42 @@ import NoveltyImg3 from '../../static/image/grinder.jpg'
 import NoveltyImg4 from '../../static/image/milling.jpg'
 
 const Main = () => {
+  const options = {
+    items: 1,
+    loop: true,
+    dots: true,
+    nav: true,
+    navContainer: ".main-slider-navigation",
+    dotsEach: true,
+    navText: [
+      "<img src='http://localhost:3000/img/main-prev.svg'>",
+      "<img src='http://localhost:3000/img/main-next.svg'>"
+    ],
+  }
+
+  const CarouselItemMainItems = []
+  for (let i = 0; i < 6; i++) {
+    CarouselItemMainItems.push([i])
+  }
+
+  const sortCarouselItemMainItems = CarouselItemMainItems.map((index) =>
+    <CarouselItemMain classCarouselItemMainProps='main-slider-item'
+      brandCarouselItemMainProps='Bort '
+      modelCarouselItemMainProps='BSS-36'
+      modelCarouselItemMainProps2=' Duo'
+      descriptionCarouselItemMainProps='Пароочиститель высокой мощности'
+      infoCarouselItemMainProps='Ручной бытовой прибор, применение которому найдется в любом
+          частном доме и квартире. С его помощью эффективность уборки
+          увеличивается в несколько раз.'/>
+  );
+
+
   return (
     <>
       <main className="main">
-        <div className="owl-carousel owl-theme main-slider">
-          <CarouselItemMain classCarouselItemMainProps='main-slider-item'
-            brandCarouselItemMainProps='Bort '
-            modelCarouselItemMainProps='BSS-36'
-            modelCarouselItemMainProps2=' Duo'
-            descriptionCarouselItemMainProps='Пароочиститель высокой мощности'
-            infoCarouselItemMainProps='Ручной бытовой прибор, применение которому найдется в любом
-          частном доме и квартире. С его помощью эффективность уборки
-          увеличивается в несколько раз.'/>
-          <CarouselItemMain classCarouselItemMainProps=''
-            brandCarouselItemMainProps='Bort '
-            modelCarouselItemMainProps='BSS-36'
-            modelCarouselItemMainProps2=' Duo'
-            descriptionCarouselItemMainProps='Пароочиститель высокой мощности'
-            infoCarouselItemMainProps='Ручной бытовой прибор, применение которому найдется в любом
-          частном доме и квартире. С его помощью эффективность уборки
-          увеличивается в несколько раз.'/>
-          <CarouselItemMain classCarouselItemMainProps=''
-            brandCarouselItemMainProps='Bort '
-            modelCarouselItemMainProps='BSS-36'
-            modelCarouselItemMainProps2=' Duo'
-            descriptionCarouselItemMainProps='Пароочиститель высокой мощности'
-            infoCarouselItemMainProps='Ручной бытовой прибор, применение которому найдется в любом
-          частном доме и квартире. С его помощью эффективность уборки
-          увеличивается в несколько раз.'/>
-          <CarouselItemMain classCarouselItemMainProps=''
-            brandCarouselItemMainProps='Bort '
-            modelCarouselItemMainProps='BSS-36'
-            modelCarouselItemMainProps2=' Duo'
-            descriptionCarouselItemMainProps='Пароочиститель высокой мощности'
-            infoCarouselItemMainProps='Ручной бытовой прибор, применение которому найдется в любом
-          частном доме и квартире. С его помощью эффективность уборки
-          увеличивается в несколько раз.'/>
-          <CarouselItemMain classCarouselItemMainProps=''
-            brandCarouselItemMainProps='Bort '
-            modelCarouselItemMainProps='BSS-36'
-            modelCarouselItemMainProps2=' Duo'
-            descriptionCarouselItemMainProps='Пароочиститель высокой мощности'
-            infoCarouselItemMainProps='Ручной бытовой прибор, применение которому найдется в любом
-          частном доме и квартире. С его помощью эффективность уборки
-          увеличивается в несколько раз.'/>
-          <CarouselItemMain classCarouselItemMainProps=''
-            brandCarouselItemMainProps='Bort '
-            modelCarouselItemMainProps='BSS-36'
-            modelCarouselItemMainProps2=' Duo'
-            descriptionCarouselItemMainProps='Пароочиститель высокой мощности'
-            infoCarouselItemMainProps='Ручной бытовой прибор, применение которому найдется в любом
-          частном доме и квартире. С его помощью эффективность уборки
-          увеличивается в несколько раз.'/>
-        </div>
+        <OwlCarousel {...options} className="main-slider">
+          {sortCarouselItemMainItems}
+        </OwlCarousel>
         <div className="main-slider-navigation"></div>
         <SliderNavigationPrevNext arrowSliderNavigationPrevNextProps='prev' />
         <SliderNavigationPrevNext arrowSliderNavigationPrevNextProps='next' />
@@ -107,16 +91,17 @@ const Main = () => {
             стендах при максимальной нагрузке, а специалисты нашего головного
             офиса в Гонконге, заботятся о 100% проверке заказов, что
             свидетельствует о качестве сервиса.'/>
-          <MainSlider classMainSliderProps='novelty-slider' arrayMainSliderCarouselItemProps={[
-            ['novelty', NoveltyImg1, 'КОМПРЕССОР АВТОМОБИЛЬНЫЙ BLK-250D-LI'],
-            ['novelty', NoveltyImg2, 'НАБОР РУЧНОГО ИНСТРУМЕНТА BTK-82'],
-            ['novelty', NoveltyImg3, 'МАШИНА ШЛИФОВАЛЬНАЯ УГЛОВАЯ АККУМУЛЯТОРНАЯ BWS-18LI-125'],
-            ['novelty', NoveltyImg4, 'ФРЕЗЕР ЭЛЕКТРИЧЕСКИЙ BOF-1080N'],
-            ['novelty', NoveltyImg3, 'МАШИНА ШЛИФОВАЛЬНАЯ УГЛОВАЯ АККУМУЛЯТОРНАЯ BWS-18LI-125'],
-            ['novelty', NoveltyImg2, 'НАБОР РУЧНОГО ИНСТРУМЕНТА BTK-82'],
-            ['novelty', NoveltyImg1, 'КОМПРЕССОР АВТОМОБИЛЬНЫЙ BLK-250D-LI'],
-            ['novelty', NoveltyImg4, 'ФРЕЗЕР ЭЛЕКТРИЧЕСКИЙ BOF-1080N']
-          ]} />
+          <MainSlider classMainSliderProps='novelty-slider' navigationMainSliderProps='.novelty-slider-navigation'
+            arrayMainSliderCarouselItemProps={[
+              ['novelty', NoveltyImg1, 'КОМПРЕССОР АВТОМОБИЛЬНЫЙ BLK-250D-LI'],
+              ['novelty', NoveltyImg2, 'НАБОР РУЧНОГО ИНСТРУМЕНТА BTK-82'],
+              ['novelty', NoveltyImg3, 'МАШИНА ШЛИФОВАЛЬНАЯ УГЛОВАЯ АККУМУЛЯТОРНАЯ BWS-18LI-125'],
+              ['novelty', NoveltyImg4, 'ФРЕЗЕР ЭЛЕКТРИЧЕСКИЙ BOF-1080N'],
+              ['novelty', NoveltyImg3, 'МАШИНА ШЛИФОВАЛЬНАЯ УГЛОВАЯ АККУМУЛЯТОРНАЯ BWS-18LI-125'],
+              ['novelty', NoveltyImg2, 'НАБОР РУЧНОГО ИНСТРУМЕНТА BTK-82'],
+              ['novelty', NoveltyImg1, 'КОМПРЕССОР АВТОМОБИЛЬНЫЙ BLK-250D-LI'],
+              ['novelty', NoveltyImg4, 'ФРЕЗЕР ЭЛЕКТРИЧЕСКИЙ BOF-1080N']
+            ]} />
         </div>
         <div className="novelty-slider-navigation"></div>
       </section>
@@ -137,16 +122,17 @@ const Main = () => {
               доступной цене и организовывать оптимальный сервис. В нашем
               понимании, сервис – это не только гибкая система скидок, логистика,
               но и качественное гарантийное и постгарантийное обслуживание.'/>
-            <MainSlider classMainSliderProps='popular-slider' arrayMainSliderCarouselItemProps={[
-              ['popular', NoveltyImg1, 'КОМПРЕССОР АВТОМОБИЛЬНЫЙ BLK-250D-LI'],
-              ['popular', NoveltyImg2, 'НАБОР РУЧНОГО ИНСТРУМЕНТА BTK-82'],
-              ['popular', NoveltyImg3, 'МАШИНА ШЛИФОВАЛЬНАЯ УГЛОВАЯ АККУМУЛЯТОРНАЯ BWS-18LI-125'],
-              ['popular', NoveltyImg4, 'ФРЕЗЕР ЭЛЕКТРИЧЕСКИЙ BOF-1080N'],
-              ['popular', NoveltyImg3, 'МАШИНА ШЛИФОВАЛЬНАЯ УГЛОВАЯ АККУМУЛЯТОРНАЯ BWS-18LI-125'],
-              ['popular', NoveltyImg2, 'НАБОР РУЧНОГО ИНСТРУМЕНТА BTK-82'],
-              ['popular', NoveltyImg1, 'КОМПРЕССОР АВТОМОБИЛЬНЫЙ BLK-250D-LI'],
-              ['popular', NoveltyImg4, 'ФРЕЗЕР ЭЛЕКТРИЧЕСКИЙ BOF-1080N']
-            ]} />
+            <MainSlider classMainSliderProps='popular-slider' navigationMainSliderProps='.popular-slider-navigation'
+              arrayMainSliderCarouselItemProps={[
+                ['popular', NoveltyImg1, 'КОМПРЕССОР АВТОМОБИЛЬНЫЙ BLK-250D-LI'],
+                ['popular', NoveltyImg2, 'НАБОР РУЧНОГО ИНСТРУМЕНТА BTK-82'],
+                ['popular', NoveltyImg3, 'МАШИНА ШЛИФОВАЛЬНАЯ УГЛОВАЯ АККУМУЛЯТОРНАЯ BWS-18LI-125'],
+                ['popular', NoveltyImg4, 'ФРЕЗЕР ЭЛЕКТРИЧЕСКИЙ BOF-1080N'],
+                ['popular', NoveltyImg3, 'МАШИНА ШЛИФОВАЛЬНАЯ УГЛОВАЯ АККУМУЛЯТОРНАЯ BWS-18LI-125'],
+                ['popular', NoveltyImg2, 'НАБОР РУЧНОГО ИНСТРУМЕНТА BTK-82'],
+                ['popular', NoveltyImg1, 'КОМПРЕССОР АВТОМОБИЛЬНЫЙ BLK-250D-LI'],
+                ['popular', NoveltyImg4, 'ФРЕЗЕР ЭЛЕКТРИЧЕСКИЙ BOF-1080N']
+              ]} />
           </div>
           <div className="popular-slider-navigation"></div>
         </section>
@@ -173,7 +159,7 @@ const Main = () => {
                   появляться разные модификации инструментов: дрели, перфораторы,
                   пилы, лобзики, углошлифовальные машины, сварочные аппараты.'/>
                 <div className="story__button__wrapper">
-                  <Button classDesignButtonProps='black' classSizeButtonProps='50'
+                  <Button clickDesignButtonProps={() => location.href = '/be-dealer'} classDesignButtonProps='black' classSizeButtonProps='50'
                     classButtonProps='story__button be-dealer-button-link' titleButtonProps='Стать дилером' />
                   <Button classDesignButtonProps='orange' classSizeButtonProps='50'
                     classButtonProps='story__button' titleButtonProps='Оптовый портал' />

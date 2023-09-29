@@ -18,7 +18,7 @@ const CarouselItemMain = ({ classCarouselItemMainProps, brandCarouselItemMainPro
               <span className="main__description">{descriptionCarouselItemMainProps}</span>
             </div>
             <p className="main__info">{infoCarouselItemMainProps}</p>
-            <Button classDesignButtonProps='orange' classSizeButtonProps='50' 
+            <Button clickDesignButtonProps={()=> location.href = '/product-card'} classDesignButtonProps='orange' classSizeButtonProps='50' 
               classButtonProps='main__button' titleButtonProps='Подробнее о товаре'/>
           </div>
         </div>
