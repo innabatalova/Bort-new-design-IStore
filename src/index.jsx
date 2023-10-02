@@ -3,8 +3,7 @@ import { createRoot } from 'react-dom/client';
 import store from '../src/store/store'
 import { Provider } from 'react-redux'
 
-import "./js/paralla"
-import "./js/main"
+import "./js/index"
 
 import "../css/foundation.scss"
 import "../css/highlight.scss"
@@ -17,9 +16,9 @@ import LayoutBlock from "./LayoutBlock"
 
 const root = createRoot(document.getElementById('root'));
 root.render(
-  <Provider store={store}>
+  <Provider store ={store} >
     <LayoutBlock />
-  </Provider>
+  </Provider >
 );
 
 

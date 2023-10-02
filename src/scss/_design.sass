@@ -112,10 +112,20 @@
 .bort
 
   &-modal
+    position: relative
     max-width: 370px
     padding: 45px
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15)
     background-color: $white
+
+    &-overlay
+
+      &__close
+        position: absolute
+        top: 30px
+        right: 30px
+        width: 30px
+        height: 30px
 
     &-contacts
       width: 280px
@@ -560,6 +570,12 @@
         color: $white
         background-image: url(http://localhost:3000/img//menu-arrow-white.svg)
         background-color: $orange
+
+      &_nobg
+        background-image: none
+
+        &:hover, &:focus, &:active
+          background-image: none
 
   &-submenu
 

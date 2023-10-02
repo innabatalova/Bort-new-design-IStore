@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ContextWindowScroll } from '../../../context/contextWindowScroll'
 
 import SearchbarItem from '../SearchbarItem/SearchbarItem'
 
@@ -6,11 +7,14 @@ import BortLogo1 from '../../../static/image/Bort_logo_1.svg'
 import SearchImg from '../../../static/image/search.svg'
 
 const Searchbar = () => {
+  const { windowScrolling } = useContext(ContextWindowScroll)
+
   return (
-    <div className="searchbar">
-      <div className="searchbar-scrolling-wrapper">
-        <a href="/" className="searchbar-scrolling-link"><img src={BortLogo1} alt="Bort logo"
-          className="searchbar-scrolling-logo" /></a>
+    <div className={`searchbar ` + (windowScrolling > 100 ? 'searchbar-scrolling' : '')} >
+      <div className={`searchbar-scrolling-wrapper ` + (windowScrolling > 100 ? 'searchbar-scrolling-wrapper-visible' : '')}>
+        <a href="/" className={`searchbar-scrolling-link ` + (windowScrolling > 100 ? 'searchbar-scrolling-link_visible' : '')}>
+          <img src={BortLogo1} alt="Bort logo" className="searchbar-scrolling-logo" />
+        </a>
         <ul className="searchbar__list">
           <SearchbarItem titleSearchbarItemProps='инструменты' classSearchbarItemProps='tool'
             hrefSearchbarMenuItemProps='/category'
@@ -113,7 +117,7 @@ const Searchbar = () => {
             ]}
           />
         </ul>
-        <form action="#" className="search">
+        <form className="search">
           <input type="text" className="search-input" />
           <button className="search-button">
             <img src={SearchImg} alt="icon search" className="searchbar__image" />

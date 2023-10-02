@@ -9,7 +9,7 @@ const SearchMobileItem = ({ hrefSearchMobileItemProps, titleSearchMobileItemProp
     <SearchmobileMenuItem key={index} hrefSearchmobileMenuItemProps={item[0]} titleSearchmobileMenuItemProps={item[1]} classSearchmobileMenuItemProps={item[2]}
       arraySearchmobileMenuItemProps={item[3]}
       />
-  );
+  )
 
   return (
     <li className="searchmobile-item">

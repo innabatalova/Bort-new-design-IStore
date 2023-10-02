@@ -10,7 +10,7 @@ const SearchbarMenuItem = ({ hrefSearchbarMenuItemProps, titleSearchbarMenuItemP
   );
 
   return (
-    <li className={`bort-menu-item searchbar-menu-item ` + classSearchbarMenuItemProps}>
+    <li onClick={() => { location.href = '/listing' }} className={`bort-menu-item searchbar-menu-item ` + classSearchbarMenuItemProps + (arraySearchbarSubmenuItemProps.length === 0 ? ' bort-menu-item_nobg' : '')}>
       <a href={hrefSearchbarMenuItemProps}>{titleSearchbarMenuItemProps}</a>
       <ul className={`searchbar__submenu__wrapper searchbar__submenu__wrapper__` + classSearchbarMenuItemPropsList}>
         <li className="searchbar__submenu__topline"></li>

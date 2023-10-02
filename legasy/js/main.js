@@ -495,18 +495,18 @@ setTimeout(() => {
     });
 
     //отправка окна с формой обратной связи из кнопки "Написать нам"
-    // $(".modal-overlay-modal-form").on("submit", function (e) {
-    //   e.preventDefault();
-    //   $(".modal-overlay").fadeOut(200),
-    //     setTimeout(function () {
-    //       $(".modal-open").addClass("modal-open__visible");
-    //     }, 1000);
-    // });
+    $(".modal-overlay-modal-form").on("submit", function (e) {
+      e.preventDefault();
+      $(".modal-overlay").fadeOut(200),
+        setTimeout(function () {
+          $(".modal-open").addClass("modal-open__visible");
+        }, 1000);
+    });
 
-    //закрытие окна успешной отправки формы
-    // $(".modal-open__button").on('click', function () {
-    //   $(".modal-open__visible").removeClass("modal-open__visible");
-    // });
+    закрытие окна успешной отправки формы
+    $(".modal-open__button").on('click', function () {
+      $(".modal-open__visible").removeClass("modal-open__visible");
+    });
   };
 
   main();
