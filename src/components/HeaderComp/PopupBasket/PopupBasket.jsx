@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import BasketMenuItem from './BasketMenuItem'
 import Button from '../../DesignComponents/Button'
@@ -19,15 +20,14 @@ const PopupBasket = ({ classBusketProfileProps }) => {
     <BasketMenuItem key={index} srcBasketMenuItemProps={item[0]} titleBasketMenuItemProps={item[1]} priceBasketMenuItemProps={item[2]} />
   )
   
-  const linkOnCart = () => {
-    location.href = '/cart'
-  }
+  const navigate = useNavigate()
+  const OnCart = () => { navigate('/cart') }
 
   return (
     <div className={`busket__popup ` + classBusketProfileProps}>
       {sortPopupBusketProps}
       <div className="busket__popup__buttons">
-        <Button clickDesignButtonProps={linkOnCart} classDesignButtonProps='black' classSizeButtonProps='45' classButtonProps='busket__popup__button' titleButtonProps='Корзина' />
+        <Button clickDesignButtonProps={OnCart} classDesignButtonProps='black' classSizeButtonProps='45' classButtonProps='busket__popup__button' titleButtonProps='Корзина' />
         <Button classDesignButtonProps='orange' classSizeButtonProps='45' classButtonProps='busket__popup__button' titleButtonProps='Оформить заказ' />
       </div>
     </div>

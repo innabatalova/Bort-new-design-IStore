@@ -13,7 +13,7 @@ import NewsImgSeven from '../../static/news-preview_image/news-preview-seven.jpg
 
 const NewsPreview = () => {
   const breadcrumbListItemProps = [
-    ['/', 'onelevel-breadcrumb-nav', 'Главная'],
+    ['/main', 'onelevel-breadcrumb-nav', 'Главная'],
     ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Новости']
   ]
 

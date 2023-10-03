@@ -1,9 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const FooterMobileListingItem = ({ hrefProps, titleProps }) => {
-  return(
+  const navigate = useNavigate()
+  const onHref = () => { navigate(hrefProps) }
+
+  return (
     <li className="bort-listing-item footer-mobile-listing-item">
-      <a href={hrefProps}>{titleProps}</a>
+      <a onClick={onHref}>{titleProps}</a>
     </li>
   )
 }

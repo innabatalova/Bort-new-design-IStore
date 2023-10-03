@@ -8,7 +8,7 @@ import Button from '../../components/DesignComponents/Button'
 
 const Guarantee = () => {
   const breadcrumbListItemProps = [
-    ['/', 'onelevel-breadcrumb-nav', 'Главная'],
+    ['/main', 'onelevel-breadcrumb-nav', 'Главная'],
     ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Гарантийное обслуживание']
   ]
 

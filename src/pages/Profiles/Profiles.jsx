@@ -6,8 +6,8 @@ import ProfilesGroupComp from '../../components/ProfilesGroupComp/ProfilesGroupC
 
 const Profiles = () => {
   const breadcrumbListItemProps = [
-    ['/', 'onelevel-breadcrumb-nav', 'Главная'],
-    ['/', 'onelevel-breadcrumb-nav', 'Личный кабинет'],
+    ['/main', 'onelevel-breadcrumb-nav', 'Главная'],
+    ['/profiles', 'onelevel-breadcrumb-nav', 'Личный кабинет'],
     ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Учетная запись']
   ]
 

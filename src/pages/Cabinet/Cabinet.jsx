@@ -7,7 +7,7 @@ import TextParagraph from '../../components/TextParagraph/TextParagraph'
 
 const Cabinet = () => {
   const breadcrumbListItemProps = [
-    ['/', 'onelevel-breadcrumb-nav', 'Главная'],
+    ['/main', 'onelevel-breadcrumb-nav', 'Главная'],
     ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Личный кабинет']
   ]
 

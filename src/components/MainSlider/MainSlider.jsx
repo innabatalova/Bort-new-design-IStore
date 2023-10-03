@@ -2,6 +2,8 @@ import React from 'react'
 import OwlCarousel from 'react-owl-carousel'
 
 import MainSliderCarouselItem from './MainSliderCarouselItem'
+import SliderPrev from '../../static/image/novelty-slider-prev.svg'
+import SliderNext from '../../static/image/novelty-slider-next.svg'
 
 const MainSlider = ({ classMainSliderProps, navigationMainSliderProps, arrayMainSliderCarouselItemProps }) => {
   const options = {
@@ -12,8 +14,8 @@ const MainSlider = ({ classMainSliderProps, navigationMainSliderProps, arrayMain
     nav: false,
     navContainer: navigationMainSliderProps,
     navText: [
-      "<img src='http://localhost:3000/img/novelty-slider-prev.svg'>",
-      "<img src='http://localhost:3000/img/novelty-slider-next.svg'>"
+      `<img src=${SliderPrev}>`,
+      `<img src=${SliderNext}>`
     ],
     responsive: {
       360: {

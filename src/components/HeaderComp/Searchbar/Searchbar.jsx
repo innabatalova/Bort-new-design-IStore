@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { ContextWindowScroll } from '../../../context/contextWindowScroll'
 
 import SearchbarItem from '../SearchbarItem/SearchbarItem'
@@ -9,10 +10,13 @@ import SearchImg from '../../../static/image/search.svg'
 const Searchbar = () => {
   const { windowScrolling } = useContext(ContextWindowScroll)
 
+  const navigate = useNavigate()
+  const onMain = () => { navigate('/main') }
+
   return (
     <div className={`searchbar ` + (windowScrolling > 100 ? 'searchbar-scrolling' : '')} >
       <div className={`searchbar-scrolling-wrapper ` + (windowScrolling > 100 ? 'searchbar-scrolling-wrapper-visible' : '')}>
-        <a href="/" className={`searchbar-scrolling-link ` + (windowScrolling > 100 ? 'searchbar-scrolling-link_visible' : '')}>
+        <a onClick={onMain} className={`searchbar-scrolling-link ` + (windowScrolling > 100 ? 'searchbar-scrolling-link_visible' : '')}>
           <img src={BortLogo1} alt="Bort logo" className="searchbar-scrolling-logo" />
         </a>
         <ul className="searchbar__list">

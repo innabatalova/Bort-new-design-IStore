@@ -4,7 +4,7 @@ import Breadcrumb from '../../Breadcrumb/Breadcrumb'
 
 const Charter = () => { 
   const breadcrumbListItemProps = [
-    ['/', 'breadcrumb-list__nav', 'Главная'],
+    ['/main', 'breadcrumb-list__nav', 'Главная'],
     ['#', 'breadcrumb-list__nav', 'Инструменты'],
     ['#', ' ', 'Аккумуляторный инструмент']
   ]

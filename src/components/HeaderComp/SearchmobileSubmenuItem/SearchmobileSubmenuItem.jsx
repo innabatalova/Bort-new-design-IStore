@@ -1,11 +1,15 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const SearchmobileSubmenuItem = ({ hrefSearchmobileSubmenuItemProps, titleSearchmobileSubmenuItemProps, classSearchmobileSubmenuItemProps }) => {
-    return(
-      <li className={`searchmobile-submenu-item ` + classSearchmobileSubmenuItemProps}>
-        <a href={hrefSearchmobileSubmenuItemProps}>{titleSearchmobileSubmenuItemProps}</a>
-      </li>
-    )
+  const navigate = useNavigate()
+  const onHref = () => { navigate(hrefSearchmobileSubmenuItemProps) }
+
+  return (
+    <li className={`searchmobile-submenu-item ` + classSearchmobileSubmenuItemProps}>
+      <a onClick={onHref}>{titleSearchmobileSubmenuItemProps}</a>
+    </li>
+  )
 }
 
 export default SearchmobileSubmenuItem;

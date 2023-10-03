@@ -9,7 +9,7 @@ import ProductImg2 from '../../static/listing_image/listing-card-two.jpg'
 
 const Cart = () => {
   const breadcrumbListItemProps = [
-    ['/', 'onelevel-breadcrumb-nav', 'Главная'],
+    ['/main', 'onelevel-breadcrumb-nav', 'Главная'],
     ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Содержимое корзины']
   ]
 

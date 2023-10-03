@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
 import FormField from '../../components/PagesComp/FormField/FormField'
@@ -6,9 +7,12 @@ import Button from '../../components/DesignComponents/Button'
 
 const Authorization = () => {
     const breadcrumbListItemProps = [
-        ['/', 'onelevel-breadcrumb-nav', 'Главная'],
+        ['/main', 'onelevel-breadcrumb-nav', 'Главная'],
         ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Авторизация']
     ]
+
+    const navigate = useNavigate()
+    const onRegistration = () => { navigate('/registration') }
 
     return (
         <main className="authorization">
@@ -24,12 +28,12 @@ const Authorization = () => {
                         <div className="authorization-form-checkbox">
                             <input type="checkbox" className="bort-checkbox" id="bcheck" />
                             <label htmlFor="bcheck" className="bort-checkbox-label">Запомнить меня</label>
-                            <a href="#" target="_blank" className="authorization-form-link">Забыли пароль?</a>
+                            <a target="_blank" className="authorization-form-link">Забыли пароль?</a>
                         </div>
                         <Button classDesignButtonProps='orange' classSizeButtonProps='45'
                             classButtonProps='bort-modal-button authorization-form-button' titleButtonProps='Войти' />
                         <div>
-                            <a href="/registration" target="_blank" className="authorization-form-newlink">Создать новую учетную запись</a>
+                            <a onClick={onRegistration} target="_blank" className="authorization-form-newlink">Создать новую учетную запись</a>
                         </div>
                     </form>
                 </div>

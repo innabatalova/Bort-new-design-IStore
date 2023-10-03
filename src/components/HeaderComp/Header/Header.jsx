@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { ContextModalOverlay } from '../../../context/contextModalOverlay'
 import { toogleAccountPopup } from '../../../store/popupAccountSlice'
@@ -40,6 +41,9 @@ const Header = () => {
   const popupBusketVisible = useSelector((state) => state.popupBusket.classVisible)
   const dispatch = useDispatch()
 
+  const navigate = useNavigate()
+  const onMain = () => { navigate('/main') }
+
   return (
     <ContextModalOverlay.Provider>
       <header className="header">
@@ -79,7 +83,7 @@ const Header = () => {
               <span className="logo-line logo-end"></span>
             </button>
             <img src={CloseMobileIcon} alt="close mobile icon" className="logo-close" />
-            <a href="/"><img src={BortLogo1} alt="Bort logo" className="logo-image" /></a>
+            <a onClick={onMain}><img src={BortLogo1} alt="Bort logo" className="logo-image" /></a>
             <form action="#" className="logo-search">
               <img src={SearchImg} alt="icon search" className="logo-search-image" />
               <input type="text" className="logo-search-input" placeholder="Поиск по каталогу" />

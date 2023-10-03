@@ -1,9 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import Button from '../DesignComponents/Button'
 import MainModel from './MainModel'
 
 const CarouselItemMain = ({ classCarouselItemMainProps, brandCarouselItemMainProps, modelCarouselItemMainProps, modelCarouselItemMainProps2, descriptionCarouselItemMainProps, infoCarouselItemMainProps }) => {
+  const navigate = useNavigate()
+  const onProductCard = () => { navigate('/product-card') }
+
   return (
     <div className={`carousel-item ` + classCarouselItemMainProps}>
       <div className="main-wrapper">
@@ -18,7 +22,7 @@ const CarouselItemMain = ({ classCarouselItemMainProps, brandCarouselItemMainPro
               <span className="main__description">{descriptionCarouselItemMainProps}</span>
             </div>
             <p className="main__info">{infoCarouselItemMainProps}</p>
-            <Button clickDesignButtonProps={()=> location.href = '/product-card'} classDesignButtonProps='orange' classSizeButtonProps='50' 
+            <Button clickDesignButtonProps={onProductCard} classDesignButtonProps='orange' classSizeButtonProps='50' 
               classButtonProps='main__button' titleButtonProps='Подробнее о товаре'/>
           </div>
         </div>

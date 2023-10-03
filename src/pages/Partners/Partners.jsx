@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
 import TextParagraph from '../../components/TextParagraph/TextParagraph'
@@ -6,11 +7,12 @@ import Button from '../../components/DesignComponents/Button'
 
 const Partners = () => {
   const breadcrumbListItemProps = [
-    ['/', 'onelevel-breadcrumb-nav', 'Главная'],
+    ['/main', 'onelevel-breadcrumb-nav', 'Главная'],
     ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Наши партнеры']
   ]
 
-  const openBeDealer = () => { location.href = '/be-dealer' }
+  const navigate = useNavigate()
+  const onBeDealer = () => { navigate('/be-dealer') }
 
   return(
     <main className="partners">
@@ -40,7 +42,7 @@ const Partners = () => {
                 развитии и приглашаем московские и региональные организации к
                 долгосрочному и взаимовыгодному сотрудничеству.'
               />
-              <Button clickDesignButtonProps={openBeDealer}  classDesignButtonProps='orange' classSizeButtonProps='45'
+              <Button clickDesignButtonProps={onBeDealer}  classDesignButtonProps='orange' classSizeButtonProps='45'
                 classButtonProps='partners-board-button' titleButtonProps='Стать дилером'/>
             </div>
           </div>

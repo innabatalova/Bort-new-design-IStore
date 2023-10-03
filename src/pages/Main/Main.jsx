@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import OwlCarousel from 'react-owl-carousel'
 
 import SliderNavigationPrevNext from '../../components/SliderNavigationPrevNext/SliderNavigationPrevNext'
@@ -6,6 +7,9 @@ import CarouselItemMain from '../../components/CarouselItemMain/CarouselItemMain
 import TextParagraph from '../../components/TextParagraph/TextParagraph'
 import Button from '../../components/DesignComponents/Button'
 import MainSlider from '../../components/MainSlider/MainSlider'
+
+import MainPrev from '../../static/image/main-prev.svg'
+import MainNext from '../../static/image/main-next.svg'
 
 import NoveltyImg1 from '../../static/image/compressor.jpg'
 import NoveltyImg2 from '../../static/image/tools.jpg'
@@ -21,8 +25,8 @@ const Main = () => {
     navContainer: ".main-slider-navigation",
     dotsEach: true,
     navText: [
-      "<img src='http://localhost:3000/img/main-prev.svg'>",
-      "<img src='http://localhost:3000/img/main-next.svg'>"
+      `<img src=${MainPrev}>`,
+      `<img src=${MainNext}>`
     ],
   }
 
@@ -32,7 +36,7 @@ const Main = () => {
   }
 
   const sortCarouselItemMainItems = CarouselItemMainItems.map((index) =>
-    <CarouselItemMain classCarouselItemMainProps='main-slider-item'
+    <CarouselItemMain key={index} classCarouselItemMainProps='main-slider-item'
       brandCarouselItemMainProps='Bort '
       modelCarouselItemMainProps='BSS-36'
       modelCarouselItemMainProps2=' Duo'
@@ -40,7 +44,10 @@ const Main = () => {
       infoCarouselItemMainProps='Ручной бытовой прибор, применение которому найдется в любом
           частном доме и квартире. С его помощью эффективность уборки
           увеличивается в несколько раз.'/>
-  );
+  )
+
+  const navigate = useNavigate()
+  const onBeDealer = () => { navigate('/be-dealer') }
 
 
   return (
@@ -159,7 +166,7 @@ const Main = () => {
                   появляться разные модификации инструментов: дрели, перфораторы,
                   пилы, лобзики, углошлифовальные машины, сварочные аппараты.'/>
                 <div className="story__button__wrapper">
-                  <Button clickDesignButtonProps={() => location.href = '/be-dealer'} classDesignButtonProps='black' classSizeButtonProps='50'
+                  <Button clickDesignButtonProps={onBeDealer} classDesignButtonProps='black' classSizeButtonProps='50'
                     classButtonProps='story__button be-dealer-button-link' titleButtonProps='Стать дилером' />
                   <Button classDesignButtonProps='orange' classSizeButtonProps='50'
                     classButtonProps='story__button' titleButtonProps='Оптовый портал' />

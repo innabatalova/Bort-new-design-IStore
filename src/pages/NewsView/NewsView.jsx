@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
 import Button from '../../components/DesignComponents/Button'
@@ -13,12 +14,13 @@ import RichImgFourFive from '../../static/rich_image/rich-section-five.jpg'
 
 const NewsView = () => {
   const breadcrumbListItemProps = [
-    ['/', 'onelevel-breadcrumb-nav', 'Главная'],
-    ['/', 'onelevel-breadcrumb-nav', 'Новости'],
+    ['/main', 'onelevel-breadcrumb-nav', 'Главная'],
+    ['/news-view', 'onelevel-breadcrumb-nav', 'Новости'],
     ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Как выбрать пылесос из всего многообразия моделей, представленного на рынке.']
   ]
 
-  const openNewsPreview = () => { location.href = '/news-preview' }
+  const navigate = useNavigate()
+  const onNewsPreview = () => { navigate('/news-preview') }
 
   return (
     <>
@@ -32,7 +34,7 @@ const NewsView = () => {
                 на рынке.
               </h2>
               <span className="news-view-date">29/08/2020</span>
-              <Button clickDesignButtonProps={openNewsPreview} classDesignButtonProps='black' classSizeButtonProps='45' 
+              <Button clickDesignButtonProps={onNewsPreview} classDesignButtonProps='black' classSizeButtonProps='45' 
                 classButtonProps='news-view-button' titleButtonProps='К списку новостей'/>
               <div className="rich-section rich-section-one">
                 <div className="rich-video">

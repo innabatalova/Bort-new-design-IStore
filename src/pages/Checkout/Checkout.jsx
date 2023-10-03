@@ -8,7 +8,7 @@ import Button from '../../components/DesignComponents/Button'
 
 const Checkout = () => {
   const breadcrumbListItemProps = [
-    ['/', 'onelevel-breadcrumb-nav', 'Главная'],
+    ['/main', 'onelevel-breadcrumb-nav', 'Главная'],
     ['#', 'onelevel-breadcrumb-nav onelevel-breadcrumb-nav-last', 'Безопасное оформление заказа']
   ]
 

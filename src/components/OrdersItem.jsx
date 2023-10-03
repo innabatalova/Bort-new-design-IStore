@@ -1,7 +1,11 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const OrdersItem = ({ idOrdersItemProps, statusOrdersItemProps, nameOrdersItemProps, emailOrdersItemProps,
   dateOrdersItemProps, priceOrdersItemProps }) => {
+  const navigate = useNavigate()
+  const onOrders = () => { navigate('/orders') }
+
   return (
     <div className="orders__item__wrapper">
       <div className="orders__item__mobile">
@@ -14,7 +18,7 @@ const OrdersItem = ({ idOrdersItemProps, statusOrdersItemProps, nameOrdersItemPr
       <div className="orders__item">
         <div className="orders__data">
           <span>{idOrdersItemProps}</span>
-          <a href="#" className="orders__data_link">Просмотреть заказ</a>
+          <a onClick={onOrders} className="orders__data_link">Просмотреть заказ</a>
         </div>
         <div className="orders__data">{statusOrdersItemProps}</div>
         <div className="orders__data">

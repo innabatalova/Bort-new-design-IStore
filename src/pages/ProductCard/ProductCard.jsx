@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 import OwlCarousel from 'react-owl-carousel'
 import { ContextProductCardImage } from '../../context/contextProductCardImage'
 
@@ -90,7 +91,7 @@ const ProductCard = () => {
     <ProductCardNavlineItem key={index} classProductCardNavlineItemProps={item[0]} hrefProductCardNavlineItemProps={item[1]}
       titleProductCardNavlineItemProps={item[2]}
     />
-  );
+  )
 
   const arrayProductCardSpecificationListItems = [
     ['Brand:', 'BORT'], ['Тип:', 'Мойка высокого давления'], ['Потребляемая мощность, Вт:', '2 000'],
@@ -105,7 +106,7 @@ const ProductCard = () => {
     <ProductCardSpecificationListItem key={index} nameProductCardSpecificationListItemProps={item[0]}
       valueProductCardSpecificationListItemProps={item[1]}
     />
-  );
+  )
 
   const buyBlockItems = []
   for(let i = 0; i < 12; i++){
@@ -114,7 +115,11 @@ const ProductCard = () => {
 
   const sortBuyBlockItems = buyBlockItems.map((index) =>
     <div key={index} className="buy-block__item"></div>
-  );
+  )
+
+  const navigate = useNavigate()
+  const onBort = () => { navigate('https://bort.ru/') }
+  const onExtego = () => { navigate('https://extego.ru/') }
 
   return (
     <>
@@ -122,7 +127,7 @@ const ProductCard = () => {
         <div className="grid-container">
           <nav className="breadcrumb">
             <ul className="breadcrumb-list product-card__breadcrumb__list">
-              <BreadcrumbListItem hrefBreadcrumbListItemProps='/' classBreadcrumbListItemProps='product-card__breadcrumb__nav'
+              <BreadcrumbListItem hrefBreadcrumbListItemProps='/main' classBreadcrumbListItemProps='product-card__breadcrumb__nav'
                 titleBreadcrumbListItemProps='Главная' />
               <BreadcrumbListItem hrefBreadcrumbListItemProps='#' classBreadcrumbListItemProps='product-card__breadcrumb__nav'
                 titleBreadcrumbListItemProps='Инструменты' />
@@ -186,7 +191,7 @@ const ProductCard = () => {
                   >Купить в магазинах:</span
                   >
                   <div className="product-card-info__buy__die">
-                    <div className="product-card-info__buy__bort" onClick={() => location.href = 'https://bort.ru/'}>
+                    <div className="product-card-info__buy__bort" onClick={onBort}>
                       <img
                         src={BortLogoImg}
                         alt="Официальный интернет-магазин Bort"
@@ -196,7 +201,7 @@ const ProductCard = () => {
                       >Официальный интернет-магазин</span
                       >
                     </div>
-                    <div className="product-card-info__buy__extego" onClick={() => location.href = 'https://extego.ru/'}>
+                    <div className="product-card-info__buy__extego" onClick={onExtego}>
                       <img
                         src={ExtegoLogoImg}
                         alt="интернет-магазин Extego"

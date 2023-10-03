@@ -23,11 +23,8 @@ module.exports = {
         use: ["style-loader", "css-loader", "postcss-loader", "resolve-url-loader", "sass-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        loader: "file-loader",
-        options: {
-          name: 'img/[name].[ext]',
-        },
+        test: /\.(png|jpe?g|gif|svg|webp|ico)$/i,
+        type: 'asset/resource',
       },
       { test: /\.(jsx)?$/, use: "babel-loader" },
       { test: /\.(js)?$/, use: "babel-loader" },
