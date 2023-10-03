@@ -18,7 +18,7 @@ const RoutesProject = () => {
   const onCheckout = () => { navigate('/checkout') }
   const onRegistration = () => { navigate('/registration') }
   const onFeedback = () => { navigate('/feedback') }
-  //const onShippingAndPayment = () => { navigate('/shipping-and-payment') }
+  const onShippingAndPayment = () => { navigate('/shipping-and-payment') }
   const onNewsPreview = () => { navigate('/news-preview') }
   const onNewsView = () => { navigate('/news-view') }
 
@@ -41,6 +41,7 @@ const RoutesProject = () => {
           <li onClick={onCheckout} className="routes-project__item">Оформление заказа </li>
           <li onClick={onRegistration} className="routes-project__item">Регистрация</li>
           <li onClick={onFeedback} className="routes-project__item">Обратная связь</li>
+          <li onClick={onShippingAndPayment} className="routes-project__item">Доставка и оплата</li>
           <li onClick={onNewsPreview} className="routes-project__item">Список новостей</li>
           <li onClick={onNewsView} className="routes-project__item">Новость</li>
         </ul>

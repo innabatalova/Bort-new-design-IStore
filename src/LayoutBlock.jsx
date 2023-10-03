@@ -36,6 +36,7 @@ import Profiles from './pages/Profiles/Profiles'
 import Cart from './pages/Cart/Cart'
 import Checkout from './pages/Checkout/Checkout'
 import Feedback from './pages/Feedback/Feedback'
+import ShippingAndPayment from './pages/ShippingAndPayment/ShippingAndPayment'
 import RoutesProject from './pages/RoutesProject/RoutesProject'
 
 import ProductCardGalleryImg4 from './static/product-card-image/BAB-10,8X_4.jpg'
@@ -87,6 +88,7 @@ const LayoutBlock = () => {
                 <Route path="cart" element={<Cart />} />
                 <Route path="checkout" element={<Checkout />} />
                 <Route path="feedback" element={<Feedback />} />
+                <Route path="shipping-and-payment" element={<ShippingAndPayment />} />
               </Routes>
               <News />
               <Banner />
