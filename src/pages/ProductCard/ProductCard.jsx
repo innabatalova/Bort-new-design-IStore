@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
 import OwlCarousel from 'react-owl-carousel'
 import { ContextProductCardImage } from '../../context/contextProductCardImage'
 
@@ -22,6 +21,10 @@ import ProductCardGalleryImg6 from '../../static/product-card-image/BAB-10,8X_6.
 
 import BortLogoImg from '../../static/image/Bort_logo_1.svg'
 import ExtegoLogoImg from '../../static/image/extego-logo.svg'
+import OzonLogoImg from '../../static/image/logo-ozon.png'
+import WBLogoImg from '../../static/image/wb-logo.png'
+import YandexLogoImg from '../../static/image/yandex-logo.png'
+import DNSLogoImg from '../../static/image/dns-logo.png'
 
 import RichImg1 from '../../static/rich_image/rich-section-two.jpg'
 import RichImg2 from '../../static/rich_image/rich-section-three.jpg'
@@ -109,7 +112,7 @@ const ProductCard = () => {
   )
 
   const buyBlockItems = []
-  for(let i = 0; i < 12; i++){
+  for (let i = 0; i < 12; i++) {
     buyBlockItems.push([i])
   }
 
@@ -117,9 +120,12 @@ const ProductCard = () => {
     <div key={index} className="buy-block__item"></div>
   )
 
-  const navigate = useNavigate()
-  const onBort = () => { navigate('https://bort.ru/') }
-  const onExtego = () => { navigate('https://extego.ru/') }
+  const onBort = () => { window.open('https://bort.ru/') }
+  const onExtego = () => { window.open('https://extego.ru/') }
+  const onOzon = () => { window.open('https://ozon.ru/') }
+  const onWB = () => { window.open('https://www.wildberries.ru/') }
+  const onYandex = () => { window.open('https://market.yandex.ru/') }
+  const onDNS = () => { window.open('https://www.dns-shop.ru/') }
 
   return (
     <>
@@ -186,29 +192,43 @@ const ProductCard = () => {
                     (рекомендованная цена)
                   </div>
                 </div>
+
                 <div className="product-card-info__buy">
-                  <span className="product-card-info__buy__title"
-                  >Купить в магазинах:</span
-                  >
+                  <span className="product-card-info__buy__title">Купить в магазинах:</span>
                   <div className="product-card-info__buy__die">
-                    <div className="product-card-info__buy__bort" onClick={onBort}>
-                      <img
-                        src={BortLogoImg}
-                        alt="Официальный интернет-магазин Bort"
-                        className="product-card-info__buy__bort__img"
-                      />
-                      <span className="product-card-info__buy__bort__subtitle"
-                      >Официальный интернет-магазин</span
-                      >
+
+                    <div className="product-card-info__buy__wrap">
+                      <div className="product-card-info__buy__bort" onClick={onBort}>
+                        <img src={BortLogoImg} alt="Официальный интернет-магазин Bort" className="product-card-info__buy__bort__img" />
+                        <span className="product-card-info__buy__bort__subtitle">Официальный интернет-магазин</span>
+                      </div>
+
+                      <div className="product-card-info__buy__extego" onClick={onExtego}>
+                        <img src={ExtegoLogoImg} alt="интернет-магазин Extego" />
+                      </div>
                     </div>
-                    <div className="product-card-info__buy__extego" onClick={onExtego}>
-                      <img
-                        src={ExtegoLogoImg}
-                        alt="интернет-магазин Extego"
-                      />
+
+                    <div className="product-card-info__buy__wrap">
+                      <div className="product-card-info__buy__dealer" onClick={onOzon}>
+                        <img src={OzonLogoImg} alt="магазин-партнер Ozon" />
+                      </div>
+
+                      <div className="product-card-info__buy__dealer" onClick={onWB}>
+                        <img src={WBLogoImg} alt="магазин-партнер Wildberries" />
+                      </div>
+
+                      <div className="product-card-info__buy__dealer" onClick={onYandex}>
+                        <img src={YandexLogoImg} alt="магазин-партнер Яндекс Маркет" />
+                      </div>
+
+                      <div className="product-card-info__buy__dealer" onClick={onDNS}>
+                        <img src={DNSLogoImg} alt="магазин-партнер DNS" />
+                      </div>
                     </div>
+
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -393,7 +413,7 @@ const ProductCard = () => {
         <section id="set" className="set">
           <ProductCardSectionTitle classProductCardSectionTitleProps='set' titleProductCardSectionTitleProps='Комплектация' />
           <dl className="set-list">
-            <ProductCardSetListItem nameProductCardSetListIteProps='Пистолет-распылитель:' valueProductCardSetListIteProps='1'/>
+            <ProductCardSetListItem nameProductCardSetListIteProps='Пистолет-распылитель:' valueProductCardSetListIteProps='1' />
             <ProductCardSetListItem nameProductCardSetListIteProps='Напорный шланг:' valueProductCardSetListIteProps='1' />
             <ProductCardSetListItem nameProductCardSetListIteProps='Фильтр:' valueProductCardSetListIteProps='1' />
           </dl>
@@ -403,17 +423,17 @@ const ProductCard = () => {
         <div className="grid-container">
           <ProductCardSectionTitle classProductCardSectionTitleProps='related' titleProductCardSectionTitleProps='Сопутствующие товары' />
 
-          <MainSlider classMainSliderProps='related-slider' navigationMainSliderProps='.related-slider-navigation' 
-          arrayMainSliderCarouselItemProps={[
-            ['related', NoveltyImg1, 'КОМПРЕССОР АВТОМОБИЛЬНЫЙ BLK-250D-LI'],
-            ['related', NoveltyImg2, 'НАБОР РУЧНОГО ИНСТРУМЕНТА BTK-82'],
-            ['related', NoveltyImg3, 'МАШИНА ШЛИФОВАЛЬНАЯ УГЛОВАЯ АККУМУЛЯТОРНАЯ BWS-18LI-125'],
-            ['related', NoveltyImg4, 'ФРЕЗЕР ЭЛЕКТРИЧЕСКИЙ BOF-1080N'],
-            ['related', NoveltyImg3, 'МАШИНА ШЛИФОВАЛЬНАЯ УГЛОВАЯ АККУМУЛЯТОРНАЯ BWS-18LI-125'],
-            ['related', NoveltyImg2, 'НАБОР РУЧНОГО ИНСТРУМЕНТА BTK-82'],
-            ['related', NoveltyImg1, 'КОМПРЕССОР АВТОМОБИЛЬНЫЙ BLK-250D-LI'],
-            ['related', NoveltyImg4, 'ФРЕЗЕР ЭЛЕКТРИЧЕСКИЙ BOF-1080N']
-          ]} />
+          <MainSlider classMainSliderProps='related-slider' navigationMainSliderProps='.related-slider-navigation'
+            arrayMainSliderCarouselItemProps={[
+              ['related', NoveltyImg1, 'КОМПРЕССОР АВТОМОБИЛЬНЫЙ BLK-250D-LI'],
+              ['related', NoveltyImg2, 'НАБОР РУЧНОГО ИНСТРУМЕНТА BTK-82'],
+              ['related', NoveltyImg3, 'МАШИНА ШЛИФОВАЛЬНАЯ УГЛОВАЯ АККУМУЛЯТОРНАЯ BWS-18LI-125'],
+              ['related', NoveltyImg4, 'ФРЕЗЕР ЭЛЕКТРИЧЕСКИЙ BOF-1080N'],
+              ['related', NoveltyImg3, 'МАШИНА ШЛИФОВАЛЬНАЯ УГЛОВАЯ АККУМУЛЯТОРНАЯ BWS-18LI-125'],
+              ['related', NoveltyImg2, 'НАБОР РУЧНОГО ИНСТРУМЕНТА BTK-82'],
+              ['related', NoveltyImg1, 'КОМПРЕССОР АВТОМОБИЛЬНЫЙ BLK-250D-LI'],
+              ['related', NoveltyImg4, 'ФРЕЗЕР ЭЛЕКТРИЧЕСКИЙ BOF-1080N']
+            ]} />
 
         </div>
         <div className="related-slider-navigation"></div>
