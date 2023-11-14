@@ -7,6 +7,7 @@ import { toogleBusketPopup } from '../../../store/popupBusketSlice'
 
 import Searchbar from '../Searchbar/Searchbar'
 import NavbarItem from '../NavbarItem/NavbarItem'
+import StickyBanner from '../StickyBanner/StickyBanner'
 import SearchMobile from '../SearchMobile/SearchMobile'
 import PopupProfile from '../PopupProfile/PopupProfile'
 import PopupBasket from '../PopupBasket/PopupBasket'
@@ -48,6 +49,7 @@ const Header = () => {
     <ContextModalOverlay.Provider>
       <header className="header">
         <div className="navigation">
+          <StickyBanner />
           <div className="grid-container">
             <div className="navigation-wrapper">
               <div className="geolocation">

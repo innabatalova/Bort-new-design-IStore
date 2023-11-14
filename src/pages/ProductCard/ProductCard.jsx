@@ -215,7 +215,7 @@ const ProductCard = () => {
 
                       <div className="product-card-info__buy__dealer" onClick={onWB}>
                         <img src={WBLogoImg} alt="магазин-партнер Wildberries" />
-                      </div>
+                      </div> 
 
                       <div className="product-card-info__buy__dealer" onClick={onYandex}>
                         <img src={YandexLogoImg} alt="магазин-партнер Яндекс Маркет" />

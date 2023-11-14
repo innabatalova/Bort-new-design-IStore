@@ -1,0 +1,39 @@
+.sticky-banner
+  position: absolute
+  top: 0
+  right: 0
+  width: 80px
+  height: 80px
+  transition: all 1.5s
+  z-index: 99
+  background-color: transparent
+  overflow: hidden
+
+  &:hover
+    width: 400px
+    height: 400px
+    transition: all 1.5s
+
+  &:hover div img
+    opacity: 0
+    transition: 0.5s
+
+  &__wrap
+    position: absolute
+    top: 0
+    right: 0
+    width: 85%
+    height: 85%
+    overflow: hidden
+    z-index: 77
+    background: url('https://makitarussia.ru/wa-data/public/shop/stickyangle/big_image.png?1614167651') no-repeat top right #fff
+
+  &__img
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 88
+
+  &__smallimg
+    opacity: 1
+    transition: 3.5s
